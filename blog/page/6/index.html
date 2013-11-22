@@ -9,7 +9,7 @@
   <meta name="author" content="Nuno Catarino">
 
   
-  <meta name="description" content="So, it seems Cyanogenmod is here to stay on the Spica. Just as long as criminal (one of the developers @ samdroid.net) doesn&#8217;t feel like it&# &hellip;">
+  <meta name="description" content="I sometimes wonder why has Samsung stated the Spica hardware specs aren&#8217;t enough for Froyo since there are at least two roms that I know of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,118 +65,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/archives/823">Cyanogen on the Spica, Gaming and a Small Update</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-07T00:00:00+00:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p style="text-align: justify;">
-  <a href="http://ncatarino.net/wp-content/uploads/2011/01/spicaquadrant.png"><img class="alignright size-medium wp-image-826" title="spicaquadrant" src="http://ncatarino.net/wp-content/uploads/2011/01/spicaquadrant-200x300.png" alt="" width="200" height="300" /></a>So, it seems Cyanogenmod is here to stay on the Spica. Just as long as criminal (one of the developers @ samdroid.net) doesn&#8217;t feel like it&#8217;s time to call it quits. I&#8217;m now running alpha 8.2 and I can say everything pretty much just works. The camera is now in color and I&#8217;m yet to find something that doesn&#8217;t work like it&#8217;s intended. Supposedly hardware acceleration for divx doesn&#8217;t work, but I don&#8217;t watch divx on the phone anyway, so that&#8217;s fine.
-</p>
-
-
-
-
-<p style="text-align: justify;">
-  There were also some 3D drivers released for the 8.1 ported from the Samsung Intercept ones, they boosted my phone&#8217;s score on Quadrant by a ton.  From the mid 400&#8242;s to the mid 600&#8242;s.  <span style="text-decoration: line-through;">Sadly they don&#8217;t work in 8.2 but I&#8217;m sure something is being done about it</span>. There has been an update to the drivers, still haven&#8217;t installed them but will do it pretty soon. Available <a href="http://forum.samdroid.net/f53/intercept-3d-drivers-cyanogemod-3601/#post95160" target="_blank">here</a>.
-</p>
-
-
-
-
-<p style="text-align: justify;">
-  Haven&#8217;t posted here in a while, no special reason. My grandfather fell down and broke his hip, had to undergo surgery and eventually his age (87) and whatever comes with it caught up with him and he didn&#8217;t make it. He passed about a week after surgery. And that was pretty effed up.
-</p>
-
-
-
-
-<p style="text-align: justify;">
-  </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/archives/823">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/archives/806">The Silent City</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-19T00:00:00+00:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://ncatarino.net/wp-content/uploads/2010/11/silent.jpg"><img class="aligncenter size-full wp-image-807" title="Silent City" src="http://ncatarino.net/wp-content/uploads/2010/11/silent.jpg" alt="" width="520" height="296" /></a></p>
-
-<p>The Silent City: an awesome short film by Ruairi Robinson featuring 3 soldiers, Cillian Murphy, Don Wycherly, and Garvan McGrath, trying to survive on a desolate planet. After hitting play, make sure the player is in HD mode, and then, watch it in full screen. Enjoy!</p>
-
-<p style="text-align: center;">
-</p>
-
-
-
-
-<p style="text-align: left;">
-  [<a href="http://www.geeksaresexy.net/2010/11/18/featured-short-film-the-silent-city-hd/" target="_blank">Via</a>]
-</p>
-
-
-
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -546,6 +434,98 @@
   
     <footer>
       <a rel="full-article" href="/archives/709">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/704">VMware Failing to Build Kernel Modules on Ubuntu 10.10</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-13T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The recent update to 10.10 on my desktop box ran without any major issues, but not without issues. VMware stopped working and complained about not being able to build needed kernel modules. After a quick google search I found this. Issue the following commands on your console.</p>
+
+<blockquote><p>cd /tmp<br/>
+wget <a rel="nofollow" href="http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash"><a href="http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash">http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash</a></a><br/>
+sudo chmod +x vmware7.1.1-patch-kernel-2.6.35.bash<br/>
+sudo ./vmware7.1.1-patch-kernel-2.6.35.bash</p></blockquote>
+
+<p>Then the script tells you to issue the following command:</p>
+
+<blockquote><p>sudo vmware-modconfig &#8211;console &#8211;install-all</p></blockquote>
+
+<p>And that&#8217;s it.</p>
+
+<p>[<a href="https://answers.launchpad.net/vmware-ubuntu/+question/128677" target="_blank">Via</a>]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/693">OS X Boot Camp and hal.dll Errors</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-04T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So I made the decision to go back to a 32bit Windows installed on Boot Camp due to some compatibility issues with the Android SDK and flashing tools not recognizing a Samsung Spica, dishing out some weird errors and generally just not finding the device. Done full installs twice before and was about to do the third but then I ran into a problem.</p>
+
+<p>Boot Camp partition made, I start the install process like in any other PC. Delete partition, create partition, format it ntfs, etc, and the install starts. First reboot comes up in the installer for whatever reason it reboots to continue the install process and then this error complaining about hal.dll not there comes up. Ahh crap. Tried it again, same error. Tried downloading an iso and install through it and there it was again. All the while googling around trying to find what the crap was happening. Spent hours trying to figure out what was borking the 2001 Space Odissey computer. Hours you ask? Yes, hours. Well, about two hours.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/archives/693">Read on &rarr;</a>
     </footer>
   
 
