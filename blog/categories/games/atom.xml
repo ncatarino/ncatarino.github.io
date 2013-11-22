@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Games | ncatarino.github.io]]></title>
   <link href="http://ncatarino.github.io/blog/categories/games/atom.xml" rel="self"/>
   <link href="http://ncatarino.github.io/"/>
-  <updated>2013-11-22T18:39:26+00:00</updated>
+  <updated>2013-11-22T18:55:57+00:00</updated>
   <id>http://ncatarino.github.io/</id>
   <author>
     <name><![CDATA[Nuno Catarino]]></name>
@@ -59,37 +59,6 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[So, What&#8217;s New?]]></title>
-    <link href="http://ncatarino.github.io/archives/858"/>
-    <updated>2011-07-06T00:00:00+01:00</updated>
-    <id>http://ncatarino.github.io/archives/so-whats-new</id>
-    <content type="html"><![CDATA[<p style="text-align: justify;">
-  <a href="http://ncatarino.net/wp-content/uploads/2011/07/wtf.jpg"><img class="alignright size-medium wp-image-861" title="Slow Down!" src="http://ncatarino.net/wp-content/uploads/2011/07/wtf-300x196.jpg" alt="" width="180" height="118" /></a>So, after some time playing Rift and having some real life issues pull me away from any kind of gaming for the most part I found myself not really wanting to play it again. It&#8217;s a hell of a fine game, up till you reach max level. Though this is open for discussion, I found myself with nothing to do. Met some great people there and I&#8217;m keeping in touch with them for other gaming experiences but I&#8217;m done with Rift.
-</p>
-
-
-<p>That left a hole in my gaming schedule that I tried to fill with some stuff on Steam but I kept getting somewhat bored with everything there, then I thought of Eve Online.</p>
-
-<!--more-->
-
-
-<p>Last time I played I left both characters logged inside a wormhole (I had to leave in a bit of a rush and hadn&#8217;t bothered resubbing up till now) and I assume that once I logged in I&#8217;d have no alternative but to self destruct both my boat and pod in order to get out of there since I had serious doubts my old corp/alliance would still be there. As it turns out, not only are they still there&#8230;I was in my home system when I logged. You know, the place where your medical clone is. In this case, high sec. I ended up loosing a few drakes and a few pvp boats but the Abaddon I was flying wasn&#8217;t lost. Woot!</p>
-
-<p>Been playing it for a while now, not much has changed. Been considering moving into some sort of null space corp with the combat pilot since wormhole life burned me out a bit faster than I expected. All the scanning involved eventually got to me, I found myself spending more time scanning than actually doing something I enjoy. As for the other pilot, being so close to a Jump Freighter and Rorqual I figured I&#8217;d might as well take advantage of having jump skills already done and train him up for a carrier too. That should keep me busy for a while.</p>
-
-<p>In the mean time I&#8217;ve been putting my excel fu to the test and doing some market work earning a few iskies in the process. Also, stuff is kind of unstable in Eve due to the micro transaction monoclegate but I won&#8217;t talk about it here.</p>
-
-<p>But enough about games. I&#8217;m a huge nerd, that&#8217;s what you&#8217;re thinking. Right?</p>
-
-<p>There&#8217;s on TV Show I&#8217;ve absolutely fell in love with. <a href="http://www.imdb.com/title/tt0944947/" target="_blank">Game of Thrones</a>. That thing is absolutely amazing, made me want to get the books and read them just so I know how the story develops and possibly ends. It has all the elements I love about stuff like the Dune universe like politics and schemes within schemes mixed with a fantasy world where dragons and undead are a threat. In one word, awesomeness.</p>
-
-<p>Been watching <a href="http://www.imdb.com/title/tt1582457/" target="_blank">The Borgias</a> as well but I think I might have been spoiled by Game of Thrones since I find myself a bit bored while watching it and thinking about how good GoT is. If i&#8217;d seen this before GoT I&#8217;d have enjoyed it a <em>lot</em> more.</p>
-
-<p>That&#8217;s it for now. Cheers :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[One Year Uptime, Rift and Some Other Stuff]]></title>
     <link href="http://ncatarino.github.io/archives/843"/>
     <updated>2011-03-07T00:00:00+00:00</updated>
@@ -110,7 +79,7 @@
     <updated>2011-01-07T00:00:00+00:00</updated>
     <id>http://ncatarino.github.io/archives/cyanogen-on-the-spica-gaming-and-a-small-update</id>
     <content type="html"><![CDATA[<p style="text-align: justify;">
-  <a href="http://ncatarino.net/wp-content/uploads/2011/01/spicaquadrant.png"><img class="alignright size-medium wp-image-826" title="spicaquadrant" src="http://ncatarino.net/wp-content/uploads/2011/01/spicaquadrant-200x300.png" alt="" width="200" height="300" /></a>So, it seems Cyanogenmod is here to stay on the Spica. Just as long as criminal (one of the developers @ samdroid.net) doesn&#8217;t feel like it&#8217;s time to call it quits. I&#8217;m now running alpha 8.2 and I can say everything pretty much just works. The camera is now in color and I&#8217;m yet to find something that doesn&#8217;t work like it&#8217;s intended. Supposedly hardware acceleration for divx doesn&#8217;t work, but I don&#8217;t watch divx on the phone anyway, so that&#8217;s fine.
+  So, it seems Cyanogenmod is here to stay on the Spica. Just as long as criminal (one of the developers @ samdroid.net) doesn&#8217;t feel like it&#8217;s time to call it quits. I&#8217;m now running alpha 8.2 and I can say everything pretty much just works. The camera is now in color and I&#8217;m yet to find something that doesn&#8217;t work like it&#8217;s intended. Supposedly hardware acceleration for divx doesn&#8217;t work, but I don&#8217;t watch divx on the phone anyway, so that&#8217;s fine.
 </p>
 
 
@@ -162,6 +131,27 @@
   Spent both christmas and new year&#8217;s with the family, couldn&#8217;t quite get myself to go out and party. Really didn&#8217;t felt like it. So&#8230;this thing needed and update and I guess this is it :)
 </p>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FPS Problems in Fallout: New Vegas]]></title>
+    <link href="http://ncatarino.github.io/archives/719"/>
+    <updated>2010-10-23T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/fps-problems-in-fallout-new-vegas</id>
+    <content type="html"><![CDATA[<p>I&#8217;ll start by saying I&#8217;m mostly an Xbox gamer and that my desktop PC isn&#8217;t exactly assembled with state of the art gear but it generally handles gaming titles coming out recently quite well. It currently runs with an Intel Core 2 Duo E7400 CPU @2.80Ghz with 4gb ram and a Geforce GTS 250 1gb. Most if not all games run with graphic settings all the way up without any noticeable performance loss, right up until I got my hands on Fallout: New Vegas.</p>
+
+<p>I noticed some FPS loss (sometimes drastic) mostly when NPCs were about to show on screen or were already on my field of view and I thought to myself the game&#8217;s engine must&#8217;ve had a serious overhaul but I couldn&#8217;t really spot where since it all seemed like a Fallout 3 visual experience.</p>
+
+<p>I proceeded to update my nvidia drivers (was using <em>really</em> old ones) and that improved things a bit but I still had some FPS drops.</p>
+
+<p>Then I googled it a bit and found out a lot of folks were having the same issues, including Xbox gamers, so it must be a nasty bug on the game and needs to be patched asap. While we wait for a patch though, I found a fix that worked for me right <a href="http://www.newvegasnexus.com/downloads/file.php?id=34778" target="_blank">here</a>. Quoting from the site:</p>
+
+<blockquote><p>&#8220;This .dll file is essentially a light-wrapper for a &#8216;supported&#8217; video card&#8217;s .dll, which tricks the game into configuring its FaceGen software (which was causing the problem) in a more efficient manner. &#8220;</p></blockquote>
+
+<p>I dropped it in the specified folder and everything runs mega smoothly now even with all the graphic settings turned all the way up.</p>
+
+<p>I&#8217;m glad I didn&#8217;t get the Xbox version if the FPS drop issue is anywhere near the PC one, at least till a patch fixes it. Even then I don&#8217;t think I&#8217;ll get it though, the PC version is a <em>lot</em> more versatile in terms of mods we can apply to the game. Naked NPCs running aroud mod, anyone?</p>
 ]]></content>
   </entry>
   

@@ -93,14 +93,23 @@
 
 <div class="entry-content"><p>The recent update to 10.10 on my desktop box ran without any major issues, but not without issues. VMware stopped working and complained about not being able to build needed kernel modules. After a quick google search I found this. Issue the following commands on your console.</p>
 
-<blockquote><p>cd /tmp<br/>
-wget <a rel="nofollow" href="http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash"><a href="http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash">http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash</a></a><br/>
-sudo chmod +x vmware7.1.1-patch-kernel-2.6.35.bash<br/>
-sudo ./vmware7.1.1-patch-kernel-2.6.35.bash</p></blockquote>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> /tmp
+</span><span class='line'>wget &lt;a <span class="nv">rel</span><span class="o">=</span><span class="s2">&quot;nofollow&quot;</span> <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash&quot;</span>&gt;http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash&lt;/a&gt;
+</span><span class='line'>sudo chmod +x vmware7.1.1-patch-kernel-2.6.35.bash
+</span><span class='line'>sudo ./vmware7.1.1-patch-kernel-2.6.35.bash
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Then the script tells you to issue the following command:</p>
 
-<blockquote><p>sudo vmware-modconfig &#8211;console &#8211;install-all</p></blockquote>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo vmware-modconfig &amp;#8211;console &amp;#8211;install-all
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>And that&#8217;s it.</p>
 

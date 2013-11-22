@@ -102,25 +102,42 @@
 
 <p>Create a gps.conf file containing:</p>
 
-<blockquote><p>NTP_SERVER=pt.pool.ntp.org<br/>
-XTRA_SERVER_1=<a href="http://xtra1.gpsonextra.net/xtra.bin  ">http://xtra1.gpsonextra.net/xtra.bin  </a>
-XTRA_SERVER_2=<a href="http://xtra2.gpsonextra.net/xtra.bin  ">http://xtra2.gpsonextra.net/xtra.bin  </a>
-XTRA_SERVER_3=<a href="http://xtra3.gpsonextra.net/xtra.bin  ">http://xtra3.gpsonextra.net/xtra.bin  </a>
-SUPL_HOST=supl.google.com<br/>
-SUPL_PORT=7276</p></blockquote>
+<figure class='code'><figcaption><span>gps.conf</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">NTP_SERVER</span><span class="o">=</span>pt.pool.ntp.org
+</span><span class='line'>XTRA<span class="se">\_</span>SERVER<span class="se">\_</span>1<span class="o">=</span>http://xtra1.gpsonextra.net/xtra.bin
+</span><span class='line'>XTRA<span class="se">\_</span>SERVER<span class="se">\_</span>2<span class="o">=</span>http://xtra2.gpsonextra.net/xtra.bin
+</span><span class='line'>XTRA<span class="se">\_</span>SERVER<span class="se">\_</span>3<span class="o">=</span>http://xtra3.gpsonextra.net/xtra.bin
+</span><span class='line'><span class="nv">SUPL_HOST</span><span class="o">=</span>supl.google.com
+</span><span class='line'><span class="nv">SUPL_PORT</span><span class="o">=</span>7276
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>I use <em>pt.pool.ntp.org</em> because I&#8217;m in Portugal, you may want to use something else.</p>
 
 <p>Copy gps.conf to your SD card and run:</p>
 
-<blockquote><p>adb shell</p></blockquote>
+<figure class='code'><figcaption><span>Start adb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>adb shell
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>and then type:</p>
 
-<blockquote><p>su<br/>
-remount rw<br/>
-cat /sdcard/gps.conf > /system/etc/gps.conf<br/>
-reboot</p></blockquote>
+<figure class='code'><figcaption><span>Replacing the phone&#8217;s gps.conf</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>su
+</span><span class='line'>remount rw
+</span><span class='line'>cat /sdcard/gps.conf &gt; /system/etc/gps.conf
+</span><span class='line'>reboot
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>I have experienced seriously faster gps lock times by doing this. It might have been a fluke or something already cached but the first couple of times I tried it took around 15 secs to find a lock both in Google Maps and NDrive.</p>
 
@@ -130,15 +147,27 @@ reboot</p></blockquote>
 
 <p>Again, you&#8217;ll need both root and the Android SDK installed with proper drivers for your phone.</p>
 
-<blockquote><p>adb shell<br/>
-su<br/>
-remount rw<br/>
-mv /system/etc/poweron.snd /system/etc/poweron.snd.bak</p></blockquote>
+<figure class='code'><figcaption><span>Disable Sound</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>adb shell
+</span><span class='line'>su
+</span><span class='line'>remount rw
+</span><span class='line'>mv /system/etc/poweron.snd /system/etc/poweron.snd.bak
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Also, if you&#8217;re running this on any form of Unix you might have to run adb daemon and shell with root permitions. If you ran it first without root issue the following:</p>
 
-<blockquote><p>sudo ./adb kill-server<br/>
-sudo ./adb shell</p></blockquote>
+<figure class='code'><figcaption><span>Run as root</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo ./adb <span class="nb">kill</span>-server
+</span><span class='line'>sudo ./adb shell
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
 
 <p>This example uses sudo to run as root, if you&#8217;re using <em>su</em> or already logged in as root you obviously exclude the sudo part from every command.</p>
 
