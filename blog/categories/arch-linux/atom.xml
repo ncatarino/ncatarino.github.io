@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Arch Linux | ncatarino.github.io]]></title>
+  <link href="http://ncatarino.github.io/blog/categories/arch-linux/atom.xml" rel="self"/>
+  <link href="http://ncatarino.github.io/"/>
+  <updated>2013-11-22T02:19:30+00:00</updated>
+  <id>http://ncatarino.github.io/</id>
+  <author>
+    <name><![CDATA[Nuno Catarino]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Changing Nvidia Fan Speed on Arch Linux]]></title>
+    <link href="http://ncatarino.github.io/archives/1537"/>
+    <updated>2013-11-20T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/changing-nvidia-fan-speed-on-arch-linux</id>
+    <content type="html"><![CDATA[<p>Quite some time ago I made a <a href="http://ncatarino.net/archives/573" target="_blank">post</a> about the coolbits option as a way to be able to control nvidia cards fan speed manually on Ubuntu. Things are a little bit different on Arch Linux. For starters <code>xorg.conf</code> has been somewhat deprecated and it&#8217;s preferable to make a file such as <code>/etc/X11/xorg.conf.d/20-nvidia.conf</code> with just the bit of information we want to change. We&#8217;ll edit/create that file and add something like:</p>
+
+<p>``` php 20-nvidia.conf
+Section &ldquo;Device&rdquo;</p>
+
+<pre><code>    Identifier "Nvidia Card"
+    Driver "nvidia"
+    VendorName "NVIDIA Corporation"
+    Option "NoLogo" "true"
+    Option "Coolbits" "4"
+</code></pre>
+
+<p>EndSection
+```</p>
+
+<p>The speed itself can still be configured through the <code>nvidia-settings</code> application under <code>Thermal Settings</code>. Keep in mind you&#8217;ll need nvidia&#8217;s proprietary driver for this to work and not the open source nouveau driver.</p>
+
+<p>More info on how to configure other aspects of the driver may be found <a href="https://wiki.archlinux.org/index.php/NVIDIA#Configuring" target="_blank">here</a> at Arch&#8217;s Wiki.</p>
+]]></content>
+  </entry>
+  
+</feed>

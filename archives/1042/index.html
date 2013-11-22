@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Removing Unused Languages in Swype - ncatarino.github.io</title>
+  <meta name="author" content="Nuno Catarino">
+
+  
+  <meta name="description" content="I like Swype, I really do. It&#8217;s probably the best keyboard out there for Android, definitely so if you have a 3.2&#8243; or smaller screen. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ncatarino.github.io/archives/1042">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="ncatarino.github.io" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ncatarino.github.io</a></h1>
+  
+    <h2>bla bla bla yada yada yada ad nauseam</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ncatarino.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Removing Unused Languages in Swype</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-01T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p style="text-align: justify;">
+  <a href="http://ncatarino.net/wp-content/uploads/2011/09/swype.jpg"><img class="alignright size-medium wp-image-1058" title="swype" src="http://ncatarino.net/wp-content/uploads/2011/09/swype-300x235.jpg" alt="" width="300" height="235" /></a>I like Swype, I really do. It&#8217;s probably the best keyboard out there for Android, definitely so if you have a 3.2&#8243; or smaller screen. Their betas are usually freely available, which means you get to use the latest test version for free and give them feedback on  their forums and possibly anonymous usage statistics, can&#8217;t quite remember. The big issue with Swype is you get to choose 3 language packages. English/Spanish, English/Chinese and English/All Other Languages. Since I&#8217;m a native portuguese speaker, I want to have the portuguese language on my phone. This ends up forcing me to use the &#8220;All Others&#8221; package and downloading/installing a huge file roughly around 10-12mb. Since I have 150mb internal memory, 12mb takes a big chunk out of it mostly with dictionaries and keyboards I will never use. Most keyboards have their various language modules available in the market, so if I want to use the portuguese language I just download the PT package and that&#8217;s it. With Swype that&#8217;s not so simple. I had to tweak the .apk a bit to remove all the crap I will never use and then install it again.
+</p>
+
+
+
+
+<!--more-->
+
+
+
+
+<p style="text-align: left;">
+  I remember following <span style="text-decoration: underline;"><a href="http://forum.samdroid.net/f10/roll-your-own-minimal-swype-2269/" target="_blank">this</a></span> guide a while ago and it worked, but I was using version 1.6 at the time if memory serves me correct. For some reason that goes beyond my understanding the android sdk apkbuilder wasn&#8217;t working as smoothly now and was complaining something about no zip and it being necessary to the resources. I googled it for a bit and came up with no decent solution so I tried doing it another way. Here&#8217;s how I did it. I&#8217;m not sure you need root for any of the steps on this guide, but I will always assume you have a rooted phone.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  First up, you&#8217;ll have to head on to <span style="text-decoration: underline;"><a href="http://beta.swype.com" target="_blank">http://beta.swype.com</a></span> to register, you will then point your phone browser to <a href="http://beta.swype.com/android/get/" target="_blank"><span style="text-decoration: underline;">http://beta.swype.com/android/get/</span></a> and download the beta installer. Run the installer and after you have inserted your login details and beta code he will download the latest beta which is 3.25 at the time this post and install it.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  You will then have Swype Beta installed on your phone and if you don&#8217;t speak English/Spanish/Chinese you&#8217;ll have a 10-12mb &#8220;All Other Languages&#8221; application installed under /data/app/. What you&#8217;ll want to do is use any file manager such as <a href="https://market.android.com/details?id=xcxin.filexpert&feature=search_result" target="_blank"><span style="text-decoration: underline;">File Expert</span></a> and copy the .apk from /data/app/ to your computer either by copying it to your SD and then move it or directly through wifi.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  Once the file is in your computer, rename it from .apk to .zip. This will allow you to use it as a regular zip and uncompress it to your Desktop for example. Inside the app folder navigate to <swype>/assets/files and delete all the keyboards and languages you don&#8217;t want to use. In my case it was everything mentioning an Azerty/Qwertz keyboard as well as all the other languages other than Portuguese and English US that I won&#8217;t be using. I ended up not touching files such as Edit-LS-Latin1.zkb.le and similar since I have no idea if I&#8217;ll need them and they&#8217;re only 2kb each anyway. I removed all unnecessary languages .zkb.le, .htm and -full.htm. While in this folder edit the languages.lst file and delete all languages that you won&#8217;t use. Be careful not to leave a newline character at the end of the line otherwise it will break, if you&#8217;re running Linux or OS X a simple command line editor like Pico will do fine, not sure for Windows. If you skip this step those languages will still show up under options cluttering the list and possibly crashing the software if you removed them.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  Once done, navigate to <swype>/assets/keyboards and delete all the image files for keyboard layouts you don&#8217;t use. In my case it was all the Azerty, Qwertz and Russian files. You can also remove the <swype>/assets/tutorial folder if you already know how to use Swype.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  Next up, you&#8217;ll want to remove the META-INF folder on the application&#8217;s root folder since we&#8217;ll need to sign the package again and we don&#8217;t want old signature information in the way. If you end up with &#8220;Application Not Installed&#8221; while trying to install it it&#8217;s probably because you skipped this step.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  You&#8217;ll then create an uncompressed .zip with all the files on the root folder and <em>not the root folder itself</em>. You&#8217;ll want assets/lib/res folders and other files to be on the root of the zip and not a folder named com.swype.android.inputmethod1. It is <em><span style="text-decoration: underline;"><strong>very</strong></span></em> important that you both select &#8220;store only&#8221; while zipping it (i.e., with no compression) as well as have the correct files on the root of the zip.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  Once zipped, change the file extension from .zip to .apk and move it to your SD Card. We&#8217;ll now proceed to sign and install it.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  You&#8217;ll need a small app from the market called <a href="https://market.android.com/details?id=com.stericson.signapktic&feature=search_result" target="_blank"><span style="text-decoration: underline;">Signapktic</span></a>. Install it and run it. Select the file on your SD and sign it, the procedure is quite straight forward and no step by step instructions should be needed here.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  All what&#8217;s left to do is uninstall the Swype you have installed and install the new one. You may also want to move it to your system rom space using the method on <a href="http://ncatarino.net/archives/979" target="_blank"><span style="text-decoration: underline;">this</span></a> post since it&#8217;s an app you&#8217;ll constantly be using.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  If you&#8217;ve never used Swype, here&#8217;s a small video showcasing what it can do :)
+</p>
+
+
+
+
+<p style="text-align: center;">
+  httpv://www.youtube.com/watch?v=DngXwUoyqCA
+</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nuno</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-01T00:00:00+01:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>Android</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://ncatarino.github.io/archives/1042" data-via="nncatarino" data-counturl="http://ncatarino.github.io/archives/1042" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archives/1036" title="Previous Post: What I think of Copyrights and Patents">&laquo; What I think of Copyrights and Patents</a>
+      
+      
+        <a class="basic-alignment right" href="/archives/1072" title="Next Post: My recent Cube4you order">My recent Cube4you order &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archives/1556">Using LaTeX in Portuguese</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1552">My .bashrc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1537">Changing Nvidia Fan Speed on Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1515">Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Nuno Catarino -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

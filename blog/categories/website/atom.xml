@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Website | ncatarino.github.io]]></title>
+  <link href="http://ncatarino.github.io/blog/categories/website/atom.xml" rel="self"/>
+  <link href="http://ncatarino.github.io/"/>
+  <updated>2013-11-22T02:19:30+00:00</updated>
+  <id>http://ncatarino.github.io/</id>
+  <author>
+    <name><![CDATA[Nuno Catarino]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Linklog &#038; Yahoo Pipes]]></title>
+    <link href="http://ncatarino.github.io/archives/1448"/>
+    <updated>2013-09-19T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/linkblog-yahoo-pipes</id>
+    <content type="html"><![CDATA[<p>So I found a way to combine multiple RSS feeds and present them on a single feed. Turns out Yahoo Pipes, a thing that I had never heard of before, is really useful. My mind was somewhat blown by what I can do with them. I think Yahoo needs to advertise their stuff a little better. Either that or I <em>really</em> need to pay more attention to what&#8217;s going on in the intertubes.</p>
+
+<p>In any case, I managed to combine items published through <a href="http://tt-rss.org/redmine/projects/tt-rss/wiki" target="_blank"><span style="text-decoration: underline;">tt-rss</span></a> and another linklog software thingie I use. It&#8217;s <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32" target="_blank"><span style="text-decoration: underline;">right here</span></a>. You can turn the pipe result into RSS or JSON or whatever pleases your heart. Full URL is as follows:</p>
+
+<blockquote><p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32">http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32</a></p></blockquote>
+
+<p>It&#8217;s mostly newspaper articles and tidbits of information I find useful while on the internet. It&#8217;s also available on a widget rss whatchamacallit on this website, one of the right side panels. If you have a link/linklog feed of your own please leave a comment with it, I&#8217;m always looking for decent feeds.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WordPress Android Beta and SK17i]]></title>
+    <link href="http://ncatarino.github.io/archives/1254"/>
+    <updated>2012-05-05T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/wordpress-android-app-beta-and-sk17i</id>
+    <content type="html"><![CDATA[<p>The new WordPress app for android entered beta a couple of weeks ago, it&#8217;s <em>very </em>different from what it used to be. Has a crapton of improvements over the old app and it actually makes me want to use it. In fact, this whole post will be written in it. If you use WordPress on a regular basis I strongly suggest you give it a test run!</p>
+
+<p>In other news, I&#8217;m still quite happy with the SK17i I bought a few weeks ago. The battery though if at first glance might seem a bit underpowered, I haven&#8217;t found it needing. The phone never died on me with moderate/intense daily usage before I set it up charging for the night before I go to bed, that&#8217;s all I really want on a phone.<br/>
+ICS should be made available through PC Companion later this month, tough it&#8217;ll be a while till I update as I like to read up on reviews and eventual bugs before I make any major jump. In any case, I already have the root procedures for ICS bookmarked and I&#8217;ll keep both a nandroid backup as well as GB firmware files in case I decide to downgrade. A performance loss is to be expected but I&#8217;m guessing from other Xperia models that already had the update it&#8217;ll be a tolerable performance loss. It runs <em>extremely </em>snappy on GB and I guess I don&#8217;t mind a choke here and there while running ICS.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Funny Spam]]></title>
+    <link href="http://ncatarino.github.io/archives/1129"/>
+    <updated>2011-12-05T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/funny-spam</id>
+    <content type="html"><![CDATA[<p>Some of the spam <a href="http://akismet.com/" target="_blank">Akismet</a> filters out on this website is hilarious.</p>
+
+<blockquote><p>Excellent site. Lots of helpful info here. I’m sending it to some pals ans additionally sharing in delicious. And obviously, thanks to your sweat!</p></blockquote>
+
+<p>Sure thing man, my sweat says it&#8217;s no problem.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Align Images in WordPress&#8217; RSS Feed]]></title>
+    <link href="http://ncatarino.github.io/archives/997"/>
+    <updated>2011-08-09T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/align-images-in-wordpress-rss-feed</id>
+    <content type="html"><![CDATA[<p>One of the things that started to bug me lately was how images were all over the place on the site&#8217;s RSS feed. This ruined formatting and really made the whole thing quite messy if any of you out there read what I post here through RSS.</p>
+
+<p>As it turns out the fix is as simple as installing a plugin that solves that. It&#8217;s called <span style="text-decoration: underline;"><a href="http://wordpress.org/extend/plugins/align-rss-images/" target="_blank">Align RSS Images</a></span> and you can install it just like any other plugin. Easy peasy.</p>
+
+<p>Via: <a href="http://www.techerator.com/2010/03/wordpress-fix-how-to-properly-align-images-in-rss-feeds/" target="_blank">Techerator</a></p>
+]]></content>
+  </entry>
+  
+</feed>

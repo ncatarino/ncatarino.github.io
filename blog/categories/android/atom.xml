@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | ncatarino.github.io]]></title>
+  <link href="http://ncatarino.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://ncatarino.github.io/"/>
+  <updated>2013-11-22T02:19:30+00:00</updated>
+  <id>http://ncatarino.github.io/</id>
+  <author>
+    <name><![CDATA[Nuno Catarino]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[BQ Aquaris 5 Root &#038; Recovery]]></title>
+    <link href="http://ncatarino.github.io/archives/1424"/>
+    <updated>2013-08-28T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/bq-aquaris-5-root-recovery</id>
+    <content type="html"><![CDATA[<p>New gadget thingie. As usual I&#8217;m posting some stuff here so I won&#8217;t forget it and know where to find it in case I need all the info again.</p>
+
+<p><strong>Rooting the BQ Aquaris 5</strong></p>
+
+<ul>
+<li>First, grab <a href="https://mega.co.nz/#!eFdwWJwL!JdQlQy438CHR5ZX_X6dGOTePh8pWVwpavHfWOmIUQv8" target="_blank"><span style="text-decoration: underline;">this file</span></a> and unpack it somewhere on our computer, we&#8217;ll need a Windows computer for the next few steps.</li>
+<li>I&#8217;m not sure if you need to install the PDANet stuff on the &#8220;Driver&#8221; folder, but I ended up doing it anyway. Didn&#8217;t run into any driver problems when I plugged the phone into the computer so I guess it works just fine.</li>
+<li>Navigate to Settings / About Phone on the device and press &#8220;Build Number&#8221; fast a few times until a popup tells you &#8220;Developer Options&#8221; are available.</li>
+<li>Navigate to Settings / Developer Options and enable &#8220;USB Debugging&#8221;</li>
+<li>Plug the phone into the computer and wait till it&#8217;s recognized. Make sure it has correct drivers.</li>
+<li>Go into the &#8220;Ejecutable&#8221; folder from the .rar you unpacked and you&#8217;ll find a &#8220;runme.bat&#8221;. Right click it and run as administrator, just in case it needs elevated privileges.</li>
+<li>A console will pop up, read what it says and press enter a few times.</li>
+<li>Done.</li>
+</ul>
+
+
+<!--more-->
+
+
+<p><strong>Installing CWM Recovery on the BQ Aquaris 5</strong></p>
+
+<ul>
+<li>Your phone will need to be rooted for this.</li>
+<li>You&#8217;ll need to install <a href="https://play.google.com/store/apps/details?id=com.mobileuncle.toolbox" target="_blank"><span style="text-decoration: underline;">Mobileuncle MTK Tools</span></a> on the phone.</li>
+<li>Next up, grab this <a href="https://mega.co.nz/#!aE00VJhC!eZj-el7sNosxuVpgoOfK5lOzn5xkaD1YMz5Ehq0d_S0" target="_blank"><span style="text-decoration: underline;">recovery image</span></a> and drop it on the root of the phone&#8217;s sd card.</li>
+<li>Fire up MTK Tools and press &#8220;Recovery Update&#8221;.</li>
+<li>Next, select the &#8220;recovery.img&#8221; present in your sdcard.</li>
+<li>Accept the dialog asking if you&#8217;re sure you want to replace the recovery image.</li>
+<li>Accept the dialog asking you to reboot the phone to recovery.</li>
+<li>Done.</li>
+</ul>
+
+
+<p>Easy as crap, right? To think I used to have to flash entire roms just to have root and/or a custom recovery.</p>
+
+<p>Via: <a href="http://taliandroid.com/root-recovery-bq-aquaris-5/" target="_blank"><span style="text-decoration: underline;">Taliandroid</span></a> and the <a href="http://www.htcmania.com/showthread.php?t=578666" target="_blank"><span style="text-decoration: underline;">htcmania forums</span></a>. Full credit goes to them, all I&#8217;ve done is post it on my personal blog so I&#8217;d have an easy to find (for me) spot so I won&#8217;t eventually forget about all this info. Guess I ended up translating the stuff but that&#8217;s not really as important as the original info itself.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nexus 7 Bootloader Unlock &#038; Root]]></title>
+    <link href="http://ncatarino.github.io/archives/1340"/>
+    <updated>2013-01-17T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/nexus-7-bootloader-unlock-root</id>
+    <content type="html"><![CDATA[<p>Quick update here, the Nexus 7 is rooted. I found that I miss little things <a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup" target="_blank">Titanium Backup</a> and <a href="https://play.google.com/store/apps/details?id=org.adaway" target="_blank">AdAway</a> a bit too much.</p>
+
+<p>The whole process is pretty straight forward, quite possibly the easiest rooting I had to do. Push 2 buttons and that&#8217;s it. I used <a href="http://www.wugfresh.com/nrt/" target="_blank">this</a> tool. There&#8217;s <a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank">another way</a> of doing it that incidentally also has a few more tools and options that can make your life easier but the graphical interface and literally &#8220;push 2 buttons and we&#8217;re done&#8221; thing makes the first one a fair bit more attractive if all you want is unlocking the bootloader and rooting.<a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank"><br /> </a></p>
+
+<p>I won&#8217;t make a guide on how to do it since, like I said, the whole process is as easy as it can be. Really. Pushing 2 buttons is all you have to do. And if you find that pushing 2 buttons is too hard for you, the guide/tutorial that comes with the app makes it literally idiot proof.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nexus 7]]></title>
+    <link href="http://ncatarino.github.io/archives/1323"/>
+    <updated>2012-12-30T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/nexus-7</id>
+    <content type="html"><![CDATA[<p>So, yeah. I got a Nexus 7.</p>
+
+<p>For a while now I&#8217;ve been tempted to get an e-paper Kindle so I could have the current book I&#8217;m reading with me at all times without having to carry the /sometimes/ equivalent of a cereal box with me. I kid you not, some of those Stephen King books are huge.</p>
+
+<p>Though perfect for books, that&#8217;s all those Kindles are good for..books. There&#8217;s no other media consumption available for them. No video, no audio. Just books.</p>
+
+<p>In the meantime, I found myself increasingly watching more and more youtube videos with tutorials/howtos and various other assorted stuff on my phone. Don&#8217;t get me wrong, my phone has the perfect size for a phone and I love it. But for videos that thing makes my eyes start to twitch after a while. That got me into the Kindle Fire territory. Books <em>and </em>media consumption.</p>
+
+<p>One thing led to another and if the Fire looked good with it&#8217;s size and price range, when the Nexus 7 came out I figured I might as well get a proper Android experience instead of an Amazon only thing. It&#8217;s true I could root and rom the Fire, but why go for all that trouble when I could just get the same thing directly from Google with the bonus effect that the Nexus is usually the first &#8220;brand&#8221; to get Android system updates? The screen on these tablets is far from being as comfortable to read as e-paper, but hey..I want my youtube videos. And truth be told, 1280*800 on a 7&#8243; screen makes for crisp clear text. My eyes have yet to complain even after spending a couple of hours straight staring at it. Typing on it is also a surprisingly good experience. My fat fingers that led me to get a phone with a physical qwerty keyboard are having no trouble at all finding those darned keys.</p>
+
+<p>I&#8217;m glad the Nexus 7 was my first tablet, it&#8217;s a pretty good one as far as I can tell. I&#8217;m yet to find something to whine and moan about, and coming from me that&#8217;s a good thing. All in all, it&#8217;s the perfect price range with the perfect size in a little piece of really fast hardware with support directly from Google. If you&#8217;re considering getting one go for it.</p>
+
+<p>I guess that a while not too long from now I&#8217;ll root and customize it to my liking as usual, but for now I&#8217;m enjoying the vanilla experience. Once a month has gone since when I got it is quite probably the ideal time to get into that sort of stuff. Until then, stay tuned for possible rooting guides as I&#8217;ll more than likely make a list of all the steps and procedures I take with the help of the fine folks at XDA and post it here.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WordPress Android Beta and SK17i]]></title>
+    <link href="http://ncatarino.github.io/archives/1254"/>
+    <updated>2012-05-05T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/wordpress-android-app-beta-and-sk17i</id>
+    <content type="html"><![CDATA[<p>The new WordPress app for android entered beta a couple of weeks ago, it&#8217;s <em>very </em>different from what it used to be. Has a crapton of improvements over the old app and it actually makes me want to use it. In fact, this whole post will be written in it. If you use WordPress on a regular basis I strongly suggest you give it a test run!</p>
+
+<p>In other news, I&#8217;m still quite happy with the SK17i I bought a few weeks ago. The battery though if at first glance might seem a bit underpowered, I haven&#8217;t found it needing. The phone never died on me with moderate/intense daily usage before I set it up charging for the night before I go to bed, that&#8217;s all I really want on a phone.<br/>
+ICS should be made available through PC Companion later this month, tough it&#8217;ll be a while till I update as I like to read up on reviews and eventual bugs before I make any major jump. In any case, I already have the root procedures for ICS bookmarked and I&#8217;ll keep both a nandroid backup as well as GB firmware files in case I decide to downgrade. A performance loss is to be expected but I&#8217;m guessing from other Xperia models that already had the update it&#8217;ll be a tolerable performance loss. It runs <em>extremely </em>snappy on GB and I guess I don&#8217;t mind a choke here and there while running ICS.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SK17i Root on .62 Firmware]]></title>
+    <link href="http://ncatarino.github.io/archives/1230"/>
+    <updated>2012-04-26T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/sk17i-root-on-62-firmware</id>
+    <content type="html"><![CDATA[<p style="text-align: justify;">
+ In my last post I mentioned I got a <a href="http://www.gsmarena.com/sony_ericsson_xperia_mini_pro-3713.php" target="_blank">SK17i</a> (Sony Ericsson Xperia Mini Pro) Android phone and as usual I like to wait a couple of weeks before I root or alter it in any way just in case something goes wrong and I have to take it back. Those weeks have now come and gone and it was time to root the device and finally install stuff like Titanium Backup on it as well as a decent recovery with Nandroid. I feel like I&#8217;m stepping on eggs whenever I&#8217;m using something with no backup whatsoever so this is something I <em>really</em> must do to the phone.
+</p>
+
+
+<p>The fine folks at <a href="http://www.xda-developers.com/" target="_blank">XDA</a> had all the information and files I needed. As it turns out .62 firmware cannot be rooted using the <a href="http://forum.xda-developers.com/showthread.php?t=1296916" target="_blank">zergRush</a> method since the exploit has been patched. But following <a href="http://forum.xda-developers.com/showthread.php?t=1512530" target="_blank">this</a> thread it&#8217;s possible to use zergRush on .58 firmware and then upgrade OTA (Over The Air, the update is pushed through WiFi or 3G to your phone) and keep the phone rooted. But how exactly do we do this? Keep on reading.</p>
+
+<!--more-->
+
+
+<p>As expected, there was a <a href="http://forum.xda-developers.com/showthread.php?t=1568792" target="_blank">very useful thread</a> over at XDA with all the files and info I needed. I won&#8217;t post or host any of the files as I do not know how exactly legal are they but there are links in the thread in case you need them.</p>
+
+<p>Keep in mind I did not and do not want to unlock my bootloader as I&#8217;m quite happy with the stock rom, I just wanted root so I could make decent backups. Unlocking the bootloader would prevent me from upgrading to the official ICS build by Sony. Maybe when it&#8217;s out and I&#8217;ve been using it for a while I&#8217;ll unlock it and fiddle around with a few roms. Also, this is how I did it. There are other methods available but this is how I got mine done.</p>
+
+<p>First off we&#8217;ll need to get our hands on a few tools. Namely <a href="http://androxyde.github.com/Flashtool/" target="_blank">Flashtool</a>, 4.0.2.A.0.58 or earlier firmware for our phone so zergRush work and <a href="http://forum.xda-developers.com/showthread.php?t=1296916" target="_blank">zergRush</a> itself.</p>
+
+<p>As I mentioned we&#8217;ll need to downgrade our firmware to .58 or earlier. We&#8217;ll need Flashtool installed and the firmware files to do this.</p>
+
+<p>I recommend doing this on a laptop or a computer with an UPS. If the power gets cut mid-flash, you have yourself a brand new paperweight. Or at least a nasty headache trying to revive it.</p>
+
+<ul>
+<li>Place the firmware .ftf file in Flashtool\firmwares</li>
+<li>Start Flashtool</li>
+<li>Click the lightning button and choose Flashmode</li>
+<li>Select the firmware you copied to the firmwares folder</li>
+<li>Turn off the phone, connect the USB cable to the computer and then press volume down and connect the cable to the phone</li>
+<li>Flashtool should detect the phone and start flashing it, follow the instructions given</li>
+<li>When &#8220;Flashing completed&#8221; shows up, unplug the cable and turn it on. It&#8217;s done.</li>
+</ul>
+
+
+<p>This will leave the phone running on .58 or .42 firmware if you&#8217;re using the files in the thread I mentioned. This means zergRush will be able to exploit and root the device.</p>
+
+<ul>
+<li>Make sure you have both the Android SDK and drivers for your phone installed, I&#8217;m not sure this is absolutely needed but it doesn&#8217;t hurt to have them.</li>
+<li>Grab zergRush files from <a href="http://forum.xda-developers.com/showthread.php?p=18805532" target="_blank">this thread</a> if you haven&#8217;t already</li>
+<li>Use the USB cable to connect the phone to the computer</li>
+<li>Run &#8220;RUNME.bat&#8221;</li>
+<li>Follow the instructions given</li>
+<li>The phone will reboot at the end</li>
+<li>Congratulations, you have Superuser.apk and busybox installed as well as root access</li>
+</ul>
+
+
+<p>Next up, I installed recovery on the phone. It was as simple as going to the Market/Play Store and installing Xperia CWM Auto-Installer and following the instructions given by the app.</p>
+
+<p>What I recommend you do right after you install recovery is booting into it and doing a full Nandroid backup of everything the phone has, it&#8217;ll be simpler to flash it back to the current state in case something goes wrong. You can boot to the recovery by holding the Volume Down button when the Blue LED shows up right after you turn it on and the Sony Ericsson logo shows up.</p>
+
+<p>Right, so now we have root, we have busybox and Superuser.apk and we have recovery installed. Only thing we have to do now is upgrade it to the most current firmware. <strong>DO NOT UPDATE OVER THE AIR IF YOU HAVE UNLOCKED YOUR BOOLOADER, IT WILL BRICK THE PHONE</strong>. Well, not exactly brick as you can revive it following a few steps but it will in fact result in bootloops and other nasty stuff. Updating itself is as simple as going to Settings->About Phone->Software Upgrade and it&#8217;ll update itself Over The Air to .62 firmware. Some folks complain it doesn&#8217;t immediately tell them there&#8217;s an update available but after they turned 3G on it showed up. Even if you use WiFi to download the update itself, it seems you need to have 3G properly configured for some reason. I didn&#8217;t notice any of this.</p>
+
+<p>Again, a full Nandroid backup won&#8217;t hurt at this point. I suggest you do it.</p>
+
+<p>All credit from this info goes to the fine gentlemen at XDA. <a href="http://forum.xda-developers.com/showthread.php?t=1512530" target="_blank">This</a>, <a href="http://forum.xda-developers.com/showthread.php?t=920746" target="_blank">this</a>, <a href="http://forum.xda-developers.com/showthread.php?t=1568792" target="_blank">this</a> and <a href="http://forum.xda-developers.com/showthread.php?p=18805532" target="_blank">this</a> threads. <a href="http://forum.xda-developers.com/member.php?u=2784807" target="_blank">DooMLorD</a> for zergRush and <a href="http://forum.xda-developers.com/member.php?u=4473694" target="_blank">Someguyfromhell</a> for compiling an excelent thread on the subject and being a nice guy willing to help the most clueless of SK17i owners :) If I forgot something or someone please leave a comment or use the contact form so I can give credit where credit is due. I mostly post this here so I can learn how to do it all over again if it ever becomes necessary. I tend to forget most steps for this stuff and end up being pretty clueless without a guide or checklist.</p>
+
+<p>For future reference, DooMLorD has already come up with root for ICS. More info on <a href="http://forum.xda-developers.com/showthread.php?t=1601038" target="_blank">this</a> thread.</p>
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+</feed>

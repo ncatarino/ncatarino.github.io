@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | ncatarino.github.io]]></title>
+  <link href="http://ncatarino.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://ncatarino.github.io/"/>
+  <updated>2013-11-22T02:19:30+00:00</updated>
+  <id>http://ncatarino.github.io/</id>
+  <author>
+    <name><![CDATA[Nuno Catarino]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Changing Nvidia Fan Speed on Arch Linux]]></title>
+    <link href="http://ncatarino.github.io/archives/1537"/>
+    <updated>2013-11-20T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/changing-nvidia-fan-speed-on-arch-linux</id>
+    <content type="html"><![CDATA[<p>Quite some time ago I made a <a href="http://ncatarino.net/archives/573" target="_blank">post</a> about the coolbits option as a way to be able to control nvidia cards fan speed manually on Ubuntu. Things are a little bit different on Arch Linux. For starters <code>xorg.conf</code> has been somewhat deprecated and it&#8217;s preferable to make a file such as <code>/etc/X11/xorg.conf.d/20-nvidia.conf</code> with just the bit of information we want to change. We&#8217;ll edit/create that file and add something like:</p>
+
+<p>``` php 20-nvidia.conf
+Section &ldquo;Device&rdquo;</p>
+
+<pre><code>    Identifier "Nvidia Card"
+    Driver "nvidia"
+    VendorName "NVIDIA Corporation"
+    Option "NoLogo" "true"
+    Option "Coolbits" "4"
+</code></pre>
+
+<p>EndSection
+```</p>
+
+<p>The speed itself can still be configured through the <code>nvidia-settings</code> application under <code>Thermal Settings</code>. Keep in mind you&#8217;ll need nvidia&#8217;s proprietary driver for this to work and not the open source nouveau driver.</p>
+
+<p>More info on how to configure other aspects of the driver may be found <a href="https://wiki.archlinux.org/index.php/NVIDIA#Configuring" target="_blank">here</a> at Arch&#8217;s Wiki.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Arch Linux]]></title>
+    <link href="http://ncatarino.github.io/archives/1515"/>
+    <updated>2013-10-26T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/arch-linux</id>
+    <content type="html"><![CDATA[<p>Since I&#8217;m not really enjoying the path <a href="http://www.canonical.com/" target="_blank">Canonical </a>is headed with <a href="http://www.ubuntu.com/" target="_blank">Ubuntu </a>I was somewhat forced to consider moving to another distribution. I considered <a href="http://www.opensuse.org/" target="_blank">OpenSUSE</a> since I had it installed inside a VM and I had really enjoyed it and <a href="http://en.opensuse.org/Portal:Tumbleweed" target="_blank">Tumbleweed </a>would probably give me all I need in terms of package freshness. I also considered going back to <a href="http://www.gentoo.org/" target="_blank">Gentoo</a> but I don&#8217;t think I&#8217;d have it in me to sit and wait for the compile times every single time I wanted to install or update something. In the end my curiosity got the best of me and I decided see to what all the fuss about <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> is about.</p>
+
+<p>I&#8217;ve been using it for roughly little more than a month now and I couldn&#8217;t be happier. It took some time to get used to it, there&#8217;s always a learning curve when changing from distribution to distribution but in this case the curve was gentle enough. It&#8217;s publicized as being a somewhat non user friendly distribution but in the end all you have to learn will help you later on. You&#8217;ll find yourself being able to fix problems instead of just reinstalling everything just because you don&#8217;t even know where to begin with a fix.</p>
+
+<p>Pacman is quite probably the best package manager I&#8217;ve used and I&#8217;m throwing <a href="http://dev.gentoo.org/~zmedico/portage/doc/man/emerge.1.html" target="_blank">emerge</a> into the equation. I&#8217;m yet to need any sort of software installed that I haven&#8217;t found on the <a href="https://aur.archlinux.org/" target="_blank">Arch User Repository</a> (AUR) and though you should really learn to install AUR packages by hand first, tools like <a href="https://aur.archlinux.org/packages/pacaur/" target="_blank">Pacaur </a>and <a href="https://aur.archlinux.org/packages/yaourt/" target="_blank">Yaourt </a>turn it into an automated process.</p>
+
+<!--more-->
+
+
+<p>That said, the two biggest reasons I&#8217;m enjoying Arch so much is the fact it&#8217;s a rolling distribution and how close to upstream I am. I don&#8217;t have to &#8220;upgrade&#8221; it every X months. In fact, I could have it installed for <em>years</em> before I start considering a reinstall. It&#8217;s not based on a snapshot frozen in time who eventually (quite soon on the Linux world) gets outdated with backport support only. Software comes out upstream and it&#8217;s available as a package usually within a couple of days. Larger projects such as <a href="http://www.gnome.org/" target="_blank">Gnome</a> can take the larger part of a week to be available, but as an example once <a href="http://cinnamon.linuxmint.com/" target="_blank">Cinnamon 2.0</a> was out it was within Arch&#8217;s repositories in a couple of days. I would probably <em>not</em> use it in a production server, where Debian stable would be my first choice but for a workstation it&#8217;s really <em>really</em> good.</p>
+
+<p>The <a href="https://wiki.archlinux.org/" target="_blank">Wiki </a>~ though most expert users say the Wiki is always wrong as a joke ~ is a great source of information, there&#8217;s apparently no aspect of an Arch instalation and maintenance that isn&#8217;t covered. Some articles have even helped me loads before I even used Arch. It sometimes makes me think Arch is what Linux is supposed to be.</p>
+
+<p>The Community, famed to be a bunch of elitist jerks, are actually quite friendly &#8211; provided you a) know how to get help in the first place and not just &#8220;how do I computer???&#8221;. Logs are actually useful for a reason. b) at least read the manual (<a href="http://en.wikipedia.org/wiki/RTFM" target="_blank">RTFM</a>) of the stuff you&#8217;re trying to use or do.</p>
+
+<p>All things considered, if you&#8217;re willing to get your hands on something where <em>you</em> the user have control and not your Distribution Overlords (e.g. Canonical) give Arch a go. Installing it can be a pain since everything is CLI only but it&#8217;s well worth it in the end. Install it a couple of times inside a VM to get the hang of it, I did that and when the time came to install it on real hardware it took me ~15 minutes to get everything up and running with LUKS and LVM included in the mix.</p>
+
+<p>There are Arch based distributions out there such as <a href="http://manjaro.org/" target="_blank">Manjaro</a> and <a href="http://archbang.org/" target="_blank">Archbang</a> with installers that are a bit more user friendly but either you end up using a different repository in Manjaro&#8217;s case &#8211; a repository that is a snapshot of Arch&#8217;s repository from some time ago, defeating the purpose of staying close to upstream &#8211; or installing packages that you don&#8217;t really need in Archbang&#8217;s case. From what I&#8217;ve been told <a href="http://antergos.com/" target="_blank">Antergos</a> is pure Arch with a user friendly installer added and a small repo of it&#8217;s own, using Arch&#8217;s repositories and AUR for everything else . I haven&#8217;t used it so I can&#8217;t say I recommend it, but it may be something you&#8217;re willing to use.</p>
+]]></content>
+  </entry>
+  
+</feed>

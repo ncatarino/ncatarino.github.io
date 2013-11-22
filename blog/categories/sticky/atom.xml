@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sticky | ncatarino.github.io]]></title>
+  <link href="http://ncatarino.github.io/blog/categories/sticky/atom.xml" rel="self"/>
+  <link href="http://ncatarino.github.io/"/>
+  <updated>2013-11-22T02:19:30+00:00</updated>
+  <id>http://ncatarino.github.io/</id>
+  <author>
+    <name><![CDATA[Nuno Catarino]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cyanogen on the Spica, Gaming and a Small Update]]></title>
+    <link href="http://ncatarino.github.io/archives/823"/>
+    <updated>2011-01-07T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/cyanogen-on-the-spica-gaming-and-a-small-update</id>
+    <content type="html"><![CDATA[<p style="text-align: justify;">
+  <a href="http://ncatarino.net/wp-content/uploads/2011/01/spicaquadrant.png"><img class="alignright size-medium wp-image-826" title="spicaquadrant" src="http://ncatarino.net/wp-content/uploads/2011/01/spicaquadrant-200x300.png" alt="" width="200" height="300" /></a>So, it seems Cyanogenmod is here to stay on the Spica. Just as long as criminal (one of the developers @ samdroid.net) doesn&#8217;t feel like it&#8217;s time to call it quits. I&#8217;m now running alpha 8.2 and I can say everything pretty much just works. The camera is now in color and I&#8217;m yet to find something that doesn&#8217;t work like it&#8217;s intended. Supposedly hardware acceleration for divx doesn&#8217;t work, but I don&#8217;t watch divx on the phone anyway, so that&#8217;s fine.
+</p>
+
+
+
+
+<p style="text-align: justify;">
+  There were also some 3D drivers released for the 8.1 ported from the Samsung Intercept ones, they boosted my phone&#8217;s score on Quadrant by a ton.  From the mid 400&#8242;s to the mid 600&#8242;s.  <span style="text-decoration: line-through;">Sadly they don&#8217;t work in 8.2 but I&#8217;m sure something is being done about it</span>. There has been an update to the drivers, still haven&#8217;t installed them but will do it pretty soon. Available <a href="http://forum.samdroid.net/f53/intercept-3d-drivers-cyanogemod-3601/#post95160" target="_blank">here</a>.
+</p>
+
+
+
+
+<p style="text-align: justify;">
+  Haven&#8217;t posted here in a while, no special reason. My grandfather fell down and broke his hip, had to undergo surgery and eventually his age (87) and whatever comes with it caught up with him and he didn&#8217;t make it. He passed about a week after surgery. And that was pretty effed up.
+</p>
+
+
+
+
+<p style="text-align: justify;">
+  <!--more-->
+</p>
+
+
+
+
+<p style="text-align: justify;">
+  After that I took some time off of everything, my grandmother has alzheimer&#8217;s and can&#8217;t quite be left alone so she&#8217;s staying here at my place for the time being. All this time at home made me start serious gaming routines to pass the time. Been having tons of fun with Blood Bowl Legendary Edition and a few other games I got on Steam&#8217;s christmas deals. Blood Bowl really is a ton of fun once you get the grasp of the rules and how it&#8217;s played, have a few friends who already played it and kept on and on talking about it and when I saw it on sale at Steam I just couldn&#8217;t resist it. The only other game that has been able to keep me away from Blood Bowl is Dead Rising 2. I played the Demo on the 360 and didn&#8217;t really like it but then I gave it a little shot on the PC and it somehow feels different. It can be hella fun. What&#8217;s there not to love in zombies and a gazillion and one possible weapons to smash their heads?
+</p>
+
+
+
+
+<p style="text-align: center;">
+  httpv://youtube.com/watch?v=x-0iMaPLgQc
+</p>
+
+
+
+
+<p style="text-align: center;">
+  httpv://www.youtube.com/watch?v=uUdA2VVNY3w
+</p>
+
+
+
+
+<p style="text-align: left;">
+  Spent both christmas and new year&#8217;s with the family, couldn&#8217;t quite get myself to go out and party. Really didn&#8217;t felt like it. So&#8230;this thing needed and update and I guess this is it :)
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Boot Snow Leopard in Verbose Mode And/or 64 Bits]]></title>
+    <link href="http://ncatarino.github.io/archives/678"/>
+    <updated>2010-09-14T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/boot-snow-leopard-in-verbose-mode-andor-64-bits</id>
+    <content type="html"><![CDATA[<p style="text-align: justify;">
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/64bit.png"><img class="alignright size-medium wp-image-682" title="64bit" src="http://ncatarino.net/wp-content/uploads/2010/09/64bit-300x162.png" alt="" width="210" height="113" /></a>I&#8217;ve always been a fan of verbose booting screens letting me know what&#8217;s going on while the OS is booting and recently this came to my attention, we can do it on OS X. Booting it once in verbose mode is as simple as holding Command+V when we power it up but if we want it to act like that by default we&#8217;ll have to open a Terminal window and type the following:
+</p>
+
+
+<blockquote><p>sudo nvram boot-args=&#8221;-v&#8221;</p></blockquote>
+
+<p>To disable verbose mode type the following:</p>
+
+<blockquote><p>sudo nvram boot-args=</p></blockquote>
+
+<p>Another option we have on Snow Leopard is booting into 64 bits mode on supported machines, we can hold the 6 and the 4 keys on boot if we want to do it once but if we want it booting into 64 bits by default we&#8217;ll have to follow a few necessary steps.</p>
+
+<p>First of all we&#8217;ll need to know if we have a 64 bit EFI. Issue the following command on a Terminal window:</p>
+
+<blockquote><p>ioreg -l -p IODeviceTree | grep firmware-abi</p></blockquote>
+
+<p>We&#8217;ll either get a &#8220;EFI32&#8243; or a &#8220;EFI64&#8243; result. If we have a 64 bit EFI we&#8217;re good to go.</p>
+
+<p>Find and edit <strong>/Library/Preferences/SystemConfiguration/com.apple.Boot.plist </strong>replacing:</p>
+
+<blockquote><p><key>Kernel Flags</key><br/>
+<string></string></p></blockquote>
+
+<p>With</p>
+
+<blockquote><p><key>Kernel Flags</key><br/>
+<string>arch=x86_64</string></p></blockquote>
+
+<p>Reboot :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up Time Machine on Ubuntu 10.04]]></title>
+    <link href="http://ncatarino.github.io/archives/592"/>
+    <updated>2010-09-08T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/setting-up-time-machine-on-ubuntu-10-04</id>
+    <content type="html"><![CDATA[<p>Backups and redundancy are always important when dealing with data you&#8217;re not willing to loose overnight when your hard drives decide it&#8217;s time to meet their maker. Usually Seagate or Western Digital in my case, not that I&#8217;m complaining *knocks on wood*. Mistakes also happen and you&#8217;re bound to eventually delete or somehow damage important data on your hard drive.</p>
+
+<p>Time Machine is a piece of software introduced by Apple when Leopard was launched, it allows us to set up an external or network drive as a backup drive and it backs up data from any given point in time onwards allowing us as well to go &#8220;back in time&#8221; to any given point in the backups.</p>
+
+<p>Recently I&#8217;ve been dabbling a lot with Ubuntu and those of you who know my nerd side know already I&#8217;ve googled the hell out of it trying to maximize and/or improve stuff and I&#8217;ve come across several interesting articles I&#8217;d like to share with whoever reads this. I could just post some links, but that wouldn&#8217;t be fun and some of the links might be taken down leaving me without any source of information in case I want to repeat the process.</p>
+
+<p>On with the interesting part, setting up Ubuntu 10.04 as a Time Machine network drive.</p>
+
+<!--more-->
+
+
+<p>Ubuntu is able to <em>speak</em> the Apple language when it comes to networking, all we have to do is install the netatalk package and in case we want to be able to dinamically find the server in our finder window for example, the avahi-daemon package.</p>
+
+<blockquote><p>$ sudo apt-get install netatalk avahi-daemon</p></blockquote>
+
+<p>Everything pretty much works right out of the box, we just have to edit a text file describing what directory to use for Time Machine and restart the services.</p>
+
+<p>For this, we will edit <strong>/etc/netatak/AppleVolumes.default</strong> and add the following:</p>
+
+<blockquote><p># By default all users have access to their home directories.<br/>
+# ~/ &#8220;Home Directory&#8221;<br/>
+/TimeMachine &#8220;TimeMachine&#8221; options:tm</p></blockquote>
+
+<p>This will point netatalk to a directory called TimeMachine in our root filesystem and share it. It <em>can</em> be a directory inside your home dir. Now we have to actually create the directory and give it the correct permissions.</p>
+
+<blockquote><p>$ sudo mkdir /TimeMachine</p>
+
+<p>$ sudo chmod a+rw /TimeMachine</p></blockquote>
+
+<p>Next up, in case we want it showing up on our finder instead of having to connect to it through the &#8220;Connect to Server&#8221; dialog (afp://192.168.ip.ip), we&#8217;ll create a file named <strong>/etc/avahi/services/afpd.service </strong>and add the following content into it:</p>
+
+<blockquote><p><div>
+  <div></p>
+
+<pre><code>&lt;div&gt;
+  &lt;service-group&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;name replace-wildcards=&amp;#8221;yes&amp;#8221;&gt;%h&lt;/name&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;type&gt;_afpovertcp._tcp&lt;/type&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;port&gt;548&lt;/port&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;type&gt;_device-info._tcp&lt;/type&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;port&gt;0&lt;/port&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;txt-record&gt;model=Xserve&lt;/txt-record&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service-group&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>  </div>
+</div></p></blockquote>
+
+<div>
+  Next, we&#8217;ll restart the services. I&#8217;m not sure you actually have to restart the avahi-daemon but we&#8217;ll do it anyway.
+</div>
+
+
+<blockquote><p><div>
+  $ sudo service avahi-daemon restart
+</div></p>
+
+<p><div>
+  $ sudo service netatalk restart
+</div></p></blockquote>
+
+<div>
+  Alternatively, you can:
+</div>
+
+
+<blockquote><p><div>
+  $ sudo /etc/init.d/avahi-daemon restart
+</div></p>
+
+<p><div>
+  $ sudo /etc/init.d/netatalk restart
+</div></p></blockquote>
+
+<div>
+  Either way works fine.
+</div>
+
+
+
+
+<div>
+  And that&#8217;s it! That folder is ready to act as a Time Machine network drive for your macs :)
+</div>
+
+
+
+
+<div>
+  It is advisable to keep the folder with enough space  for your backups, usually something with twice the space of your used space in disk works but the bigger the better since it allows you to go further back in time. Folders used in these screenshots were made for example/test purposes and have nowhere near the required size to effectively act as a Time Machine server.
+</div>
+
+
+
+
+<div>
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/screen1.png"><img class="alignnone size-medium wp-image-593" title="Finder Window" src="http://ncatarino.net/wp-content/uploads/2010/09/screen1-300x181.png" alt="The server is visible in your finder window" width="300" height="181" /></a>
+</div>
+
+
+
+
+<div>
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/screen2.png"><img class="alignnone size-medium wp-image-594" title="Time Machine Window" src="http://ncatarino.net/wp-content/uploads/2010/09/screen2-300x174.png" alt="The folder is visible in your Time Machine window." width="300" height="174" /></a>
+</div>
+
+
+
+
+<div>
+  Full credit for this info goes to:
+</div>
+
+
+
+
+<div>
+  <ul>
+    <li>
+      <a href="http://sidikahawa.blogspot.com/2010/03/setting-up-time-machine-server-on-my.html" target="_blank">Sidi Kawaha</a>
+    </li>
+    <li>
+      <a href="http://www.kremalicious.com/2008/06/ubuntu-as-mac-file-server-and-time-machine-volume/" target="_blank">kremalicious</a>
+    </li>
+    <li>
+      <a href="http://ubuntuforums.org/" target="_blank">The Ubuntu Forums</a> (too many posts to list here)
+    </li>
+    <li>
+      If you feel your name should be here please press Contact on the top of this page and use it to email me
+    </li>
+  </ul>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

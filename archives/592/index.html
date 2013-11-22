@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Setting Up Time Machine on Ubuntu 10.04 - ncatarino.github.io</title>
+  <meta name="author" content="Nuno Catarino">
+
+  
+  <meta name="description" content="Backups and redundancy are always important when dealing with data you&#8217;re not willing to loose overnight when your hard drives decide it&#8217; &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ncatarino.github.io/archives/592">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="ncatarino.github.io" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ncatarino.github.io</a></h1>
+  
+    <h2>bla bla bla yada yada yada ad nauseam</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ncatarino.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Setting Up Time Machine on Ubuntu 10.04</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-08T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Backups and redundancy are always important when dealing with data you&#8217;re not willing to loose overnight when your hard drives decide it&#8217;s time to meet their maker. Usually Seagate or Western Digital in my case, not that I&#8217;m complaining *knocks on wood*. Mistakes also happen and you&#8217;re bound to eventually delete or somehow damage important data on your hard drive.</p>
+
+<p>Time Machine is a piece of software introduced by Apple when Leopard was launched, it allows us to set up an external or network drive as a backup drive and it backs up data from any given point in time onwards allowing us as well to go &#8220;back in time&#8221; to any given point in the backups.</p>
+
+<p>Recently I&#8217;ve been dabbling a lot with Ubuntu and those of you who know my nerd side know already I&#8217;ve googled the hell out of it trying to maximize and/or improve stuff and I&#8217;ve come across several interesting articles I&#8217;d like to share with whoever reads this. I could just post some links, but that wouldn&#8217;t be fun and some of the links might be taken down leaving me without any source of information in case I want to repeat the process.</p>
+
+<p>On with the interesting part, setting up Ubuntu 10.04 as a Time Machine network drive.</p>
+
+<!--more-->
+
+
+<p>Ubuntu is able to <em>speak</em> the Apple language when it comes to networking, all we have to do is install the netatalk package and in case we want to be able to dinamically find the server in our finder window for example, the avahi-daemon package.</p>
+
+<blockquote><p>$ sudo apt-get install netatalk avahi-daemon</p></blockquote>
+
+<p>Everything pretty much works right out of the box, we just have to edit a text file describing what directory to use for Time Machine and restart the services.</p>
+
+<p>For this, we will edit <strong>/etc/netatak/AppleVolumes.default</strong> and add the following:</p>
+
+<blockquote><p># By default all users have access to their home directories.<br/>
+# ~/ &#8220;Home Directory&#8221;<br/>
+/TimeMachine &#8220;TimeMachine&#8221; options:tm</p></blockquote>
+
+<p>This will point netatalk to a directory called TimeMachine in our root filesystem and share it. It <em>can</em> be a directory inside your home dir. Now we have to actually create the directory and give it the correct permissions.</p>
+
+<blockquote><p>$ sudo mkdir /TimeMachine</p>
+
+<p>$ sudo chmod a+rw /TimeMachine</p></blockquote>
+
+<p>Next up, in case we want it showing up on our finder instead of having to connect to it through the &#8220;Connect to Server&#8221; dialog (afp://192.168.ip.ip), we&#8217;ll create a file named <strong>/etc/avahi/services/afpd.service </strong>and add the following content into it:</p>
+
+<blockquote><p><div>
+  <div></p>
+
+<pre><code>&lt;div&gt;
+  &lt;service-group&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;name replace-wildcards=&amp;#8221;yes&amp;#8221;&gt;%h&lt;/name&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;type&gt;_afpovertcp._tcp&lt;/type&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;port&gt;548&lt;/port&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;type&gt;_device-info._tcp&lt;/type&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;port&gt;0&lt;/port&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;txt-record&gt;model=Xserve&lt;/txt-record&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service-group&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>  </div>
+</div></p></blockquote>
+
+<div>
+  Next, we&#8217;ll restart the services. I&#8217;m not sure you actually have to restart the avahi-daemon but we&#8217;ll do it anyway.
+</div>
+
+
+<blockquote><p><div>
+  $ sudo service avahi-daemon restart
+</div></p>
+
+<p><div>
+  $ sudo service netatalk restart
+</div></p></blockquote>
+
+<div>
+  Alternatively, you can:
+</div>
+
+
+<blockquote><p><div>
+  $ sudo /etc/init.d/avahi-daemon restart
+</div></p>
+
+<p><div>
+  $ sudo /etc/init.d/netatalk restart
+</div></p></blockquote>
+
+<div>
+  Either way works fine.
+</div>
+
+
+
+
+<div>
+  And that&#8217;s it! That folder is ready to act as a Time Machine network drive for your macs :)
+</div>
+
+
+
+
+<div>
+  It is advisable to keep the folder with enough space  for your backups, usually something with twice the space of your used space in disk works but the bigger the better since it allows you to go further back in time. Folders used in these screenshots were made for example/test purposes and have nowhere near the required size to effectively act as a Time Machine server.
+</div>
+
+
+
+
+<div>
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/screen1.png"><img class="alignnone size-medium wp-image-593" title="Finder Window" src="http://ncatarino.net/wp-content/uploads/2010/09/screen1-300x181.png" alt="The server is visible in your finder window" width="300" height="181" /></a>
+</div>
+
+
+
+
+<div>
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/screen2.png"><img class="alignnone size-medium wp-image-594" title="Time Machine Window" src="http://ncatarino.net/wp-content/uploads/2010/09/screen2-300x174.png" alt="The folder is visible in your Time Machine window." width="300" height="174" /></a>
+</div>
+
+
+
+
+<div>
+  Full credit for this info goes to:
+</div>
+
+
+
+
+<div>
+  <ul>
+    <li>
+      <a href="http://sidikahawa.blogspot.com/2010/03/setting-up-time-machine-server-on-my.html" target="_blank">Sidi Kawaha</a>
+    </li>
+    <li>
+      <a href="http://www.kremalicious.com/2008/06/ubuntu-as-mac-file-server-and-time-machine-volume/" target="_blank">kremalicious</a>
+    </li>
+    <li>
+      <a href="http://ubuntuforums.org/" target="_blank">The Ubuntu Forums</a> (too many posts to list here)
+    </li>
+    <li>
+      If you feel your name should be here please press Contact on the top of this page and use it to email me
+    </li>
+  </ul>
+</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nuno</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-08T00:00:00+01:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mac-os-x/'>Mac OS X</a>, <a class='category' href='/blog/categories/sticky/'>Sticky</a>, <a class='category' href='/blog/categories/ubuntu/'>Ubuntu</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://ncatarino.github.io/archives/592" data-via="nncatarino" data-counturl="http://ncatarino.github.io/archives/592" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archives/573" title="Previous Post: Changing nvidia fan speed on Ubuntu">&laquo; Changing nvidia fan speed on Ubuntu</a>
+      
+      
+        <a class="basic-alignment right" href="/archives/670" title="Next Post: Douglas Adams: Parrots, the Universe and Everything">Douglas Adams: Parrots, the Universe and Everything &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archives/1556">Using LaTeX in Portuguese</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1552">My .bashrc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1537">Changing Nvidia Fan Speed on Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1515">Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Nuno Catarino -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

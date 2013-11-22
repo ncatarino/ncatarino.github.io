@@ -4,7 +4,7 @@
   <title><![CDATA[ncatarino.github.io]]></title>
   <link href="http://ncatarino.github.io/atom.xml" rel="self"/>
   <link href="http://ncatarino.github.io/"/>
-  <updated>2013-11-21T23:29:19+00:00</updated>
+  <updated>2013-11-22T02:19:30+00:00</updated>
   <id>http://ncatarino.github.io/</id>
   <author>
     <name><![CDATA[Nuno Catarino]]></name>
@@ -12,5 +12,1022 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using LaTeX in Portuguese]]></title>
+    <link href="http://ncatarino.github.io/archives/1556"/>
+    <updated>2013-11-21T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/using-latex-in-portuguese</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been using LaTeX for a couple of small projects recently and I had some trouble figuring out how to make the accented characters as well as stuff like &#8216;Ç&#8217; render correctly in the end product. After some mucking about I learned that we have to use three extra packages so everything shows up nicely in the end. It probably works just as well for other languages but you may want to refer to the documentation. Here are the packages you have to use:</p>
+
+<figure class='code'><figcaption><span>Packages </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='tex'><span class='line'><span class="k">\usepackage</span><span class="na">[portuguese]</span><span class="nb">{</span>babel<span class="nb">}</span>
+</span><span class='line'><span class="k">\usepackage</span><span class="na">[utf8]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
+</span><span class='line'><span class="k">\usepackage</span><span class="na">[T1]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My .bashrc]]></title>
+    <link href="http://ncatarino.github.io/archives/1552"/>
+    <updated>2013-11-21T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/my-bashrc</id>
+    <content type="html"><![CDATA[<p>Here&#8217;s something I keep forgetting to save and/or backup, my .bashrc. The last couple of times I reinstalled or switched to another distribution I <em>did</em> remember to backup my dotfiles but I figured I might as well just post it here in case I ever need it again.</p>
+
+<p>Most of it comes from the Arch Linux Wiki, a great place for Linux information even if you <em>don&#8217;t</em> use Arch. I have then made a few tweaks from snippets I found on other websites. I can&#8217;t remember all of them since at the time I had no intention of posting this here. If you find anything that you think is yours please send me the article link so I can pingback to it. Keep in mind there are some Arch specific sections in there, feel free to edit and redistribute as you see fit.</p>
+
+<p>Since it&#8217;s quite a wall of text, I&#8217;ll drop it after a break for the website proper. If you&#8217;re reading this through an RSS reader, sorry for the wall of text.</p>
+
+<!--more-->
+
+
+
+
+<figure class='code'><figcaption><span>.bashrc</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># /etc/bash.bashrc</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># This file is sourced by all *interactive* bash shells on startup,</span>
+</span><span class='line'><span class="c"># including some apparently interactive shells such as scp and rcp</span>
+</span><span class='line'><span class="c"># that can&#39;t tolerate any output. So make sure this doesn&#39;t display</span>
+</span><span class='line'><span class="c"># anything or bad things will happen !</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Test for an interactive shell. There is no need to set anything</span>
+</span><span class='line'><span class="c"># past this point for scp and rcp, and it&#39;s important to refrain from</span>
+</span><span class='line'><span class="c"># outputting anything in those cases.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># If not running interactively, don&#39;t do anything!</span>
+</span><span class='line'><span class="o">[[</span> <span class="nv">$-</span> !<span class="o">=</span> *i* <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="k">return</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Bash won&#39;t get SIGWINCH if another process is in the foreground.</span>
+</span><span class='line'><span class="c"># Enable checkwinsize so that bash will check the terminal size when</span>
+</span><span class='line'><span class="c"># it regains control.</span>
+</span><span class='line'><span class="c"># http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)</span>
+</span><span class='line'><span class="nb">shopt</span> -s checkwinsize
+</span><span class='line'>
+</span><span class='line'><span class="c"># Enable history appending instead of overwriting.</span>
+</span><span class='line'><span class="nb">shopt</span> -s histappend
+</span><span class='line'>
+</span><span class='line'><span class="k">case</span> <span class="k">${</span><span class="nv">TERM</span><span class="k">}</span> in
+</span><span class='line'>    xterm*|rxvt*|Eterm|aterm|kterm|gnome*<span class="o">)</span>
+</span><span class='line'>        <span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="k">${</span><span class="nv">PROMPT_COMMAND</span><span class="p">:+</span><span class="nv">$PROMPT_COMMAND</span><span class="p">; </span><span class="k">}</span><span class="s1">&#39;printf &quot;\033]0;%s@%s:%s\007&quot; &quot;${USER}&quot; &quot;${HOSTNAME%%.*}&quot; &quot;${PWD/#$HOME/~}&quot;&#39;</span>
+</span><span class='line'>        ;;
+</span><span class='line'>    screen<span class="o">)</span>
+</span><span class='line'>        <span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="k">${</span><span class="nv">PROMPT_COMMAND</span><span class="p">:+</span><span class="nv">$PROMPT_COMMAND</span><span class="p">; </span><span class="k">}</span><span class="s1">&#39;printf &quot;\033_%s@%s:%s\033\\&quot; &quot;${USER}&quot; &quot;${HOSTNAME%%.*}&quot; &quot;${PWD/#$HOME/~}&quot;&#39;</span>
+</span><span class='line'>        ;;
+</span><span class='line'><span class="k">esac</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Set colorful PS1 only on colorful terminals.</span>
+</span><span class='line'><span class="c"># dircolors --print-database uses its own built-in database</span>
+</span><span class='line'><span class="c"># instead of using /etc/DIR_COLORS. Try to use the external file</span>
+</span><span class='line'><span class="c"># first to take advantage of user additions. Use internal bash</span>
+</span><span class='line'><span class="c"># globbing instead of external grep binary.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># sanitize TERM:</span>
+</span><span class='line'><span class="nv">safe_term</span><span class="o">=</span><span class="k">${</span><span class="nv">TERM</span><span class="p">//[^[:</span><span class="nv">alnum</span><span class="p">:]]/?</span><span class="k">}</span>
+</span><span class='line'><span class="nv">match_lhs</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">[[</span> -f ~/.dir_colors <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">match_lhs</span><span class="o">=</span><span class="s2">&quot;${match_lhs}$(&lt;~/.dir_colors)&quot;</span>
+</span><span class='line'><span class="o">[[</span> -f /etc/DIR_COLORS <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">match_lhs</span><span class="o">=</span><span class="s2">&quot;${match_lhs}$(&lt;/etc/DIR_COLORS)&quot;</span>
+</span><span class='line'><span class="o">[[</span> -z <span class="k">${</span><span class="nv">match_lhs</span><span class="k">}</span> <span class="o">]]</span> <span class="se">\</span>
+</span><span class='line'>    <span class="o">&amp;&amp;</span> <span class="nb">type</span> -P dircolors &gt;/dev/null <span class="se">\</span>
+</span><span class='line'>    <span class="o">&amp;&amp;</span> <span class="nv">match_lhs</span><span class="o">=</span><span class="k">$(</span>dircolors --print-database<span class="k">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[[</span> <span class="s1">$&#39;\n&#39;</span><span class="k">${</span><span class="nv">match_lhs</span><span class="k">}</span> <span class="o">==</span> *<span class="s1">$&#39;\n&#39;</span><span class="s2">&quot;TERM &quot;</span><span class="k">${</span><span class="nv">safe_term</span><span class="k">}</span>* <span class="o">]]</span> ; <span class="k">then</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c"># we have colors :-)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c"># Enable colors for ls, etc. Prefer ~/.dir_colors</span>
+</span><span class='line'>    <span class="k">if </span><span class="nb">type</span> -P dircolors &gt;/dev/null ; <span class="k">then</span>
+</span><span class='line'><span class="k">        if</span> <span class="o">[[</span> -f ~/.dir_colors <span class="o">]]</span> ; <span class="k">then</span>
+</span><span class='line'><span class="k">            </span><span class="nb">eval</span> <span class="k">$(</span>dircolors -b ~/.dir_colors<span class="k">)</span>
+</span><span class='line'>        <span class="k">elif</span> <span class="o">[[</span> -f /etc/DIR_COLORS <span class="o">]]</span> ; <span class="k">then</span>
+</span><span class='line'><span class="k">            </span><span class="nb">eval</span> <span class="k">$(</span>dircolors -b /etc/DIR_COLORS<span class="k">)</span>
+</span><span class='line'>        <span class="k">fi</span>
+</span><span class='line'><span class="k">    fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Reset</span>
+</span><span class='line'><span class="nv">Color_Off</span><span class="o">=</span><span class="s2">&quot;\[\033[0m\]&quot;</span>       <span class="c"># Text Reset</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Regular Colors</span>
+</span><span class='line'><span class="nv">Black</span><span class="o">=</span><span class="s2">&quot;\[\033[0;30m\]&quot;</span>        <span class="c"># Black</span>
+</span><span class='line'><span class="nv">Red</span><span class="o">=</span><span class="s2">&quot;\[\033[0;31m\]&quot;</span>          <span class="c"># Red</span>
+</span><span class='line'><span class="nv">Green</span><span class="o">=</span><span class="s2">&quot;\[\033[0;32m\]&quot;</span>        <span class="c"># Green</span>
+</span><span class='line'><span class="nv">Yellow</span><span class="o">=</span><span class="s2">&quot;\[\033[0;33m\]&quot;</span>       <span class="c"># Yellow</span>
+</span><span class='line'><span class="nv">Blue</span><span class="o">=</span><span class="s2">&quot;\[\033[0;34m\]&quot;</span>         <span class="c"># Blue</span>
+</span><span class='line'><span class="nv">Purple</span><span class="o">=</span><span class="s2">&quot;\[\033[0;35m\]&quot;</span>       <span class="c"># Purple</span>
+</span><span class='line'><span class="nv">Cyan</span><span class="o">=</span><span class="s2">&quot;\[\033[0;36m\]&quot;</span>         <span class="c"># Cyan</span>
+</span><span class='line'><span class="nv">White</span><span class="o">=</span><span class="s2">&quot;\[\033[0;37m\]&quot;</span>        <span class="c"># White</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Bold</span>
+</span><span class='line'><span class="nv">BBlack</span><span class="o">=</span><span class="s2">&quot;\[\033[1;30m\]&quot;</span>       <span class="c"># Black</span>
+</span><span class='line'><span class="nv">BRed</span><span class="o">=</span><span class="s2">&quot;\[\033[1;31m\]&quot;</span>         <span class="c"># Red</span>
+</span><span class='line'><span class="nv">BGreen</span><span class="o">=</span><span class="s2">&quot;\[\033[1;32m\]&quot;</span>       <span class="c"># Green</span>
+</span><span class='line'><span class="nv">BYellow</span><span class="o">=</span><span class="s2">&quot;\[\033[1;33m\]&quot;</span>      <span class="c"># Yellow</span>
+</span><span class='line'><span class="nv">BBlue</span><span class="o">=</span><span class="s2">&quot;\[\033[1;34m\]&quot;</span>        <span class="c"># Blue</span>
+</span><span class='line'><span class="nv">BPurple</span><span class="o">=</span><span class="s2">&quot;\[\033[1;35m\]&quot;</span>      <span class="c"># Purple</span>
+</span><span class='line'><span class="nv">BCyan</span><span class="o">=</span><span class="s2">&quot;\[\033[1;36m\]&quot;</span>        <span class="c"># Cyan</span>
+</span><span class='line'><span class="nv">BWhite</span><span class="o">=</span><span class="s2">&quot;\[\033[1;37m\]&quot;</span>       <span class="c"># White</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Underline</span>
+</span><span class='line'><span class="nv">UBlack</span><span class="o">=</span><span class="s2">&quot;\[\033[4;30m\]&quot;</span>       <span class="c"># Black</span>
+</span><span class='line'><span class="nv">URed</span><span class="o">=</span><span class="s2">&quot;\[\033[4;31m\]&quot;</span>         <span class="c"># Red</span>
+</span><span class='line'><span class="nv">UGreen</span><span class="o">=</span><span class="s2">&quot;\[\033[4;32m\]&quot;</span>       <span class="c"># Green</span>
+</span><span class='line'><span class="nv">UYellow</span><span class="o">=</span><span class="s2">&quot;\[\033[4;33m\]&quot;</span>      <span class="c"># Yellow</span>
+</span><span class='line'><span class="nv">UBlue</span><span class="o">=</span><span class="s2">&quot;\[\033[4;34m\]&quot;</span>        <span class="c"># Blue</span>
+</span><span class='line'><span class="nv">UPurple</span><span class="o">=</span><span class="s2">&quot;\[\033[4;35m\]&quot;</span>      <span class="c"># Purple</span>
+</span><span class='line'><span class="nv">UCyan</span><span class="o">=</span><span class="s2">&quot;\[\033[4;36m\]&quot;</span>        <span class="c"># Cyan</span>
+</span><span class='line'><span class="nv">UWhite</span><span class="o">=</span><span class="s2">&quot;\[\033[4;37m\]&quot;</span>       <span class="c"># White</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Background</span>
+</span><span class='line'><span class="nv">On_Black</span><span class="o">=</span><span class="s2">&quot;\[\033[40m\]&quot;</span>       <span class="c"># Black</span>
+</span><span class='line'><span class="nv">On_Red</span><span class="o">=</span><span class="s2">&quot;\[\033[41m\]&quot;</span>         <span class="c"># Red</span>
+</span><span class='line'><span class="nv">On_Green</span><span class="o">=</span><span class="s2">&quot;\[\033[42m\]&quot;</span>       <span class="c"># Green</span>
+</span><span class='line'><span class="nv">On_Yellow</span><span class="o">=</span><span class="s2">&quot;\[\033[43m\]&quot;</span>      <span class="c"># Yellow</span>
+</span><span class='line'><span class="nv">On_Blue</span><span class="o">=</span><span class="s2">&quot;\[\033[44m\]&quot;</span>        <span class="c"># Blue</span>
+</span><span class='line'><span class="nv">On_Purple</span><span class="o">=</span><span class="s2">&quot;\[\033[45m\]&quot;</span>      <span class="c"># Purple</span>
+</span><span class='line'><span class="nv">On_Cyan</span><span class="o">=</span><span class="s2">&quot;\[\033[46m\]&quot;</span>        <span class="c"># Cyan</span>
+</span><span class='line'><span class="nv">On_White</span><span class="o">=</span><span class="s2">&quot;\[\033[47m\]&quot;</span>       <span class="c"># White</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># High Intensty</span>
+</span><span class='line'><span class="nv">IBlack</span><span class="o">=</span><span class="s2">&quot;\[\033[0;90m\]&quot;</span>       <span class="c"># Black</span>
+</span><span class='line'><span class="nv">IRed</span><span class="o">=</span><span class="s2">&quot;\[\033[0;91m\]&quot;</span>         <span class="c"># Red</span>
+</span><span class='line'><span class="nv">IGreen</span><span class="o">=</span><span class="s2">&quot;\[\033[0;92m\]&quot;</span>       <span class="c"># Green</span>
+</span><span class='line'><span class="nv">IYellow</span><span class="o">=</span><span class="s2">&quot;\[\033[0;93m\]&quot;</span>      <span class="c"># Yellow</span>
+</span><span class='line'><span class="nv">IBlue</span><span class="o">=</span><span class="s2">&quot;\[\033[0;94m\]&quot;</span>        <span class="c"># Blue</span>
+</span><span class='line'><span class="nv">IPurple</span><span class="o">=</span><span class="s2">&quot;\[\033[0;95m\]&quot;</span>      <span class="c"># Purple</span>
+</span><span class='line'><span class="nv">ICyan</span><span class="o">=</span><span class="s2">&quot;\[\033[0;96m\]&quot;</span>        <span class="c"># Cyan</span>
+</span><span class='line'><span class="nv">IWhite</span><span class="o">=</span><span class="s2">&quot;\[\033[0;97m\]&quot;</span>       <span class="c"># White</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Bold High Intensty</span>
+</span><span class='line'><span class="nv">BIBlack</span><span class="o">=</span><span class="s2">&quot;\[\033[1;90m\]&quot;</span>      <span class="c"># Black</span>
+</span><span class='line'><span class="nv">BIRed</span><span class="o">=</span><span class="s2">&quot;\[\033[1;91m\]&quot;</span>        <span class="c"># Red</span>
+</span><span class='line'><span class="nv">BIGreen</span><span class="o">=</span><span class="s2">&quot;\[\033[1;92m\]&quot;</span>      <span class="c"># Green</span>
+</span><span class='line'><span class="nv">BIYellow</span><span class="o">=</span><span class="s2">&quot;\[\033[1;93m\]&quot;</span>     <span class="c"># Yellow</span>
+</span><span class='line'><span class="nv">BIBlue</span><span class="o">=</span><span class="s2">&quot;\[\033[1;94m\]&quot;</span>       <span class="c"># Blue</span>
+</span><span class='line'><span class="nv">BIPurple</span><span class="o">=</span><span class="s2">&quot;\[\033[1;95m\]&quot;</span>     <span class="c"># Purple</span>
+</span><span class='line'><span class="nv">BICyan</span><span class="o">=</span><span class="s2">&quot;\[\033[1;96m\]&quot;</span>       <span class="c"># Cyan</span>
+</span><span class='line'><span class="nv">BIWhite</span><span class="o">=</span><span class="s2">&quot;\[\033[1;97m\]&quot;</span>      <span class="c"># White</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># High Intensty backgrounds</span>
+</span><span class='line'><span class="nv">On_IBlack</span><span class="o">=</span><span class="s2">&quot;\[\033[0;100m\]&quot;</span>   <span class="c"># Black</span>
+</span><span class='line'><span class="nv">On_IRed</span><span class="o">=</span><span class="s2">&quot;\[\033[0;101m\]&quot;</span>     <span class="c"># Red</span>
+</span><span class='line'><span class="nv">On_IGreen</span><span class="o">=</span><span class="s2">&quot;\[\033[0;102m\]&quot;</span>   <span class="c"># Green</span>
+</span><span class='line'><span class="nv">On_IYellow</span><span class="o">=</span><span class="s2">&quot;\[\033[0;103m\]&quot;</span>  <span class="c"># Yellow</span>
+</span><span class='line'><span class="nv">On_IBlue</span><span class="o">=</span><span class="s2">&quot;\[\033[0;104m\]&quot;</span>    <span class="c"># Blue</span>
+</span><span class='line'><span class="nv">On_IPurple</span><span class="o">=</span><span class="s2">&quot;\[\033[10;95m\]&quot;</span>  <span class="c"># Purple</span>
+</span><span class='line'><span class="nv">On_ICyan</span><span class="o">=</span><span class="s2">&quot;\[\033[0;106m\]&quot;</span>    <span class="c"># Cyan</span>
+</span><span class='line'><span class="nv">On_IWhite</span><span class="o">=</span><span class="s2">&quot;\[\033[0;107m\]&quot;</span>   <span class="c"># White</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c">#Random PS1 EDIT</span>
+</span><span class='line'><span class="nv">GIT_PS1_SHOWDIRTYSTATE</span><span class="o">=</span><span class="nb">false</span>
+</span><span class='line'><span class="nb"> </span>
+</span><span class='line'><span class="k">if</span> <span class="o">[[</span> <span class="k">${</span><span class="nv">EUID</span><span class="k">}</span> <span class="o">==</span> 0 <span class="o">]]</span> ; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nv">sq_color</span><span class="o">=</span><span class="nv">$BRed</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="k">  </span><span class="nv">sq_color</span><span class="o">=</span><span class="nv">$BBlue</span>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'><span class="k"> </span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\n$sq_color\342\224\214\342\224\200\$([[ \$? != 0 ]] &amp;&amp; echo \&quot;[$BRed\342\234\227$sq_color]\342\224\200\&quot;)[$IBlack\t$sq_color]\342\224\200[\[\033[01;37m\]\u$sq_color]\342\224\200[$BGreen\w$sq_color]\n$sq_color\342\224\224\342\224\200\342\224\200&gt; $BRed\$(&quot;&quot;) $sq_color\$ $Color_Off&quot;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    <span class="nb">alias </span><span class="nv">ls</span><span class="o">=</span><span class="s2">&quot;ls --color=auto&quot;</span>
+</span><span class='line'>    <span class="nb">alias </span><span class="nv">dir</span><span class="o">=</span><span class="s2">&quot;dir --color=auto&quot;</span>
+</span><span class='line'>    <span class="nb">alias </span><span class="nv">grep</span><span class="o">=</span><span class="s2">&quot;grep --color=auto&quot;</span>
+</span><span class='line'>    <span class="nb">alias </span><span class="nv">dmesg</span><span class="o">=</span><span class="s1">&#39;dmesg --color&#39;</span>
+</span><span class='line'>    man<span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        env <span class="nv">LESS_TERMCAP_mb</span><span class="o">=</span><span class="s1">$&#39;\E[01;31m&#39;</span> <span class="se">\</span>
+</span><span class='line'>        <span class="nv">LESS_TERMCAP_md</span><span class="o">=</span><span class="s1">$&#39;\E[01;38;5;74m&#39;</span> <span class="se">\</span>
+</span><span class='line'>        <span class="nv">LESS_TERMCAP_me</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="se">\</span>
+</span><span class='line'>        <span class="nv">LESS_TERMCAP_se</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="se">\</span>
+</span><span class='line'>        <span class="nv">LESS_TERMCAP_so</span><span class="o">=</span><span class="s1">$&#39;\E[38;5;246m&#39;</span> <span class="se">\</span>
+</span><span class='line'>        <span class="nv">LESS_TERMCAP_ue</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="se">\</span>
+</span><span class='line'>        <span class="nv">LESS_TERMCAP_us</span><span class="o">=</span><span class="s1">$&#39;\E[04;38;5;146m&#39;</span> <span class="se">\</span>
+</span><span class='line'>        man <span class="s2">&quot;$@&quot;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c"># show root@ when we do not have colors</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\u@\h \w \$([[ \$? != 0 ]] &amp;&amp; echo \&quot;:( \&quot;)\$ &quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c"># Use this other PS1 string if you want \W for root and \w for all other users:</span>
+</span><span class='line'>    <span class="c"># PS1=&quot;\u@\h $(if [[ ${EUID} == 0 ]]; then echo &#39;\W&#39;; else echo &#39;\w&#39;; fi) \$([[ \$? != 0 ]] &amp;&amp; echo \&quot;:( \&quot;)\$ &quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">PS2</span><span class="o">=</span><span class="s2">&quot;&gt; &quot;</span>
+</span><span class='line'><span class="nv">PS3</span><span class="o">=</span><span class="s2">&quot;&gt; &quot;</span>
+</span><span class='line'><span class="nv">PS4</span><span class="o">=</span><span class="s2">&quot;+ &quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Try to keep environment pollution down, EPA loves us.</span>
+</span><span class='line'><span class="nb">unset </span>safe_term match_lhs
+</span><span class='line'>
+</span><span class='line'><span class="c"># Try to enable the auto-completion (type: &quot;pacman -S bash-completion&quot; to install it).</span>
+</span><span class='line'><span class="o">[</span> -r /usr/share/bash-completion/bash_completion <span class="o">]</span> <span class="o">&amp;&amp;</span> . /usr/share/bash-completion/bash_completion
+</span><span class='line'>
+</span><span class='line'><span class="c"># Try to enable the &quot;Command not found&quot; hook (&quot;pacman -S pkgfile&quot; to install it).</span>
+</span><span class='line'><span class="c"># See also: https://wiki.archlinux.org/index.php/Bash#The_.22command_not_found.22_hook</span>
+</span><span class='line'><span class="o">[</span> -r /usr/share/doc/pkgfile/command-not-found.bash <span class="o">]</span> <span class="o">&amp;&amp;</span> . /usr/share/doc/pkgfile/command-not-found.bash
+</span><span class='line'>
+</span><span class='line'>archey
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Changing Nvidia Fan Speed on Arch Linux]]></title>
+    <link href="http://ncatarino.github.io/archives/1537"/>
+    <updated>2013-11-20T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/changing-nvidia-fan-speed-on-arch-linux</id>
+    <content type="html"><![CDATA[<p>Quite some time ago I made a <a href="http://ncatarino.net/archives/573" target="_blank">post</a> about the coolbits option as a way to be able to control nvidia cards fan speed manually on Ubuntu. Things are a little bit different on Arch Linux. For starters <code>xorg.conf</code> has been somewhat deprecated and it&#8217;s preferable to make a file such as <code>/etc/X11/xorg.conf.d/20-nvidia.conf</code> with just the bit of information we want to change. We&#8217;ll edit/create that file and add something like:</p>
+
+<figure class='code'><figcaption><span>20-nvidia.conf</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nx">Section</span> <span class="s2">&quot;Device&quot;</span>
+</span><span class='line'>        <span class="nx">Identifier</span> <span class="s2">&quot;Nvidia Card&quot;</span>
+</span><span class='line'>        <span class="nx">Driver</span> <span class="s2">&quot;nvidia&quot;</span>
+</span><span class='line'>        <span class="nx">VendorName</span> <span class="s2">&quot;NVIDIA Corporation&quot;</span>
+</span><span class='line'>        <span class="nx">Option</span> <span class="s2">&quot;NoLogo&quot;</span> <span class="s2">&quot;true&quot;</span>
+</span><span class='line'>        <span class="nx">Option</span> <span class="s2">&quot;Coolbits&quot;</span> <span class="s2">&quot;4&quot;</span>
+</span><span class='line'><span class="nx">EndSection</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The speed itself can still be configured through the <code>nvidia-settings</code> application under <code>Thermal Settings</code>. Keep in mind you&#8217;ll need nvidia&#8217;s proprietary driver for this to work and not the open source nouveau driver.</p>
+
+<p>More info on how to configure other aspects of the driver may be found <a href="https://wiki.archlinux.org/index.php/NVIDIA#Configuring" target="_blank">here</a> at Arch&#8217;s Wiki.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Arch Linux]]></title>
+    <link href="http://ncatarino.github.io/archives/1515"/>
+    <updated>2013-10-26T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/arch-linux</id>
+    <content type="html"><![CDATA[<p>Since I&#8217;m not really enjoying the path <a href="http://www.canonical.com/" target="_blank">Canonical </a>is headed with <a href="http://www.ubuntu.com/" target="_blank">Ubuntu </a>I was somewhat forced to consider moving to another distribution. I considered <a href="http://www.opensuse.org/" target="_blank">OpenSUSE</a> since I had it installed inside a VM and I had really enjoyed it and <a href="http://en.opensuse.org/Portal:Tumbleweed" target="_blank">Tumbleweed </a>would probably give me all I need in terms of package freshness. I also considered going back to <a href="http://www.gentoo.org/" target="_blank">Gentoo</a> but I don&#8217;t think I&#8217;d have it in me to sit and wait for the compile times every single time I wanted to install or update something. In the end my curiosity got the best of me and I decided see to what all the fuss about <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> is about.</p>
+
+<p>I&#8217;ve been using it for roughly little more than a month now and I couldn&#8217;t be happier. It took some time to get used to it, there&#8217;s always a learning curve when changing from distribution to distribution but in this case the curve was gentle enough. It&#8217;s publicized as being a somewhat non user friendly distribution but in the end all you have to learn will help you later on. You&#8217;ll find yourself being able to fix problems instead of just reinstalling everything just because you don&#8217;t even know where to begin with a fix.</p>
+
+<p>Pacman is quite probably the best package manager I&#8217;ve used and I&#8217;m throwing <a href="http://dev.gentoo.org/~zmedico/portage/doc/man/emerge.1.html" target="_blank">emerge</a> into the equation. I&#8217;m yet to need any sort of software installed that I haven&#8217;t found on the <a href="https://aur.archlinux.org/" target="_blank">Arch User Repository</a> (AUR) and though you should really learn to install AUR packages by hand first, tools like <a href="https://aur.archlinux.org/packages/pacaur/" target="_blank">Pacaur </a>and <a href="https://aur.archlinux.org/packages/yaourt/" target="_blank">Yaourt </a>turn it into an automated process.</p>
+
+<!--more-->
+
+
+<p>That said, the two biggest reasons I&#8217;m enjoying Arch so much is the fact it&#8217;s a rolling distribution and how close to upstream I am. I don&#8217;t have to &#8220;upgrade&#8221; it every X months. In fact, I could have it installed for <em>years</em> before I start considering a reinstall. It&#8217;s not based on a snapshot frozen in time who eventually (quite soon on the Linux world) gets outdated with backport support only. Software comes out upstream and it&#8217;s available as a package usually within a couple of days. Larger projects such as <a href="http://www.gnome.org/" target="_blank">Gnome</a> can take the larger part of a week to be available, but as an example once <a href="http://cinnamon.linuxmint.com/" target="_blank">Cinnamon 2.0</a> was out it was within Arch&#8217;s repositories in a couple of days. I would probably <em>not</em> use it in a production server, where Debian stable would be my first choice but for a workstation it&#8217;s really <em>really</em> good.</p>
+
+<p>The <a href="https://wiki.archlinux.org/" target="_blank">Wiki </a>~ though most expert users say the Wiki is always wrong as a joke ~ is a great source of information, there&#8217;s apparently no aspect of an Arch instalation and maintenance that isn&#8217;t covered. Some articles have even helped me loads before I even used Arch. It sometimes makes me think Arch is what Linux is supposed to be.</p>
+
+<p>The Community, famed to be a bunch of elitist jerks, are actually quite friendly &#8211; provided you a) know how to get help in the first place and not just &#8220;how do I computer???&#8221;. Logs are actually useful for a reason. b) at least read the manual (<a href="http://en.wikipedia.org/wiki/RTFM" target="_blank">RTFM</a>) of the stuff you&#8217;re trying to use or do.</p>
+
+<p>All things considered, if you&#8217;re willing to get your hands on something where <em>you</em> the user have control and not your Distribution Overlords (e.g. Canonical) give Arch a go. Installing it can be a pain since everything is CLI only but it&#8217;s well worth it in the end. Install it a couple of times inside a VM to get the hang of it, I did that and when the time came to install it on real hardware it took me ~15 minutes to get everything up and running with LUKS and LVM included in the mix.</p>
+
+<p>There are Arch based distributions out there such as <a href="http://manjaro.org/" target="_blank">Manjaro</a> and <a href="http://archbang.org/" target="_blank">Archbang</a> with installers that are a bit more user friendly but either you end up using a different repository in Manjaro&#8217;s case &#8211; a repository that is a snapshot of Arch&#8217;s repository from some time ago, defeating the purpose of staying close to upstream &#8211; or installing packages that you don&#8217;t really need in Archbang&#8217;s case. From what I&#8217;ve been told <a href="http://antergos.com/" target="_blank">Antergos</a> is pure Arch with a user friendly installer added and a small repo of it&#8217;s own, using Arch&#8217;s repositories and AUR for everything else . I haven&#8217;t used it so I can&#8217;t say I recommend it, but it may be something you&#8217;re willing to use.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Making a OS X 10.9 Mavericks Install USB Drive]]></title>
+    <link href="http://ncatarino.github.io/archives/1488"/>
+    <updated>2013-10-23T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/making-a-os-x-10-9-mavericks-install-usb-drive</id>
+    <content type="html"><![CDATA[<p>Apparently the days of getting new releases of OS X on DVDs is long gone and instead it&#8217;s made available in the App Store. If you&#8217;re upgrading your existing OS X install you probably have no need for physical media to install it but if you&#8217;re willing to do a clean install the .dmg you get from the App Store isn&#8217;t very useful. You&#8217;ll have to make your own physical install media.</p>
+
+<p>I&#8217;ve read about Lion Disk Maker and other extensive ways with multiple steps to build a USB thumb drive capable of installing OS X from scratch. But then I came across a single Terminal command line that does absolutely everything and leaves the USB thumb drive ready to install everything. You&#8217;ll need a comfortably sized drive &#8211; 8GB should be enough. If possible buy a new one and don&#8217;t use it for anything else other than being your OS X install media. First, download Mavericks from the App Store. Then open up a Terminal, plug in your USB drive and type the following &#8211; you can use TAB to autocomplete folder names:</p>
+
+<figure class='code'><figcaption><span>Making a OS X 10.9 Mavericks Install USB Drive</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo /Applications/Install<span class="se">\ </span>OS<span class="se">\ </span>X<span class="se">\ </span>Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install<span class="se">\ </span>OS<span class="se">\ </span>X<span class="se">\ </span>Mavericks.app --nointeraction
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Replace <code>/Volumes/Untitled</code> with <code>/Volumes/YourUsbDriveName</code>. Insert your password, wait for some time (I went to get dinner, when I came back ~20 mins later it was still running) and BAM &#8211; Bob&#8217;s your uncle. Reboot, pick booting from the USB drive (hold Option while booting so you can choose) and you&#8217;re good to go.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Linklog &#038; Yahoo Pipes]]></title>
+    <link href="http://ncatarino.github.io/archives/1448"/>
+    <updated>2013-09-19T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/linkblog-yahoo-pipes</id>
+    <content type="html"><![CDATA[<p>So I found a way to combine multiple RSS feeds and present them on a single feed. Turns out Yahoo Pipes, a thing that I had never heard of before, is really useful. My mind was somewhat blown by what I can do with them. I think Yahoo needs to advertise their stuff a little better. Either that or I <em>really</em> need to pay more attention to what&#8217;s going on in the intertubes.</p>
+
+<p>In any case, I managed to combine items published through <a href="http://tt-rss.org/redmine/projects/tt-rss/wiki" target="_blank"><span style="text-decoration: underline;">tt-rss</span></a> and another linklog software thingie I use. It&#8217;s <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32" target="_blank"><span style="text-decoration: underline;">right here</span></a>. You can turn the pipe result into RSS or JSON or whatever pleases your heart. Full URL is as follows:</p>
+
+<blockquote><p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32">http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32</a></p></blockquote>
+
+<p>It&#8217;s mostly newspaper articles and tidbits of information I find useful while on the internet. It&#8217;s also available on a widget rss whatchamacallit on this website, one of the right side panels. If you have a link/linklog feed of your own please leave a comment with it, I&#8217;m always looking for decent feeds.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BQ Aquaris 5 Root &#038; Recovery]]></title>
+    <link href="http://ncatarino.github.io/archives/1424"/>
+    <updated>2013-08-28T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/bq-aquaris-5-root-recovery</id>
+    <content type="html"><![CDATA[<p>New gadget thingie. As usual I&#8217;m posting some stuff here so I won&#8217;t forget it and know where to find it in case I need all the info again.</p>
+
+<p><strong>Rooting the BQ Aquaris 5</strong></p>
+
+<ul>
+<li>First, grab <a href="https://mega.co.nz/#!eFdwWJwL!JdQlQy438CHR5ZX_X6dGOTePh8pWVwpavHfWOmIUQv8" target="_blank"><span style="text-decoration: underline;">this file</span></a> and unpack it somewhere on our computer, we&#8217;ll need a Windows computer for the next few steps.</li>
+<li>I&#8217;m not sure if you need to install the PDANet stuff on the &#8220;Driver&#8221; folder, but I ended up doing it anyway. Didn&#8217;t run into any driver problems when I plugged the phone into the computer so I guess it works just fine.</li>
+<li>Navigate to Settings / About Phone on the device and press &#8220;Build Number&#8221; fast a few times until a popup tells you &#8220;Developer Options&#8221; are available.</li>
+<li>Navigate to Settings / Developer Options and enable &#8220;USB Debugging&#8221;</li>
+<li>Plug the phone into the computer and wait till it&#8217;s recognized. Make sure it has correct drivers.</li>
+<li>Go into the &#8220;Ejecutable&#8221; folder from the .rar you unpacked and you&#8217;ll find a &#8220;runme.bat&#8221;. Right click it and run as administrator, just in case it needs elevated privileges.</li>
+<li>A console will pop up, read what it says and press enter a few times.</li>
+<li>Done.</li>
+</ul>
+
+
+<!--more-->
+
+
+<p><strong>Installing CWM Recovery on the BQ Aquaris 5</strong></p>
+
+<ul>
+<li>Your phone will need to be rooted for this.</li>
+<li>You&#8217;ll need to install <a href="https://play.google.com/store/apps/details?id=com.mobileuncle.toolbox" target="_blank"><span style="text-decoration: underline;">Mobileuncle MTK Tools</span></a> on the phone.</li>
+<li>Next up, grab this <a href="https://mega.co.nz/#!aE00VJhC!eZj-el7sNosxuVpgoOfK5lOzn5xkaD1YMz5Ehq0d_S0" target="_blank"><span style="text-decoration: underline;">recovery image</span></a> and drop it on the root of the phone&#8217;s sd card.</li>
+<li>Fire up MTK Tools and press &#8220;Recovery Update&#8221;.</li>
+<li>Next, select the &#8220;recovery.img&#8221; present in your sdcard.</li>
+<li>Accept the dialog asking if you&#8217;re sure you want to replace the recovery image.</li>
+<li>Accept the dialog asking you to reboot the phone to recovery.</li>
+<li>Done.</li>
+</ul>
+
+
+<p>Easy as crap, right? To think I used to have to flash entire roms just to have root and/or a custom recovery.</p>
+
+<p>Via: <a href="http://taliandroid.com/root-recovery-bq-aquaris-5/" target="_blank"><span style="text-decoration: underline;">Taliandroid</span></a> and the <a href="http://www.htcmania.com/showthread.php?t=578666" target="_blank"><span style="text-decoration: underline;">htcmania forums</span></a>. Full credit goes to them, all I&#8217;ve done is post it on my personal blog so I&#8217;d have an easy to find (for me) spot so I won&#8217;t eventually forget about all this info. Guess I ended up translating the stuff but that&#8217;s not really as important as the original info itself.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Is Youtube Making Us (Me) Lazy?]]></title>
+    <link href="http://ncatarino.github.io/archives/1393"/>
+    <updated>2013-02-04T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/is-youtube-making-us-me-lazy</id>
+    <content type="html"><![CDATA[<p>Long gone are the days when I spent nearly 8 hours reading a manual while making a stage 1 Gentoo install. Granted, most of those 8 hours were due to the compile times on the computer available to me at the time but a large part of it was spent reading huge walls of text on how to properly install, maintain, upgrade, tweak, work with emerge, etc..</p>
+
+<p>If it were today, I think I’d Youtube it. I’m pretty sure there’s at least one video guide on how to do it. In fact, it’s not just <em>computer stuff</em> that I find myself searching on Youtube. I find myself choosing Youtube <em>instead</em> of googling for an alternative learning method who could possibly have more information than the video. If I then run into an issue that requires further investigation <em>only then</em> do I do a regular Google search for text.</p>
+
+<p>I’m not quite sure what this means, or even if it means anything at all. Is that a sign that I’m getting lazy when it comes to do proper research? Do I need more information than what is present in a simple video? I suppose that will depend on who makes the video and what is chosen to be presented in it. But still..</p>
+
+<p>There’s a world of information on Youtube. Ted is also quite decent, though it has a completely different scope. I’m unaware of any studies presenting conclusive data on whether people (like me) are starting to choose video as a preferred learning method. Someone better than me should probably do it, it sounds exciting.</p>
+
+<p>What could this mean to the way things are traditionally taught across the globe? Will tablets with video content be used instead of books? Would I learn faster/better with video? There are plenty of possibilities and hypothesis about this, I’d like to know more about it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gnome Classic on Ubuntu 12.10]]></title>
+    <link href="http://ncatarino.github.io/archives/1346"/>
+    <updated>2013-01-20T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/gnome-classic-on-ubuntu-12-10</id>
+    <content type="html"><![CDATA[<p>If there&#8217;s one thing I&#8217;ve come to find that almost every Ubuntu user agrees to, it has to be the fact that <a href="http://en.wikipedia.org/wiki/Unity_%28user_interface%29" target="_blank">Unity</a> is terrible and I&#8217;m sure the Dash plays a big part on one of Dante&#8217;s Infernos. Installing nvidia proprietary drivers is a <a href="http://www.dedoimedo.com/computers/ubuntu-quetzal-nvidia.html" target="_blank">nightmare in and of itself</a>. It used to be as simple as clicking a button when a popup (i.e., Jockey) mentioning proprietary drivers were ready to install, now it&#8217;s a multi step procedure.</p>
+
+<p>All things considered though, the main issue I have with the &#8220;new&#8221; Ubuntu is Unity. Some people who don&#8217;t like it move to KDE, other people (me) like the GTK interface and choose something like XFCE but Gnome was and will continue being what most people that took the jump to Linux during the Ubuntu &#8220;golden age&#8221; are used to. This includes older people like possibly our parents, who installed Ubuntu on their machines simply because we told them it was better than what they were using. Change always meets resistance, but if I&#8217;m having a hard time getting used to Unity or even failing to see the point in it, those people will surely run away from it like the plague. Personal tastes aside, here&#8217;s how you can change that.</p>
+
+<p>For now there&#8217;s still a way to revert to the &#8220;old&#8221; Gnome. You&#8217;ll have to open up a console window and type the following in it.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install gnome-session-fallback
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will install everything you need. The next step is logging out from your current session, then click the icon/symbol right next to your name at the login screen and choose &#8220;Gnome Classic&#8221;. Insert your password and once the login procedure is complete you&#8217;ll be presented with something a bit less confusing.</p>
+
+<p>I will give Unity another chance, eventually. But for now I&#8217;m one of those that runs away from it like the plague.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nexus 7 Bootloader Unlock &#038; Root]]></title>
+    <link href="http://ncatarino.github.io/archives/1340"/>
+    <updated>2013-01-17T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/nexus-7-bootloader-unlock-root</id>
+    <content type="html"><![CDATA[<p>Quick update here, the Nexus 7 is rooted. I found that I miss little things <a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup" target="_blank">Titanium Backup</a> and <a href="https://play.google.com/store/apps/details?id=org.adaway" target="_blank">AdAway</a> a bit too much.</p>
+
+<p>The whole process is pretty straight forward, quite possibly the easiest rooting I had to do. Push 2 buttons and that&#8217;s it. I used <a href="http://www.wugfresh.com/nrt/" target="_blank">this</a> tool. There&#8217;s <a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank">another way</a> of doing it that incidentally also has a few more tools and options that can make your life easier but the graphical interface and literally &#8220;push 2 buttons and we&#8217;re done&#8221; thing makes the first one a fair bit more attractive if all you want is unlocking the bootloader and rooting.<a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank"><br /> </a></p>
+
+<p>I won&#8217;t make a guide on how to do it since, like I said, the whole process is as easy as it can be. Really. Pushing 2 buttons is all you have to do. And if you find that pushing 2 buttons is too hard for you, the guide/tutorial that comes with the app makes it literally idiot proof.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Modern Computers]]></title>
+    <link href="http://ncatarino.github.io/archives/1328"/>
+    <updated>2013-01-01T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/modern-computers</id>
+    <content type="html"><![CDATA[<p>Multiple processors, gigabytes of ram, videocards with 400 times more memory than my first computer ever had and he had no videocard worth mentioning at all..and what do I find myself playing? Also, happy new year :)</p>
+
+<p style="text-align: center">
+  <a href="http://ncatarino.net/wp-content/uploads/2013/01/angband.png"><img class="aligncenter  wp-image-1329" alt="angband" src="http://ncatarino.net/wp-content/uploads/2013/01/angband-1024x560.png" width="496" height="271" /></a>
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nexus 7]]></title>
+    <link href="http://ncatarino.github.io/archives/1323"/>
+    <updated>2012-12-30T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/nexus-7</id>
+    <content type="html"><![CDATA[<p>So, yeah. I got a Nexus 7.</p>
+
+<p>For a while now I&#8217;ve been tempted to get an e-paper Kindle so I could have the current book I&#8217;m reading with me at all times without having to carry the /sometimes/ equivalent of a cereal box with me. I kid you not, some of those Stephen King books are huge.</p>
+
+<p>Though perfect for books, that&#8217;s all those Kindles are good for..books. There&#8217;s no other media consumption available for them. No video, no audio. Just books.</p>
+
+<p>In the meantime, I found myself increasingly watching more and more youtube videos with tutorials/howtos and various other assorted stuff on my phone. Don&#8217;t get me wrong, my phone has the perfect size for a phone and I love it. But for videos that thing makes my eyes start to twitch after a while. That got me into the Kindle Fire territory. Books <em>and </em>media consumption.</p>
+
+<p>One thing led to another and if the Fire looked good with it&#8217;s size and price range, when the Nexus 7 came out I figured I might as well get a proper Android experience instead of an Amazon only thing. It&#8217;s true I could root and rom the Fire, but why go for all that trouble when I could just get the same thing directly from Google with the bonus effect that the Nexus is usually the first &#8220;brand&#8221; to get Android system updates? The screen on these tablets is far from being as comfortable to read as e-paper, but hey..I want my youtube videos. And truth be told, 1280*800 on a 7&#8243; screen makes for crisp clear text. My eyes have yet to complain even after spending a couple of hours straight staring at it. Typing on it is also a surprisingly good experience. My fat fingers that led me to get a phone with a physical qwerty keyboard are having no trouble at all finding those darned keys.</p>
+
+<p>I&#8217;m glad the Nexus 7 was my first tablet, it&#8217;s a pretty good one as far as I can tell. I&#8217;m yet to find something to whine and moan about, and coming from me that&#8217;s a good thing. All in all, it&#8217;s the perfect price range with the perfect size in a little piece of really fast hardware with support directly from Google. If you&#8217;re considering getting one go for it.</p>
+
+<p>I guess that a while not too long from now I&#8217;ll root and customize it to my liking as usual, but for now I&#8217;m enjoying the vanilla experience. Once a month has gone since when I got it is quite probably the ideal time to get into that sort of stuff. Until then, stay tuned for possible rooting guides as I&#8217;ll more than likely make a list of all the steps and procedures I take with the help of the fine folks at XDA and post it here.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aenean Posuere]]></title>
+    <link href="http://ncatarino.github.io/blog/2012/10/02/aenean-posuere/"/>
+    <updated>2012-10-02T06:29:00+01:00</updated>
+    <id>http://ncatarino.github.io/blog/2012/10/02/aenean-posuere</id>
+    <content type="html"><![CDATA[<h2>Aenean posuere</h2>
+
+<p>odio eget imperdiet ullamcorper, nulla libero auctor dui, at adipiscing tortor neque nec lacus. Donec <a href="http://foo.com">ac mi luctus</a> nisi vestibulum scelerisque. Integer congue metus in nisi venenatis sit amet sagittis tortor sodales. Phasellus lobortis sollicitudin porttitor. Integer vel enim eu nunc laoreet pharetra eget nec nibh. Nam <a href="http://github.com">orci quam</a>, facilisis a accumsan vel, ultricies at felis. Nullam erat ipsum, tempor a viverra id, pulvinar non odio. Suspendisse eu turpis ligula, quis mattis dolor. Ut pellentesque mattis ipsum in ornare. Nullam non metus lacus. Vivamus sed euismod mi. Sed sed tellus dui, molestie dignissim turpis.</p>
+
+<!-- more -->
+
+
+<h2>Morbi tincidunt</h2>
+
+<p>urna eget volutpat vestibulum, est nunc eleifend diam, quis interdum quam erat nec risus. Etiam tincidunt cursus tortor, in aliquam orci interdum euismod. Curabitur nibh enim, fermentum eget placerat id</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># Public: Makes a GET request to Mega API</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># shop   - The Shop instance</span>
+</span><span class='line'><span class="c1"># url    - The String which is the URL to query for</span>
+</span><span class='line'><span class="c1"># params - The Hash of attributes to pass in to the query</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># Examples</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1">#   MegaApps::Interface.get(shop, &#39;/foo&#39;, {bar: &#39;bar&#39;})</span>
+</span><span class='line'><span class="c1">#   # =&gt; {...}</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># Returns the Hash</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># Signature</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1">#   &lt;mtd&gt;(args)</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># mtd - Either of the get, post or put HTTP methods</span>
+</span><span class='line'><span class="sx">%w(get put post)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">mtd</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">define_method</span> <span class="n">mtd</span> <span class="k">do</span> <span class="o">|</span><span class="n">shop</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{}</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">pre_setup</span>
+</span><span class='line'>    <span class="ss">Mega</span><span class="p">:</span><span class="ss">:Request</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">mtd</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">access_params</span><span class="p">(</span><span class="n">shop</span><span class="p">,</span> <span class="n">params</span><span class="p">))</span><span class="o">.</span><span class="n">to_hash</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>, rutrum ut urna. Morbi in odio nibh, vitae viverra tortor. Etiam sed massa elit. Integer non massa in urna accumsan adipiscing vitae sit amet ante. Vivamus urna metus, sollicitudin eu interdum ut, laoreet mattis tortor. Sed sed tortor nunc. In hac habitasse platea dictumst. Suspendisse vel quam mi, nec tristique orci.</p>
+
+<figure class='code'><figcaption><span>interface.rb</span><a href='http://coo.com'>sometext</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># Public: Makes a GET request to Mega API</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># shop   - The Shop instance</span>
+</span><span class='line'><span class="c1"># url    - The String which is the URL to query for</span>
+</span><span class='line'><span class="c1"># params - The Hash of attributes to pass in to the query</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># Examples</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1">#   MegaApps::Interface.get(shop, &#39;/foo&#39;, {bar: &#39;bar&#39;})</span>
+</span><span class='line'><span class="c1">#   # =&gt; {...}</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># Returns the Hash</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># Signature</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1">#   &lt;mtd&gt;(args)</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># mtd - Either of the get, post or put HTTP methods</span>
+</span><span class='line'><span class="sx">%w(get put post)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">mtd</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">define_method</span> <span class="n">mtd</span> <span class="k">do</span> <span class="o">|</span><span class="n">shop</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{}</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">pre_setup</span>
+</span><span class='line'>    <span class="ss">Mega</span><span class="p">:</span><span class="ss">:Request</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">mtd</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">access_params</span><span class="p">(</span><span class="n">shop</span><span class="p">,</span> <span class="n">params</span><span class="p">))</span><span class="o">.</span><span class="n">to_hash</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Fusce aliquam</h2>
+
+<div><script src='https://gist.github.com/996818.js'></script>
+<noscript><pre><code>@@ -590,7 +590,7 @@ class SpritesTest &lt; Test::Unit::TestCase
+  it &quot;should generate a sprite from nested folders&quot; do
+    css = render &lt;&lt;-SCSS
+-     @import &quot;nested/*.png&quot;;
++     @import &quot;nested/**/*.png&quot;;
+      @include all-nested-sprites;
+    SCSS
+    assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
+
+
+<p>congue dictum. Nam dignissim eros commodo eros rutrum cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, est at dictum malesuada, urna lectus condimentum dui, sit amet aliquet risus velit sed dolor. Pellentesque laoreet nulla blandit lectus pulvinar laoreet. Maecenas lorem dolor, gravida ac vulputate eget, lacinia ut nunc. Sed consequat semper quam, quis sodales arcu congue a. Nullam ac urna elit. Ut vel elit diam, vel luctus nisi. Phasellus porta scelerisque nisi quis consequat. Integer a</p>
+
+<p><span class='pullquote-right' data-pullquote='Sed eget orci vel'>
+commodo dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget orci vel lectus vulputate ullamcorper quis quis orci. Morbi mollis sapien in tortor ullamcorper sit
+</span></p>
+
+<p> amet lacinia justo vulputate. Nam eget mauris elit, at lobortis tellus. Fusce ligula odio, mollis sit amet dignissim vitae, imperdiet et nisi.</p>
+
+<h2>Vestibulum facilisis</h2>
+
+<p>accumsan fringilla. Proin justo magna, cursus sit amet suscipit eu, euismod in mi. Ut malesuada nisi nec turpis pretium dictum sit amet nec nisi. Proin in urna sapien. Quisque lobortis auctor nibh non aliquet. Donec bibendum cursus dolor, in hendrerit neque lacinia a. Mauris arcu ipsum, interdum sit amet sagittis in, rutrum consequat lorem. Aenean dictum odio et lacus molestie quis placerat nunc laoreet. Ut consectetur porttitor lacinia. Mauris hendrerit dui id erat vestibulum ut consectetur felis hendrerit. Duis enim ligula, ultricies non cursus sit amet, sollicitudin vel mauris. Cras tellus nulla, mollis quis rhoncus vitae, consectetur eu erat. Maecenas et diam nec mauris lacinia egestas condimentum ac lectus. Donec consectetur, diam congue volutpat volutpat, sem enim mollis dolor, quis tempus metus ipsum nec lacus.</p>
+
+<h2>Duis consequat</h2>
+
+<p>pharetra nunc, quis fringilla orci semper ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nunc est, pulvinar sed imperdiet scelerisque, fermentum eu dolor. Quisque vel mi nunc. Curabitur congue consectetur lacinia. Curabitur id dui tortor, et pretium lorem. Nullam metus mi, venenatis at gravida ut, consequat in risus. Cras tristique gravida magna, eget rhoncus nisl blandit vitae. Sed id tellus enim. Quisque sed orci nisi. Nunc id felis ullamcorper metus cursus tristique et non quam.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lorem Ipsum]]></title>
+    <link href="http://ncatarino.github.io/blog/2012/10/01/lorem-ipsum/"/>
+    <updated>2012-10-01T17:42:00+01:00</updated>
+    <id>http://ncatarino.github.io/blog/2012/10/01/lorem-ipsum</id>
+    <content type="html"><![CDATA[<h2>Lorem ipsum dolor</h2>
+
+<p>sit amet, consectetur adipiscing elit. Aenean tincidunt, orci id placerat semper, nibh elit cursus velit, quis porta quam tellus sed orci. In porttitor volutpat eros, et hendrerit nunc pulvinar a. Donec</p>
+
+<blockquote><p>malesuada pulvinar dui, vitae egestas nunc dignissim eu. Donec auctor velit ac erat</p></blockquote>
+
+
+<p> porta commodo. Curabitur consequat nulla eget ipsum malesuada id tempor urna porttitor. Phasellus eu mauris odio. Vivamus eget lectus nec massa tempus pulvinar at ac libero. Aliquam sodales enim sit amet risus posuere sed porttitor felis venenatis. Pellentesque malesuada gravida ligula luctus lacinia.</p>
+
+<h2>Donec auctor</h2>
+
+<p>nisl vel fringilla varius, lectus dui faucibus est, sed fermentum neque nisl eu lectus. Vestibulum id arcu dui, nec tristique mauris. Duis gravida augue a arcu sagittis id aliquet velit dignissim. Nulla</p>
+
+<h3>interdum</h3>
+
+<p><img src="http://placekitten.com/890/280"></p>
+
+<p>lacinia dui, vel auctor leo vulputate eget. Donec at urna quam. Praesent ac ante mauris, non tempus urna. Donec vitae ligula iaculis dui aliquet imperdiet ut a sem. Nulla eu nulla felis. Integer fermentum laoreet fringilla. Nunc vel sem rhoncus arcu consectetur scelerisque. Sed elementum tempor est in vehicula.</p>
+
+<h3>Vivamus</h3>
+
+<p>ac massa nunc, at facilisis nunc. Vestibulum rhoncus velit in dui tincidunt ac sollicitudin nisi auctor. Aenean sapien leo, vestibulum non sollicitudin vitae, dignissim nec lacus. Pellentesque dapibus lectus bibendum turpis malesuada sodales. Praesent a leo quam, in pellentesque est.</p>
+
+<h2>Praesent tristique</h2>
+
+<p>molestie felis, at interdum orci rutrum vel. Sed et leo vel nunc dictum lacinia ullamcorper a velit. Vestibulum purus est, ornare sit amet eleifend eget, mollis non leo. Fusce mollis, dui at consequat hendrerit, lectus sapien pharetra quam, sit amet pharetra diam elit vitae augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam pulvinar laoreet leo, vel rutrum nibh convallis sed. Curabitur laoreet posuere dui quis blandit. Curabitur sed lacus neque, vel fringilla est. Vestibulum sit amet ligula eget sapien ultricies scelerisque. Donec dictum porta auctor. Donec placerat rutrum condimentum. Aliquam fermentum semper pulvinar. Proin nisi est, ultrices vitae suscipit quis, ultrices vel justo.</p>
+
+<h2>Curabitur sem</h2>
+
+<p>ligula, vestibulum eget ultricies vitae, aliquam eu turpis. Mauris eleifend lacinia mi, a elementum turpis consectetur vel. Ut commodo metus et felis tempor vitae pharetra turpis euismod. Duis purus nunc, molestie ornare suscipit in, porta id neque. Cras pellentesque faucibus malesuada. Fusce porttitor, metus at vestibulum varius, nulla nisi lacinia nisi, at fermentum arcu risus nec ante. Aenean consequat volutpat leo nec tempus. Integer elementum felis a tortor congue facilisis. Donec dictum vulputate pulvinar. Pellentesque porttitor bibendum rutrum. Donec sed gravida justo. Duis imperdiet quam eu libero adipiscing non facilisis est tempus. Proin nec tellus libero. Aliquam tincidunt, ligula id auctor semper, lorem metus rutrum elit, eget iaculis turpis justo at velit. Sed faucibus, urna id consectetur consequat, nisl erat pretium diam, eget molestie lacus erat ac arcu.</p>
+
+<h2>Suspendisse potenti</h2>
+
+<p>Nunc turpis augue, blandit quis euismod ac, eleifend eget enim. Nulla rutrum tellus id magna lobortis fermentum. Aliquam pretium vulputate erat, in mattis justo gravida vel. Aliquam erat volutpat. Nunc sem orci, adipiscing ultrices sagittis at, fringilla nec ipsum. Integer ultrices volutpat convallis. Quisque vehicula auctor posuere. Vivamus non diam ut nisi posuere rhoncus. Suspendisse non tellus tortor. Vivamus id tellus sed mauris pulvinar rhoncus.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hur Hur. Oh So True&#8230;]]></title>
+    <link href="http://ncatarino.github.io/archives/1295"/>
+    <updated>2012-08-13T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/hur-hur-oh-so-true</id>
+    <content type="html"><![CDATA[<p><a href="http://ncatarino.net/wp-content/uploads/2012/08/4964114.jpg"><img class="size-full wp-image-1296 aligncenter" title="4964114" src="http://ncatarino.net/wp-content/uploads/2012/08/4964114.jpg" alt="" width="405" height="644" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Art of Glitching]]></title>
+    <link href="http://ncatarino.github.io/archives/1262"/>
+    <updated>2012-05-14T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/the-art-of-glitching</id>
+    <content type="html"><![CDATA[<p style="text-align: left;">
+  So, a friend of mine asked me for any piece of mac or windows software that would &#8220;glitch&#8221; images as he needs it for some artsy thing. I didn&#8217;t quite understand what he was after at first, but when the conversation continued and I put my Google Fu to work I realized people were glitching images as an art form. You know when sometimes there&#8217;s data corruption on your hard or usb drive? Images get all twisted and/or with a crapton of artifacts in it. Glitching is the art of doing it on purpose! It&#8217;s also hella fun to look at the result in some cases. Here&#8217;s a &#8216;glitched&#8217; image so you can have a better perception of what I&#8217;m talking about. Non glitched on the left, glitched on the right. Click them to see a bigger picture.
+</p>
+
+
+
+
+<p style="text-align: center;">
+  <a href="http://ncatarino.net/wp-content/uploads/2012/05/nonwarp.png"><img class="alignnone size-thumbnail wp-image-1263" title="Non Glitched" src="http://ncatarino.net/wp-content/uploads/2012/05/nonwarp-112x150.png" alt="Non Glitched" width="112" height="150" /></a> <a href="http://ncatarino.net/wp-content/uploads/2012/05/warped.jpg"><img class="alignnone size-thumbnail wp-image-1264" title="Glitched" src="http://ncatarino.net/wp-content/uploads/2012/05/warped-112x150.jpg" alt="Glitched" width="112" height="150" /></a>
+</p>
+
+
+
+
+<p style="text-align: left;">
+  Looks great, doesn&#8217;t it? But how exactly does one do this? Well&#8230;read on, friend.
+</p>
+
+
+
+
+<!--more-->
+
+
+
+
+<p style="text-align: left;">
+  At first I started looking for a Photoshop plugin because if it exists, there&#8217;s a Photoshop plugin for it. Right? Wrong. The only plugin I found related in any way to this was an After Effects plugin, and that&#8217;s video. Apparently glitching is also used in video, they call it datamoshing. Cool name.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  Following that and as I entered Zen State in my Google Fu, I discovered enlightenment. You only need Paint and Wordpad to do this. Two common Windows pieces of software no one would ever consider when doing <em>serious business</em> image editing. You open the image in Paint and save it in .bmp (bitmap) format as this format renders the file less &#8216;fragile&#8217; to the procedure that follows. And yes, it&#8217;s important you use Paint for some reason. I tried saving it on Irfanview and it didn&#8217;t work. Next up you open Wordpad and drop the file in it, just click the file and drag it into Wordpad. Press &#8216;Save&#8217; once and that&#8217;s it. Congrats, you glitched an image. For some god knows why reason (ehh, I&#8217;m sure some nerd can explain it) the file generated is a corrupt version of the previous image.
+</p>
+
+
+
+
+<p style="text-align: left;">
+  So, yeah. I guess the next step is to google for ALL the images (if you know what I mean) and glitch them? Fun, fun, fun!
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WordPress Android Beta and SK17i]]></title>
+    <link href="http://ncatarino.github.io/archives/1254"/>
+    <updated>2012-05-05T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/wordpress-android-app-beta-and-sk17i</id>
+    <content type="html"><![CDATA[<p>The new WordPress app for android entered beta a couple of weeks ago, it&#8217;s <em>very </em>different from what it used to be. Has a crapton of improvements over the old app and it actually makes me want to use it. In fact, this whole post will be written in it. If you use WordPress on a regular basis I strongly suggest you give it a test run!</p>
+
+<p>In other news, I&#8217;m still quite happy with the SK17i I bought a few weeks ago. The battery though if at first glance might seem a bit underpowered, I haven&#8217;t found it needing. The phone never died on me with moderate/intense daily usage before I set it up charging for the night before I go to bed, that&#8217;s all I really want on a phone.<br/>
+ICS should be made available through PC Companion later this month, tough it&#8217;ll be a while till I update as I like to read up on reviews and eventual bugs before I make any major jump. In any case, I already have the root procedures for ICS bookmarked and I&#8217;ll keep both a nandroid backup as well as GB firmware files in case I decide to downgrade. A performance loss is to be expected but I&#8217;m guessing from other Xperia models that already had the update it&#8217;ll be a tolerable performance loss. It runs <em>extremely </em>snappy on GB and I guess I don&#8217;t mind a choke here and there while running ICS.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SK17i Root on .62 Firmware]]></title>
+    <link href="http://ncatarino.github.io/archives/1230"/>
+    <updated>2012-04-26T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/sk17i-root-on-62-firmware</id>
+    <content type="html"><![CDATA[<p style="text-align: justify;">
+ In my last post I mentioned I got a <a href="http://www.gsmarena.com/sony_ericsson_xperia_mini_pro-3713.php" target="_blank">SK17i</a> (Sony Ericsson Xperia Mini Pro) Android phone and as usual I like to wait a couple of weeks before I root or alter it in any way just in case something goes wrong and I have to take it back. Those weeks have now come and gone and it was time to root the device and finally install stuff like Titanium Backup on it as well as a decent recovery with Nandroid. I feel like I&#8217;m stepping on eggs whenever I&#8217;m using something with no backup whatsoever so this is something I <em>really</em> must do to the phone.
+</p>
+
+
+<p>The fine folks at <a href="http://www.xda-developers.com/" target="_blank">XDA</a> had all the information and files I needed. As it turns out .62 firmware cannot be rooted using the <a href="http://forum.xda-developers.com/showthread.php?t=1296916" target="_blank">zergRush</a> method since the exploit has been patched. But following <a href="http://forum.xda-developers.com/showthread.php?t=1512530" target="_blank">this</a> thread it&#8217;s possible to use zergRush on .58 firmware and then upgrade OTA (Over The Air, the update is pushed through WiFi or 3G to your phone) and keep the phone rooted. But how exactly do we do this? Keep on reading.</p>
+
+<!--more-->
+
+
+<p>As expected, there was a <a href="http://forum.xda-developers.com/showthread.php?t=1568792" target="_blank">very useful thread</a> over at XDA with all the files and info I needed. I won&#8217;t post or host any of the files as I do not know how exactly legal are they but there are links in the thread in case you need them.</p>
+
+<p>Keep in mind I did not and do not want to unlock my bootloader as I&#8217;m quite happy with the stock rom, I just wanted root so I could make decent backups. Unlocking the bootloader would prevent me from upgrading to the official ICS build by Sony. Maybe when it&#8217;s out and I&#8217;ve been using it for a while I&#8217;ll unlock it and fiddle around with a few roms. Also, this is how I did it. There are other methods available but this is how I got mine done.</p>
+
+<p>First off we&#8217;ll need to get our hands on a few tools. Namely <a href="http://androxyde.github.com/Flashtool/" target="_blank">Flashtool</a>, 4.0.2.A.0.58 or earlier firmware for our phone so zergRush work and <a href="http://forum.xda-developers.com/showthread.php?t=1296916" target="_blank">zergRush</a> itself.</p>
+
+<p>As I mentioned we&#8217;ll need to downgrade our firmware to .58 or earlier. We&#8217;ll need Flashtool installed and the firmware files to do this.</p>
+
+<p>I recommend doing this on a laptop or a computer with an UPS. If the power gets cut mid-flash, you have yourself a brand new paperweight. Or at least a nasty headache trying to revive it.</p>
+
+<ul>
+<li>Place the firmware .ftf file in Flashtool\firmwares</li>
+<li>Start Flashtool</li>
+<li>Click the lightning button and choose Flashmode</li>
+<li>Select the firmware you copied to the firmwares folder</li>
+<li>Turn off the phone, connect the USB cable to the computer and then press volume down and connect the cable to the phone</li>
+<li>Flashtool should detect the phone and start flashing it, follow the instructions given</li>
+<li>When &#8220;Flashing completed&#8221; shows up, unplug the cable and turn it on. It&#8217;s done.</li>
+</ul>
+
+
+<p>This will leave the phone running on .58 or .42 firmware if you&#8217;re using the files in the thread I mentioned. This means zergRush will be able to exploit and root the device.</p>
+
+<ul>
+<li>Make sure you have both the Android SDK and drivers for your phone installed, I&#8217;m not sure this is absolutely needed but it doesn&#8217;t hurt to have them.</li>
+<li>Grab zergRush files from <a href="http://forum.xda-developers.com/showthread.php?p=18805532" target="_blank">this thread</a> if you haven&#8217;t already</li>
+<li>Use the USB cable to connect the phone to the computer</li>
+<li>Run &#8220;RUNME.bat&#8221;</li>
+<li>Follow the instructions given</li>
+<li>The phone will reboot at the end</li>
+<li>Congratulations, you have Superuser.apk and busybox installed as well as root access</li>
+</ul>
+
+
+<p>Next up, I installed recovery on the phone. It was as simple as going to the Market/Play Store and installing Xperia CWM Auto-Installer and following the instructions given by the app.</p>
+
+<p>What I recommend you do right after you install recovery is booting into it and doing a full Nandroid backup of everything the phone has, it&#8217;ll be simpler to flash it back to the current state in case something goes wrong. You can boot to the recovery by holding the Volume Down button when the Blue LED shows up right after you turn it on and the Sony Ericsson logo shows up.</p>
+
+<p>Right, so now we have root, we have busybox and Superuser.apk and we have recovery installed. Only thing we have to do now is upgrade it to the most current firmware. <strong>DO NOT UPDATE OVER THE AIR IF YOU HAVE UNLOCKED YOUR BOOLOADER, IT WILL BRICK THE PHONE</strong>. Well, not exactly brick as you can revive it following a few steps but it will in fact result in bootloops and other nasty stuff. Updating itself is as simple as going to Settings->About Phone->Software Upgrade and it&#8217;ll update itself Over The Air to .62 firmware. Some folks complain it doesn&#8217;t immediately tell them there&#8217;s an update available but after they turned 3G on it showed up. Even if you use WiFi to download the update itself, it seems you need to have 3G properly configured for some reason. I didn&#8217;t notice any of this.</p>
+
+<p>Again, a full Nandroid backup won&#8217;t hurt at this point. I suggest you do it.</p>
+
+<p>All credit from this info goes to the fine gentlemen at XDA. <a href="http://forum.xda-developers.com/showthread.php?t=1512530" target="_blank">This</a>, <a href="http://forum.xda-developers.com/showthread.php?t=920746" target="_blank">this</a>, <a href="http://forum.xda-developers.com/showthread.php?t=1568792" target="_blank">this</a> and <a href="http://forum.xda-developers.com/showthread.php?p=18805532" target="_blank">this</a> threads. <a href="http://forum.xda-developers.com/member.php?u=2784807" target="_blank">DooMLorD</a> for zergRush and <a href="http://forum.xda-developers.com/member.php?u=4473694" target="_blank">Someguyfromhell</a> for compiling an excelent thread on the subject and being a nice guy willing to help the most clueless of SK17i owners :) If I forgot something or someone please leave a comment or use the contact form so I can give credit where credit is due. I mostly post this here so I can learn how to do it all over again if it ever becomes necessary. I tend to forget most steps for this stuff and end up being pretty clueless without a guide or checklist.</p>
+
+<p>For future reference, DooMLorD has already come up with root for ICS. More info on <a href="http://forum.xda-developers.com/showthread.php?t=1601038" target="_blank">this</a> thread.</p>
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Take on What&#8217;s Wrong With Blackberry]]></title>
+    <link href="http://ncatarino.github.io/archives/1204"/>
+    <updated>2012-04-08T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/my-take-on-whats-wrong-with-blackberry</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve recently begun looking for a new smartphone as my trusty <a href="http://www.gsmarena.com/samsung_i5700_galaxy_spica-2965.php" target="_blank">Spica</a> started to feel a bit..uh..old. Odd for a 1 year old phone to start feeling old but hey, it had already been out for quite some time before I got it. Menus and interaction was a bit sluggish at times, couldn&#8217;t install as many apps as I wanted because it&#8217;s available space was very limited, started missing some calls because it wouldn&#8217;t ring (no idea what caused it), had to constantly factory reset/reinstall rom because something would go bork and stop working, etc. While doing so, I remembered how much I loved the qwerty physical keyboard on my former phone, the <a href="http://www.gsmarena.com/nokia_e71-2425.php" target="_blank">Nokia E71</a>. With that in mind, I remembered how well regarded Blackberry phones are/used to be in that aspect, so I started checking out some online reviews.</p>
+
+<!--more-->
+
+
+<p>Their <a href="http://www.gsmarena.com/blackberry_bold_touch_9900-3116.php" target="_blank">Bold</a> line of phones seems to be quite good and the physical keyboard is reported as probably the best out there and though Blackberry OS and app store doesn&#8217;t have nearly as many apps available as Android/iOS I think I could live with that since I&#8217;m not that much into games and most if not all essential apps I use on Android are available there as well. The issue with them is their price range, +500€ is simply put too much to shell out for what we get in return. Their keyboards may be great, but not <em>that</em> great. Especially when you consider that for that price you can get a phone with much better specs such as the <a href="http://www.gsmarena.com/samsung_i9100_galaxy_s_ii-3621.php" target="_blank">Samsung Galaxy S II</a>, <a href="http://www.gsmarena.com/samsung_galaxy_nexus-4219.php" target="_blank">Galaxy Nexus</a> or even the <a href="http://www.gsmarena.com/apple_iphone_4s-4212.php" target="_blank">iPhone 4S</a>. No qwerty physical keyboard, I&#8217;ll grant you that, but with screens big enough for that to be a non issue.</p>
+
+<p>Into the Curve line of phones then. The <a href="http://www.gsmarena.com/blackberry_curve_9360-3722.php" target="_blank">9360</a> seems to be exactly the phone I&#8217;d buy. If it was at least 150€ cheaper, I mean. It&#8217;s seems to be a great phone. Qwerty keyboard (though not backlit like the Bold 9900), Blackberry OS 7, decent storage and app space, etc..but guys, it&#8217;s not a 300€ phone. Not even close.</p>
+
+<p>This takes me to another issue I found with Blackberry recent handsets. Their batteries and battery life. A 1000mAh battery on a handset like the 9360? Really guys? I remember pulling almost a week&#8217;s worth of use out of the E71, though the Symbian version they used isn&#8217;t as battery intensive as most &#8220;modern&#8221; handset operating systems and hardware seem to be. I mean, people on the forums were complaining about 4 hours use before their phone went dead. That just doesn&#8217;t cut it. 300€ for a phone with it&#8217;s specs that lasts for less than half a day before it needs recharging? No thanks.</p>
+
+<p>That said, I went and checked the other Curve phone available through my local cellphone operators, the <a href="http://www.gsmarena.com/blackberry_curve_8520-2889.php" target="_blank">8520</a>. 170€ for a phone with no 3G (Edge only), no GPS, Blackberry OS 5 as opposed to the current Blackberry OS 7, 256mb internal storage memory&#8230;are you even serious? I&#8217;d rather go for a cheap 50€ qwerty Huawei phone.</p>
+
+<p>After further reading on what buyers had to say and online reviews I ended up going for the <a href="http://www.gsmarena.com/sony_ericsson_xperia_mini_pro-3713.php" target="_blank">Sony Ericsson Xperia Mini Pro</a>. A 1ghz Android handset, 512RAM/400mb storage, 5MP camera with HD video recording (although reviews suggested the camera isn&#8217;t that great and it really isn&#8217;t, I don&#8217;t really use my phones to take pictures), qwerty physical slide keyboard(!) which is pretty good/solidly built and changed what I used to think of slide keyboards, etc. Former Sony Ericsson model X10 Mini wasn&#8217;t impressive at all but this new line of &#8220;Mini&#8221; phones has been surprising a lot of people. All for&#8230;can you guess it? 170€. The same price I&#8217;d pay for a <em>really</em> outdated phone such as the Blackberry 8520. Hell, for 50€ more and I could even buy a <a href="http://www.gsmarena.com/samsung_google_nexus_s-3620.php" target="_blank">Nexus S</a>. A bit outdated but still a hell of an impressive phone.</p>
+
+<p>I&#8217;ll grant you the Mini Pro has a small(ish) 3&#8243; screen, but I don&#8217;t watch movies on phones, I don&#8217;t really read stuff in them for large amounts of time and when I do I find it surprising that I really don&#8217;t find such a small screen uncomfortable..that&#8217;s what made me look into Blackberries in the first place. Besides, a smaller screen drains the juice out of the battery far less than larger models and that is vital to me. But anyway, sheesh guys..if you put a premium price on something you better make sure it&#8217;s up to par with equivalent hardware. I don&#8217;t even mean Android phones that come up with a &#8220;best available specs phone&#8221; every couple of months or so..even the iPhone that has a somewhat inflated price for the hardware would be a better purchase than the Bold 9900 for the kind of money you&#8217;re asking.</p>
+
+<p>Simply put, recheck your pricing model. The Bold 9900 isn&#8217;t a 500€ phone, more like 300€. The 9360 isn&#8217;t a 300€ phone, 150€. The 8520 would be a decent phone for 50€, though it&#8217;s *really* outdated.</p>
+
+<p>The hardware is fine for what the phones are supposed to do, but their price is simply not justifiable when you glance at the next phone on the store shelf and see much better hardware for the same price range. One could say it&#8217;s the same as the Apple vs Android thing, but personal tastes aside your OS isn&#8217;t even comparable in the slightest to what Android/iOS has to offer for exactly the same price or sometimes for a hell of a lot less on Android&#8217;s case.</p>
+
+<p>I really wanted to like Blackberries when I started hunting for a new phone to buy, I really did. But all I could think of was &#8220;are these guys serious?&#8221;.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OS X Flashback Trojan Identification and Removal]]></title>
+    <link href="http://ncatarino.github.io/archives/1199"/>
+    <updated>2012-04-05T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/os-x-flashback-trojan-identification-and-removal</id>
+    <content type="html"><![CDATA[<p>Despite what most OS X users think and say, OS X is in fact as vulnerable to trojans and/or rootkits as any other Operating System. Though it is significantly harder (or not) to do so in a Unix machine, the increase in Apple computer users has turned their operating system a viable target for mass infection and botnet operation.</p>
+
+<p>This time around, a trojan named as Flashback has reportedly infected more than half a million computers worldwide. It earned it&#8217;s name due to the nature of the infection, pretending to be an Adobe Flash update and thus being granted administrator privileges by unsuspecting users to download and install it&#8217;s payload.</p>
+
+<p>Apparently the trojan takes advantage of flaws within the Java versions found within latest versions of OS X. Although Oracle published a fix for it several weeks ago, Apple is only just now making it available to it&#8217;s users generating this way a fair amount of controversy.</p>
+
+<p>An advanced description of the trojan as well as identification and removal methods can be found <a href="http://www.f-secure.com/v-descs/trojan-downloader_osx_flashback_i.shtml" target="_blank">here</a>, thanks to the folks at F-Secure.</p>
+
+<p>&nbsp;</p>
+
+<p>Edit: F-Secure has made a tool available online to remove Flashback from OS X machines <a href="http://www.f-secure.com/weblog/archives/00002346.html" target="_blank">here</a>.</p>
+]]></content>
+  </entry>
   
 </feed>

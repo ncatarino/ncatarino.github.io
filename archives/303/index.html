@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>SSH Into Your Mac From Your Symbian Phone - ncatarino.github.io</title>
+  <meta name="author" content="Nuno Catarino">
+
+  
+  <meta name="description" content="Sometimes we all wish we could access our home computer with our phone wherever we are just to check on something or do some menial task. If you have &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ncatarino.github.io/archives/303">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="ncatarino.github.io" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ncatarino.github.io</a></h1>
+  
+    <h2>bla bla bla yada yada yada ad nauseam</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ncatarino.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">SSH Into Your Mac From Your Symbian Phone</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-25T00:00:00+00:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Sometimes we all wish we could access our home computer with our phone wherever we are just to check on something or do some menial task. If you have a Symbian phone and your computer runs Mac OS X, that&#8217;s possible! You can do it with any Unix box, in fact. You won&#8217;t have a visual interface and it will only be useful to those of you who are used to Unix console commands, but if you are indeed used to them you already know you can do pretty much everything you feel like on your machine with them.</p>
+
+<p>This guide will not cover what SSH is nor teach you unix console commands. What this guide will teach you is how to get a SSH client in your Symbian phone and get it to work with Mac OS X.</p>
+
+<p>Mac OS X, like any unix box, lets you access your machine remotely through SSH. In Mac OS X it even comes pre-installed, all you have to do is activate it. To do this, open your System Preferences pane and click on Sharing. On the Sharing screen, add a checkmark on the Remote Login service like on the following picture.</p>
+
+<p><a href="http://ncatarino.net/wp-content/uploads/2010/03/prefs.png"><img class="alignnone size-medium wp-image-309" title="prefs" src="http://ncatarino.net/wp-content/uploads/2010/03/prefs-300x251.png" alt="" width="300" height="251" /></a></p>
+
+<p>It is advisable to change the default port SSH uses to something not easily guessed. I won&#8217;t get into details about that. You can test your connection by opening a Terminal window and typing &#8220;ssh 127.0.0.1&#8243; or whatever IP you currently have. If a login window preceded by a question if you are willing to accept the crypto key shows up, your SSH server is up and running.</p>
+
+<p>Next up, you&#8217;ll need to install PuTTy in your Symbian phone. You can get it <a href="http://s2putty.sourceforge.net/" target="_blank">here</a>. Launch it and start a new profile. Insert the name you want to use for this profile, the target computer&#8217;s IP and login name. This is your <em>short</em> username, not your long one on OS X.</p>
+
+<p><a href="http://ncatarino.net/wp-content/uploads/2010/03/SuperScreenshot0011.jpg"><img class="alignnone size-medium wp-image-312" title="SuperScreenshot0011" src="http://ncatarino.net/wp-content/uploads/2010/03/SuperScreenshot0011-300x225.jpg" alt="" width="300" height="225" /></a></p>
+
+<p>Move back into the main program&#8217;s window and select the target host you just created. You will be prompted for a password.</p>
+
+<p><a href="http://ncatarino.net/wp-content/uploads/2010/03/SuperScreenshot0013-300x225.jpg"><img class="alignnone size-medium wp-image-313" title="SuperScreenshot0013" src="http://ncatarino.net/wp-content/uploads/2010/03/SuperScreenshot0013-300x225.jpg" alt="" width="300" height="225" /></a></p>
+
+<p>Once you fill in the password field, you will be logged into you Mac OS X box and can start exploring the wonderful world of  the unix console.</p>
+
+<p><a href="http://ncatarino.net/wp-content/uploads/2010/03/SuperScreenshot0014-300x225.jpg"><img class="alignnone size-medium wp-image-320" title="SuperScreenshot0014" src="http://ncatarino.net/wp-content/uploads/2010/03/SuperScreenshot0014-300x225.jpg" alt="" width="300" height="225" /></a></p>
+
+<p>As an example you can type &#8220;python -m SimpleHTTPServer&#8221; to start a http server with your current directory tree at <a href="http://$HOSTNAME:8000/.">http://$HOSTNAME:8000/.</a> Pretty useful to quickly retrieve files through http to another computer or even your phone.</p>
+
+<p>Hope you find this info useful. Feel free to add a comment with any question you might have.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nuno</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-25T00:00:00+00:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mac-os-x/'>Mac OS X</a>, <a class='category' href='/blog/categories/symbian/'>Symbian</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://ncatarino.github.io/archives/303" data-via="nncatarino" data-counturl="http://ncatarino.github.io/archives/303" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archives/272" title="Previous Post: Inauguração &#8211; Estúdio Mahtab Danças Étnicas">&laquo; Inauguração &#8211; Estúdio Mahtab Danças Étnicas</a>
+      
+      
+        <a class="basic-alignment right" href="/archives/378" title="Next Post: Deleting old useless junk from your Gmail account">Deleting old useless junk from your Gmail account &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archives/1556">Using LaTeX in Portuguese</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1552">My .bashrc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1537">Changing Nvidia Fan Speed on Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1515">Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Nuno Catarino -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>SK17i Root on .62 Firmware - ncatarino.github.io</title>
+  <meta name="author" content="Nuno Catarino">
+
+  
+  <meta name="description" content="In my last post I mentioned I got a SK17i (Sony Ericsson Xperia Mini Pro) Android phone and as usual I like to wait a couple of weeks before I root &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ncatarino.github.io/archives/1230">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="ncatarino.github.io" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ncatarino.github.io</a></h1>
+  
+    <h2>bla bla bla yada yada yada ad nauseam</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ncatarino.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">SK17i Root on .62 Firmware</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-26T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p style="text-align: justify;">
+ In my last post I mentioned I got a <a href="http://www.gsmarena.com/sony_ericsson_xperia_mini_pro-3713.php" target="_blank">SK17i</a> (Sony Ericsson Xperia Mini Pro) Android phone and as usual I like to wait a couple of weeks before I root or alter it in any way just in case something goes wrong and I have to take it back. Those weeks have now come and gone and it was time to root the device and finally install stuff like Titanium Backup on it as well as a decent recovery with Nandroid. I feel like I&#8217;m stepping on eggs whenever I&#8217;m using something with no backup whatsoever so this is something I <em>really</em> must do to the phone.
+</p>
+
+
+<p>The fine folks at <a href="http://www.xda-developers.com/" target="_blank">XDA</a> had all the information and files I needed. As it turns out .62 firmware cannot be rooted using the <a href="http://forum.xda-developers.com/showthread.php?t=1296916" target="_blank">zergRush</a> method since the exploit has been patched. But following <a href="http://forum.xda-developers.com/showthread.php?t=1512530" target="_blank">this</a> thread it&#8217;s possible to use zergRush on .58 firmware and then upgrade OTA (Over The Air, the update is pushed through WiFi or 3G to your phone) and keep the phone rooted. But how exactly do we do this? Keep on reading.</p>
+
+<!--more-->
+
+
+<p>As expected, there was a <a href="http://forum.xda-developers.com/showthread.php?t=1568792" target="_blank">very useful thread</a> over at XDA with all the files and info I needed. I won&#8217;t post or host any of the files as I do not know how exactly legal are they but there are links in the thread in case you need them.</p>
+
+<p>Keep in mind I did not and do not want to unlock my bootloader as I&#8217;m quite happy with the stock rom, I just wanted root so I could make decent backups. Unlocking the bootloader would prevent me from upgrading to the official ICS build by Sony. Maybe when it&#8217;s out and I&#8217;ve been using it for a while I&#8217;ll unlock it and fiddle around with a few roms. Also, this is how I did it. There are other methods available but this is how I got mine done.</p>
+
+<p>First off we&#8217;ll need to get our hands on a few tools. Namely <a href="http://androxyde.github.com/Flashtool/" target="_blank">Flashtool</a>, 4.0.2.A.0.58 or earlier firmware for our phone so zergRush work and <a href="http://forum.xda-developers.com/showthread.php?t=1296916" target="_blank">zergRush</a> itself.</p>
+
+<p>As I mentioned we&#8217;ll need to downgrade our firmware to .58 or earlier. We&#8217;ll need Flashtool installed and the firmware files to do this.</p>
+
+<p>I recommend doing this on a laptop or a computer with an UPS. If the power gets cut mid-flash, you have yourself a brand new paperweight. Or at least a nasty headache trying to revive it.</p>
+
+<ul>
+<li>Place the firmware .ftf file in Flashtool\firmwares</li>
+<li>Start Flashtool</li>
+<li>Click the lightning button and choose Flashmode</li>
+<li>Select the firmware you copied to the firmwares folder</li>
+<li>Turn off the phone, connect the USB cable to the computer and then press volume down and connect the cable to the phone</li>
+<li>Flashtool should detect the phone and start flashing it, follow the instructions given</li>
+<li>When &#8220;Flashing completed&#8221; shows up, unplug the cable and turn it on. It&#8217;s done.</li>
+</ul>
+
+
+<p>This will leave the phone running on .58 or .42 firmware if you&#8217;re using the files in the thread I mentioned. This means zergRush will be able to exploit and root the device.</p>
+
+<ul>
+<li>Make sure you have both the Android SDK and drivers for your phone installed, I&#8217;m not sure this is absolutely needed but it doesn&#8217;t hurt to have them.</li>
+<li>Grab zergRush files from <a href="http://forum.xda-developers.com/showthread.php?p=18805532" target="_blank">this thread</a> if you haven&#8217;t already</li>
+<li>Use the USB cable to connect the phone to the computer</li>
+<li>Run &#8220;RUNME.bat&#8221;</li>
+<li>Follow the instructions given</li>
+<li>The phone will reboot at the end</li>
+<li>Congratulations, you have Superuser.apk and busybox installed as well as root access</li>
+</ul>
+
+
+<p>Next up, I installed recovery on the phone. It was as simple as going to the Market/Play Store and installing Xperia CWM Auto-Installer and following the instructions given by the app.</p>
+
+<p>What I recommend you do right after you install recovery is booting into it and doing a full Nandroid backup of everything the phone has, it&#8217;ll be simpler to flash it back to the current state in case something goes wrong. You can boot to the recovery by holding the Volume Down button when the Blue LED shows up right after you turn it on and the Sony Ericsson logo shows up.</p>
+
+<p>Right, so now we have root, we have busybox and Superuser.apk and we have recovery installed. Only thing we have to do now is upgrade it to the most current firmware. <strong>DO NOT UPDATE OVER THE AIR IF YOU HAVE UNLOCKED YOUR BOOLOADER, IT WILL BRICK THE PHONE</strong>. Well, not exactly brick as you can revive it following a few steps but it will in fact result in bootloops and other nasty stuff. Updating itself is as simple as going to Settings->About Phone->Software Upgrade and it&#8217;ll update itself Over The Air to .62 firmware. Some folks complain it doesn&#8217;t immediately tell them there&#8217;s an update available but after they turned 3G on it showed up. Even if you use WiFi to download the update itself, it seems you need to have 3G properly configured for some reason. I didn&#8217;t notice any of this.</p>
+
+<p>Again, a full Nandroid backup won&#8217;t hurt at this point. I suggest you do it.</p>
+
+<p>All credit from this info goes to the fine gentlemen at XDA. <a href="http://forum.xda-developers.com/showthread.php?t=1512530" target="_blank">This</a>, <a href="http://forum.xda-developers.com/showthread.php?t=920746" target="_blank">this</a>, <a href="http://forum.xda-developers.com/showthread.php?t=1568792" target="_blank">this</a> and <a href="http://forum.xda-developers.com/showthread.php?p=18805532" target="_blank">this</a> threads. <a href="http://forum.xda-developers.com/member.php?u=2784807" target="_blank">DooMLorD</a> for zergRush and <a href="http://forum.xda-developers.com/member.php?u=4473694" target="_blank">Someguyfromhell</a> for compiling an excelent thread on the subject and being a nice guy willing to help the most clueless of SK17i owners :) If I forgot something or someone please leave a comment or use the contact form so I can give credit where credit is due. I mostly post this here so I can learn how to do it all over again if it ever becomes necessary. I tend to forget most steps for this stuff and end up being pretty clueless without a guide or checklist.</p>
+
+<p>For future reference, DooMLorD has already come up with root for ICS. More info on <a href="http://forum.xda-developers.com/showthread.php?t=1601038" target="_blank">this</a> thread.</p>
+
+<p>&nbsp;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nuno</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-26T00:00:00+01:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>Android</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://ncatarino.github.io/archives/1230" data-via="nncatarino" data-counturl="http://ncatarino.github.io/archives/1230" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archives/1204" title="Previous Post: My take on what&#8217;s wrong with Blackberry">&laquo; My take on what&#8217;s wrong with Blackberry</a>
+      
+      
+        <a class="basic-alignment right" href="/archives/1254" title="Next Post: WordPress Android Beta and SK17i">WordPress Android Beta and SK17i &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archives/1556">Using LaTeX in Portuguese</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1552">My .bashrc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1537">Changing Nvidia Fan Speed on Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1515">Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Nuno Catarino -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

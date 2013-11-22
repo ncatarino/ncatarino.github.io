@@ -9,7 +9,7 @@
   <meta name="author" content="Nuno Catarino">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="I&#8217;ve been using LaTeX for a couple of small projects recently and I had some trouble figuring out how to make the accented characters as well &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,7 +66,476 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1556">Using LaTeX in Portuguese</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-21T00:00:00+00:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve been using LaTeX for a couple of small projects recently and I had some trouble figuring out how to make the accented characters as well as stuff like &#8216;Ç&#8217; render correctly in the end product. After some mucking about I learned that we have to use three extra packages so everything shows up nicely in the end. It probably works just as well for other languages but you may want to refer to the documentation. Here are the packages you have to use:</p>
+
+<figure class='code'><figcaption><span>Packages </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='tex'><span class='line'><span class="k">\usepackage</span><span class="na">[portuguese]</span><span class="nb">{</span>babel<span class="nb">}</span>
+</span><span class='line'><span class="k">\usepackage</span><span class="na">[utf8]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
+</span><span class='line'><span class="k">\usepackage</span><span class="na">[T1]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1552">My .bashrc</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-21T00:00:00+00:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here&#8217;s something I keep forgetting to save and/or backup, my .bashrc. The last couple of times I reinstalled or switched to another distribution I <em>did</em> remember to backup my dotfiles but I figured I might as well just post it here in case I ever need it again.</p>
+
+<p>Most of it comes from the Arch Linux Wiki, a great place for Linux information even if you <em>don&#8217;t</em> use Arch. I have then made a few tweaks from snippets I found on other websites. I can&#8217;t remember all of them since at the time I had no intention of posting this here. If you find anything that you think is yours please send me the article link so I can pingback to it. Keep in mind there are some Arch specific sections in there, feel free to edit and redistribute as you see fit.</p>
+
+<p>Since it&#8217;s quite a wall of text, I&#8217;ll drop it after a break for the website proper. If you&#8217;re reading this through an RSS reader, sorry for the wall of text.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/archives/1552">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1537">Changing Nvidia Fan Speed on Arch Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-20T00:00:00+00:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Quite some time ago I made a <a href="http://ncatarino.net/archives/573" target="_blank">post</a> about the coolbits option as a way to be able to control nvidia cards fan speed manually on Ubuntu. Things are a little bit different on Arch Linux. For starters <code>xorg.conf</code> has been somewhat deprecated and it&#8217;s preferable to make a file such as <code>/etc/X11/xorg.conf.d/20-nvidia.conf</code> with just the bit of information we want to change. We&#8217;ll edit/create that file and add something like:</p>
+
+<figure class='code'><figcaption><span>20-nvidia.conf</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nx">Section</span> <span class="s2">&quot;Device&quot;</span>
+</span><span class='line'>        <span class="nx">Identifier</span> <span class="s2">&quot;Nvidia Card&quot;</span>
+</span><span class='line'>        <span class="nx">Driver</span> <span class="s2">&quot;nvidia&quot;</span>
+</span><span class='line'>        <span class="nx">VendorName</span> <span class="s2">&quot;NVIDIA Corporation&quot;</span>
+</span><span class='line'>        <span class="nx">Option</span> <span class="s2">&quot;NoLogo&quot;</span> <span class="s2">&quot;true&quot;</span>
+</span><span class='line'>        <span class="nx">Option</span> <span class="s2">&quot;Coolbits&quot;</span> <span class="s2">&quot;4&quot;</span>
+</span><span class='line'><span class="nx">EndSection</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The speed itself can still be configured through the <code>nvidia-settings</code> application under <code>Thermal Settings</code>. Keep in mind you&#8217;ll need nvidia&#8217;s proprietary driver for this to work and not the open source nouveau driver.</p>
+
+<p>More info on how to configure other aspects of the driver may be found <a href="https://wiki.archlinux.org/index.php/NVIDIA#Configuring" target="_blank">here</a> at Arch&#8217;s Wiki.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1515">Arch Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-26T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since I&#8217;m not really enjoying the path <a href="http://www.canonical.com/" target="_blank">Canonical </a>is headed with <a href="http://www.ubuntu.com/" target="_blank">Ubuntu </a>I was somewhat forced to consider moving to another distribution. I considered <a href="http://www.opensuse.org/" target="_blank">OpenSUSE</a> since I had it installed inside a VM and I had really enjoyed it and <a href="http://en.opensuse.org/Portal:Tumbleweed" target="_blank">Tumbleweed </a>would probably give me all I need in terms of package freshness. I also considered going back to <a href="http://www.gentoo.org/" target="_blank">Gentoo</a> but I don&#8217;t think I&#8217;d have it in me to sit and wait for the compile times every single time I wanted to install or update something. In the end my curiosity got the best of me and I decided see to what all the fuss about <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> is about.</p>
+
+<p>I&#8217;ve been using it for roughly little more than a month now and I couldn&#8217;t be happier. It took some time to get used to it, there&#8217;s always a learning curve when changing from distribution to distribution but in this case the curve was gentle enough. It&#8217;s publicized as being a somewhat non user friendly distribution but in the end all you have to learn will help you later on. You&#8217;ll find yourself being able to fix problems instead of just reinstalling everything just because you don&#8217;t even know where to begin with a fix.</p>
+
+<p>Pacman is quite probably the best package manager I&#8217;ve used and I&#8217;m throwing <a href="http://dev.gentoo.org/~zmedico/portage/doc/man/emerge.1.html" target="_blank">emerge</a> into the equation. I&#8217;m yet to need any sort of software installed that I haven&#8217;t found on the <a href="https://aur.archlinux.org/" target="_blank">Arch User Repository</a> (AUR) and though you should really learn to install AUR packages by hand first, tools like <a href="https://aur.archlinux.org/packages/pacaur/" target="_blank">Pacaur </a>and <a href="https://aur.archlinux.org/packages/yaourt/" target="_blank">Yaourt </a>turn it into an automated process.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/archives/1515">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-23T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Apparently the days of getting new releases of OS X on DVDs is long gone and instead it&#8217;s made available in the App Store. If you&#8217;re upgrading your existing OS X install you probably have no need for physical media to install it but if you&#8217;re willing to do a clean install the .dmg you get from the App Store isn&#8217;t very useful. You&#8217;ll have to make your own physical install media.</p>
+
+<p>I&#8217;ve read about Lion Disk Maker and other extensive ways with multiple steps to build a USB thumb drive capable of installing OS X from scratch. But then I came across a single Terminal command line that does absolutely everything and leaves the USB thumb drive ready to install everything. You&#8217;ll need a comfortably sized drive &#8211; 8GB should be enough. If possible buy a new one and don&#8217;t use it for anything else other than being your OS X install media. First, download Mavericks from the App Store. Then open up a Terminal, plug in your USB drive and type the following &#8211; you can use TAB to autocomplete folder names:</p>
+
+<figure class='code'><figcaption><span>Making a OS X 10.9 Mavericks Install USB Drive</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo /Applications/Install<span class="se">\ </span>OS<span class="se">\ </span>X<span class="se">\ </span>Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install<span class="se">\ </span>OS<span class="se">\ </span>X<span class="se">\ </span>Mavericks.app --nointeraction
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Replace <code>/Volumes/Untitled</code> with <code>/Volumes/YourUsbDriveName</code>. Insert your password, wait for some time (I went to get dinner, when I came back ~20 mins later it was still running) and BAM &#8211; Bob&#8217;s your uncle. Reboot, pick booting from the USB drive (hold Option while booting so you can choose) and you&#8217;re good to go.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1448">Linklog &#038; Yahoo Pipes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-19T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So I found a way to combine multiple RSS feeds and present them on a single feed. Turns out Yahoo Pipes, a thing that I had never heard of before, is really useful. My mind was somewhat blown by what I can do with them. I think Yahoo needs to advertise their stuff a little better. Either that or I <em>really</em> need to pay more attention to what&#8217;s going on in the intertubes.</p>
+
+<p>In any case, I managed to combine items published through <a href="http://tt-rss.org/redmine/projects/tt-rss/wiki" target="_blank"><span style="text-decoration: underline;">tt-rss</span></a> and another linklog software thingie I use. It&#8217;s <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32" target="_blank"><span style="text-decoration: underline;">right here</span></a>. You can turn the pipe result into RSS or JSON or whatever pleases your heart. Full URL is as follows:</p>
+
+<blockquote><p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32">http://pipes.yahoo.com/pipes/pipe.info?_id=168514ce88f11afc75a8bb3eec45ad32</a></p></blockquote>
+
+<p>It&#8217;s mostly newspaper articles and tidbits of information I find useful while on the internet. It&#8217;s also available on a widget rss whatchamacallit on this website, one of the right side panels. If you have a link/linklog feed of your own please leave a comment with it, I&#8217;m always looking for decent feeds.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1424">BQ Aquaris 5 Root &#038; Recovery</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-28T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>New gadget thingie. As usual I&#8217;m posting some stuff here so I won&#8217;t forget it and know where to find it in case I need all the info again.</p>
+
+<p><strong>Rooting the BQ Aquaris 5</strong></p>
+
+<ul>
+<li>First, grab <a href="https://mega.co.nz/#!eFdwWJwL!JdQlQy438CHR5ZX_X6dGOTePh8pWVwpavHfWOmIUQv8" target="_blank"><span style="text-decoration: underline;">this file</span></a> and unpack it somewhere on our computer, we&#8217;ll need a Windows computer for the next few steps.</li>
+<li>I&#8217;m not sure if you need to install the PDANet stuff on the &#8220;Driver&#8221; folder, but I ended up doing it anyway. Didn&#8217;t run into any driver problems when I plugged the phone into the computer so I guess it works just fine.</li>
+<li>Navigate to Settings / About Phone on the device and press &#8220;Build Number&#8221; fast a few times until a popup tells you &#8220;Developer Options&#8221; are available.</li>
+<li>Navigate to Settings / Developer Options and enable &#8220;USB Debugging&#8221;</li>
+<li>Plug the phone into the computer and wait till it&#8217;s recognized. Make sure it has correct drivers.</li>
+<li>Go into the &#8220;Ejecutable&#8221; folder from the .rar you unpacked and you&#8217;ll find a &#8220;runme.bat&#8221;. Right click it and run as administrator, just in case it needs elevated privileges.</li>
+<li>A console will pop up, read what it says and press enter a few times.</li>
+<li>Done.</li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/archives/1424">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1393">Is Youtube Making Us (Me) Lazy?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-04T00:00:00+00:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Long gone are the days when I spent nearly 8 hours reading a manual while making a stage 1 Gentoo install. Granted, most of those 8 hours were due to the compile times on the computer available to me at the time but a large part of it was spent reading huge walls of text on how to properly install, maintain, upgrade, tweak, work with emerge, etc..</p>
+
+<p>If it were today, I think I’d Youtube it. I’m pretty sure there’s at least one video guide on how to do it. In fact, it’s not just <em>computer stuff</em> that I find myself searching on Youtube. I find myself choosing Youtube <em>instead</em> of googling for an alternative learning method who could possibly have more information than the video. If I then run into an issue that requires further investigation <em>only then</em> do I do a regular Google search for text.</p>
+
+<p>I’m not quite sure what this means, or even if it means anything at all. Is that a sign that I’m getting lazy when it comes to do proper research? Do I need more information than what is present in a simple video? I suppose that will depend on who makes the video and what is chosen to be presented in it. But still..</p>
+
+<p>There’s a world of information on Youtube. Ted is also quite decent, though it has a completely different scope. I’m unaware of any studies presenting conclusive data on whether people (like me) are starting to choose video as a preferred learning method. Someone better than me should probably do it, it sounds exciting.</p>
+
+<p>What could this mean to the way things are traditionally taught across the globe? Will tablets with video content be used instead of books? Would I learn faster/better with video? There are plenty of possibilities and hypothesis about this, I’d like to know more about it.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1346">Gnome Classic on Ubuntu 12.10</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-20T00:00:00+00:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If there&#8217;s one thing I&#8217;ve come to find that almost every Ubuntu user agrees to, it has to be the fact that <a href="http://en.wikipedia.org/wiki/Unity_%28user_interface%29" target="_blank">Unity</a> is terrible and I&#8217;m sure the Dash plays a big part on one of Dante&#8217;s Infernos. Installing nvidia proprietary drivers is a <a href="http://www.dedoimedo.com/computers/ubuntu-quetzal-nvidia.html" target="_blank">nightmare in and of itself</a>. It used to be as simple as clicking a button when a popup (i.e., Jockey) mentioning proprietary drivers were ready to install, now it&#8217;s a multi step procedure.</p>
+
+<p>All things considered though, the main issue I have with the &#8220;new&#8221; Ubuntu is Unity. Some people who don&#8217;t like it move to KDE, other people (me) like the GTK interface and choose something like XFCE but Gnome was and will continue being what most people that took the jump to Linux during the Ubuntu &#8220;golden age&#8221; are used to. This includes older people like possibly our parents, who installed Ubuntu on their machines simply because we told them it was better than what they were using. Change always meets resistance, but if I&#8217;m having a hard time getting used to Unity or even failing to see the point in it, those people will surely run away from it like the plague. Personal tastes aside, here&#8217;s how you can change that.</p>
+
+<p>For now there&#8217;s still a way to revert to the &#8220;old&#8221; Gnome. You&#8217;ll have to open up a console window and type the following in it.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install gnome-session-fallback
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will install everything you need. The next step is logging out from your current session, then click the icon/symbol right next to your name at the login screen and choose &#8220;Gnome Classic&#8221;. Insert your password and once the login procedure is complete you&#8217;ll be presented with something a bit less confusing.</p>
+
+<p>I will give Unity another chance, eventually. But for now I&#8217;m one of those that runs away from it like the plague.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/1340">Nexus 7 Bootloader Unlock &#038; Root</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-17T00:00:00+00:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Quick update here, the Nexus 7 is rooted. I found that I miss little things <a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup" target="_blank">Titanium Backup</a> and <a href="https://play.google.com/store/apps/details?id=org.adaway" target="_blank">AdAway</a> a bit too much.</p>
+
+<p>The whole process is pretty straight forward, quite possibly the easiest rooting I had to do. Push 2 buttons and that&#8217;s it. I used <a href="http://www.wugfresh.com/nrt/" target="_blank">this</a> tool. There&#8217;s <a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank">another way</a> of doing it that incidentally also has a few more tools and options that can make your life easier but the graphical interface and literally &#8220;push 2 buttons and we&#8217;re done&#8221; thing makes the first one a fair bit more attractive if all you want is unlocking the bootloader and rooting.<a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank"><br /> </a></p>
+
+<p>I won&#8217;t make a guide on how to do it since, like I said, the whole process is as easy as it can be. Really. Pushing 2 buttons is all you have to do. And if you find that pushing 2 buttons is too hard for you, the guide/tutorial that comes with the app makes it literally idiot proof.</p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -77,6 +546,26 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archives/1556">Using LaTeX in Portuguese</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1552">My .bashrc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1537">Changing Nvidia Fan Speed on Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1515">Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
     
   </ul>
 </section>

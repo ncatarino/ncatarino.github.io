@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rambles | ncatarino.github.io]]></title>
+  <link href="http://ncatarino.github.io/blog/categories/rambles/atom.xml" rel="self"/>
+  <link href="http://ncatarino.github.io/"/>
+  <updated>2013-11-22T02:19:30+00:00</updated>
+  <id>http://ncatarino.github.io/</id>
+  <author>
+    <name><![CDATA[Nuno Catarino]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Is Youtube Making Us (Me) Lazy?]]></title>
+    <link href="http://ncatarino.github.io/archives/1393"/>
+    <updated>2013-02-04T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/is-youtube-making-us-me-lazy</id>
+    <content type="html"><![CDATA[<p>Long gone are the days when I spent nearly 8 hours reading a manual while making a stage 1 Gentoo install. Granted, most of those 8 hours were due to the compile times on the computer available to me at the time but a large part of it was spent reading huge walls of text on how to properly install, maintain, upgrade, tweak, work with emerge, etc..</p>
+
+<p>If it were today, I think I’d Youtube it. I’m pretty sure there’s at least one video guide on how to do it. In fact, it’s not just <em>computer stuff</em> that I find myself searching on Youtube. I find myself choosing Youtube <em>instead</em> of googling for an alternative learning method who could possibly have more information than the video. If I then run into an issue that requires further investigation <em>only then</em> do I do a regular Google search for text.</p>
+
+<p>I’m not quite sure what this means, or even if it means anything at all. Is that a sign that I’m getting lazy when it comes to do proper research? Do I need more information than what is present in a simple video? I suppose that will depend on who makes the video and what is chosen to be presented in it. But still..</p>
+
+<p>There’s a world of information on Youtube. Ted is also quite decent, though it has a completely different scope. I’m unaware of any studies presenting conclusive data on whether people (like me) are starting to choose video as a preferred learning method. Someone better than me should probably do it, it sounds exciting.</p>
+
+<p>What could this mean to the way things are traditionally taught across the globe? Will tablets with video content be used instead of books? Would I learn faster/better with video? There are plenty of possibilities and hypothesis about this, I’d like to know more about it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trying Out a New Minimal Theme]]></title>
+    <link href="http://ncatarino.github.io/archives/1164"/>
+    <updated>2012-03-22T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/trying-out-a-new-minimal-theme</id>
+    <content type="html"><![CDATA[<p>I like stuff to be as simple as possible without too much clutter, the layout/theme I&#8217;ve been using for the past year or so does that quite well but while browsing on the forums for the theme I found out there was another guy who likes minimal stuff&#8230;and that he&#8217;s a php/css ninja!</p>
+
+<p>Turns out the made his user.css publicly available and I decided to give it a shot. I <em>love </em>it! Had to make a new banner and I will probably have to make yet another one since I made that one in under a minute and it sort of needs some polishing but whatever, I like how uncluttered everything looks like.</p>
+
+<p>Still have to work on the label position on the comment forms. The labels are showing up on the left of the forms and thus messing up their alignment. I have no idea where to change that, probably on the comments.php file but as soon as I *try* to start reading it and figure out what needs to be changed I&#8217;m reminded I&#8217;m a total naab when it comes to php. Oh well.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Migration Successful]]></title>
+    <link href="http://ncatarino.github.io/archives/1138"/>
+    <updated>2012-03-20T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/migration-successful</id>
+    <content type="html"><![CDATA[<p>Well, looks like everything went mighty fine with the host migration. Still have some maintenance to work on but nothing major. I can now add new content! Not like I will, but&#8230;yeah&#8230;you know.</p>
+
+<p>I&#8217;ve recently been dabbling with a few mmo&#8217;s and I got into the Diablo 3 beta. Really hyped about that so at least <em>that&#8217;s</em> something to talk about, right?</p>
+
+<p>Stay tuned.</p>
+
+<p>Oh yeah, the website is almost 2 years old.</p>
+
+<p>PS: This host seems to be a hell of a lot faster than the last, easier to use management tools too. Godaddy can bite my shiny metal ass.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What I Think of Copyrights and Patents]]></title>
+    <link href="http://ncatarino.github.io/archives/1036"/>
+    <updated>2011-08-28T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/what-i-think-of-copyrights-and-patents</id>
+    <content type="html"><![CDATA[<p style="text-align: center;">
+  <span class='embed-youtube' style='text-align:center; display: block;'></span>
+</p>
+
+
+
+
+<p style="text-align: center;">
+  [<a href="http://www.geeksaresexy.net/2011/08/28/copyright-how-long-does-it-last/" target="_blank">Source</a>]
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[One Year Uptime, Rift and Some Other Stuff]]></title>
+    <link href="http://ncatarino.github.io/archives/843"/>
+    <updated>2011-03-07T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/one-year-uptime-rift-and-some-other-stuff</id>
+    <content type="html"><![CDATA[<p>No idea what was the exact day I bought the domain/hosting and started working on this site as a hobby, but it&#8217;s been roughly a year now. I know this because I had to renew it all, sometimes I wonder if it&#8217;s worth it since I end up spending quite some time without paying any attention to it. I guess that&#8217;s the nature of such sites :)</p>
+
+<p>Been spending a *lot* of time playing Rift, I&#8217;m quite amazed how good something I&#8217;ve never heard of till about a couple of months ago can be. Couple of guys I know mentioned the open beta was up and I tried it. A few hours after I found myself buying it. I had recently restarted playing WoW but as soon as the month&#8217;s subscription ended I was finding myself really bored with it and Rift was entering it&#8217;s head start for pre-order customers. Perfect timing. Dragon Age 2 is supposed to be coming out too, that&#8217;s another one to check out.</p>
+
+<p>Haven&#8217;t spent much time around my Spica as of lately, which is just as well since development for the Cyanogenmod Spica beta seems to have come to a halt. Probably because everything&#8217;s working quite well and it really shouldn&#8217;t be called a beta anymore. Been using the 8.3 beta for a few months now and it&#8217;s working like a charm.</p>
+
+<p>Also, saw Tron Legacy the other day. Awesome sauce.</p>
+]]></content>
+  </entry>
+  
+</feed>

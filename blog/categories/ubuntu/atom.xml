@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ubuntu | ncatarino.github.io]]></title>
+  <link href="http://ncatarino.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://ncatarino.github.io/"/>
+  <updated>2013-11-22T02:19:30+00:00</updated>
+  <id>http://ncatarino.github.io/</id>
+  <author>
+    <name><![CDATA[Nuno Catarino]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Arch Linux]]></title>
+    <link href="http://ncatarino.github.io/archives/1515"/>
+    <updated>2013-10-26T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/arch-linux</id>
+    <content type="html"><![CDATA[<p>Since I&#8217;m not really enjoying the path <a href="http://www.canonical.com/" target="_blank">Canonical </a>is headed with <a href="http://www.ubuntu.com/" target="_blank">Ubuntu </a>I was somewhat forced to consider moving to another distribution. I considered <a href="http://www.opensuse.org/" target="_blank">OpenSUSE</a> since I had it installed inside a VM and I had really enjoyed it and <a href="http://en.opensuse.org/Portal:Tumbleweed" target="_blank">Tumbleweed </a>would probably give me all I need in terms of package freshness. I also considered going back to <a href="http://www.gentoo.org/" target="_blank">Gentoo</a> but I don&#8217;t think I&#8217;d have it in me to sit and wait for the compile times every single time I wanted to install or update something. In the end my curiosity got the best of me and I decided see to what all the fuss about <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> is about.</p>
+
+<p>I&#8217;ve been using it for roughly little more than a month now and I couldn&#8217;t be happier. It took some time to get used to it, there&#8217;s always a learning curve when changing from distribution to distribution but in this case the curve was gentle enough. It&#8217;s publicized as being a somewhat non user friendly distribution but in the end all you have to learn will help you later on. You&#8217;ll find yourself being able to fix problems instead of just reinstalling everything just because you don&#8217;t even know where to begin with a fix.</p>
+
+<p>Pacman is quite probably the best package manager I&#8217;ve used and I&#8217;m throwing <a href="http://dev.gentoo.org/~zmedico/portage/doc/man/emerge.1.html" target="_blank">emerge</a> into the equation. I&#8217;m yet to need any sort of software installed that I haven&#8217;t found on the <a href="https://aur.archlinux.org/" target="_blank">Arch User Repository</a> (AUR) and though you should really learn to install AUR packages by hand first, tools like <a href="https://aur.archlinux.org/packages/pacaur/" target="_blank">Pacaur </a>and <a href="https://aur.archlinux.org/packages/yaourt/" target="_blank">Yaourt </a>turn it into an automated process.</p>
+
+<!--more-->
+
+
+<p>That said, the two biggest reasons I&#8217;m enjoying Arch so much is the fact it&#8217;s a rolling distribution and how close to upstream I am. I don&#8217;t have to &#8220;upgrade&#8221; it every X months. In fact, I could have it installed for <em>years</em> before I start considering a reinstall. It&#8217;s not based on a snapshot frozen in time who eventually (quite soon on the Linux world) gets outdated with backport support only. Software comes out upstream and it&#8217;s available as a package usually within a couple of days. Larger projects such as <a href="http://www.gnome.org/" target="_blank">Gnome</a> can take the larger part of a week to be available, but as an example once <a href="http://cinnamon.linuxmint.com/" target="_blank">Cinnamon 2.0</a> was out it was within Arch&#8217;s repositories in a couple of days. I would probably <em>not</em> use it in a production server, where Debian stable would be my first choice but for a workstation it&#8217;s really <em>really</em> good.</p>
+
+<p>The <a href="https://wiki.archlinux.org/" target="_blank">Wiki </a>~ though most expert users say the Wiki is always wrong as a joke ~ is a great source of information, there&#8217;s apparently no aspect of an Arch instalation and maintenance that isn&#8217;t covered. Some articles have even helped me loads before I even used Arch. It sometimes makes me think Arch is what Linux is supposed to be.</p>
+
+<p>The Community, famed to be a bunch of elitist jerks, are actually quite friendly &#8211; provided you a) know how to get help in the first place and not just &#8220;how do I computer???&#8221;. Logs are actually useful for a reason. b) at least read the manual (<a href="http://en.wikipedia.org/wiki/RTFM" target="_blank">RTFM</a>) of the stuff you&#8217;re trying to use or do.</p>
+
+<p>All things considered, if you&#8217;re willing to get your hands on something where <em>you</em> the user have control and not your Distribution Overlords (e.g. Canonical) give Arch a go. Installing it can be a pain since everything is CLI only but it&#8217;s well worth it in the end. Install it a couple of times inside a VM to get the hang of it, I did that and when the time came to install it on real hardware it took me ~15 minutes to get everything up and running with LUKS and LVM included in the mix.</p>
+
+<p>There are Arch based distributions out there such as <a href="http://manjaro.org/" target="_blank">Manjaro</a> and <a href="http://archbang.org/" target="_blank">Archbang</a> with installers that are a bit more user friendly but either you end up using a different repository in Manjaro&#8217;s case &#8211; a repository that is a snapshot of Arch&#8217;s repository from some time ago, defeating the purpose of staying close to upstream &#8211; or installing packages that you don&#8217;t really need in Archbang&#8217;s case. From what I&#8217;ve been told <a href="http://antergos.com/" target="_blank">Antergos</a> is pure Arch with a user friendly installer added and a small repo of it&#8217;s own, using Arch&#8217;s repositories and AUR for everything else . I haven&#8217;t used it so I can&#8217;t say I recommend it, but it may be something you&#8217;re willing to use.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gnome Classic on Ubuntu 12.10]]></title>
+    <link href="http://ncatarino.github.io/archives/1346"/>
+    <updated>2013-01-20T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/gnome-classic-on-ubuntu-12-10</id>
+    <content type="html"><![CDATA[<p>If there&#8217;s one thing I&#8217;ve come to find that almost every Ubuntu user agrees to, it has to be the fact that <a href="http://en.wikipedia.org/wiki/Unity_%28user_interface%29" target="_blank">Unity</a> is terrible and I&#8217;m sure the Dash plays a big part on one of Dante&#8217;s Infernos. Installing nvidia proprietary drivers is a <a href="http://www.dedoimedo.com/computers/ubuntu-quetzal-nvidia.html" target="_blank">nightmare in and of itself</a>. It used to be as simple as clicking a button when a popup (i.e., Jockey) mentioning proprietary drivers were ready to install, now it&#8217;s a multi step procedure.</p>
+
+<p>All things considered though, the main issue I have with the &#8220;new&#8221; Ubuntu is Unity. Some people who don&#8217;t like it move to KDE, other people (me) like the GTK interface and choose something like XFCE but Gnome was and will continue being what most people that took the jump to Linux during the Ubuntu &#8220;golden age&#8221; are used to. This includes older people like possibly our parents, who installed Ubuntu on their machines simply because we told them it was better than what they were using. Change always meets resistance, but if I&#8217;m having a hard time getting used to Unity or even failing to see the point in it, those people will surely run away from it like the plague. Personal tastes aside, here&#8217;s how you can change that.</p>
+
+<p>For now there&#8217;s still a way to revert to the &#8220;old&#8221; Gnome. You&#8217;ll have to open up a console window and type the following in it.</p>
+
+<p><code>bash
+$ sudo apt-get install gnome-session-fallback
+</code></p>
+
+<p>This will install everything you need. The next step is logging out from your current session, then click the icon/symbol right next to your name at the login screen and choose &#8220;Gnome Classic&#8221;. Insert your password and once the login procedure is complete you&#8217;ll be presented with something a bit less confusing.</p>
+
+<p>I will give Unity another chance, eventually. But for now I&#8217;m one of those that runs away from it like the plague.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VMware Failing to Build Kernel Modules on Ubuntu 10.10]]></title>
+    <link href="http://ncatarino.github.io/archives/704"/>
+    <updated>2010-10-13T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/vmware-failing-to-build-kernel-modules-on-ubuntu-10-10</id>
+    <content type="html"><![CDATA[<p>The recent update to 10.10 on my desktop box ran without any major issues, but not without issues. VMware stopped working and complained about not being able to build needed kernel modules. After a quick google search I found this. Issue the following commands on your console.</p>
+
+<blockquote><p>cd /tmp<br/>
+wget <a rel="nofollow" href="http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash"><a href="http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash">http://www.sputnick-area.net/scripts/vmware7.1.1-patch-kernel-2.6.35.bash</a></a><br/>
+sudo chmod +x vmware7.1.1-patch-kernel-2.6.35.bash<br/>
+sudo ./vmware7.1.1-patch-kernel-2.6.35.bash</p></blockquote>
+
+<p>Then the script tells you to issue the following command:</p>
+
+<blockquote><p>sudo vmware-modconfig &#8211;console &#8211;install-all</p></blockquote>
+
+<p>And that&#8217;s it.</p>
+
+<p>[<a href="https://answers.launchpad.net/vmware-ubuntu/+question/128677" target="_blank">Via</a>]</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up Time Machine on Ubuntu 10.04]]></title>
+    <link href="http://ncatarino.github.io/archives/592"/>
+    <updated>2010-09-08T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/setting-up-time-machine-on-ubuntu-10-04</id>
+    <content type="html"><![CDATA[<p>Backups and redundancy are always important when dealing with data you&#8217;re not willing to loose overnight when your hard drives decide it&#8217;s time to meet their maker. Usually Seagate or Western Digital in my case, not that I&#8217;m complaining *knocks on wood*. Mistakes also happen and you&#8217;re bound to eventually delete or somehow damage important data on your hard drive.</p>
+
+<p>Time Machine is a piece of software introduced by Apple when Leopard was launched, it allows us to set up an external or network drive as a backup drive and it backs up data from any given point in time onwards allowing us as well to go &#8220;back in time&#8221; to any given point in the backups.</p>
+
+<p>Recently I&#8217;ve been dabbling a lot with Ubuntu and those of you who know my nerd side know already I&#8217;ve googled the hell out of it trying to maximize and/or improve stuff and I&#8217;ve come across several interesting articles I&#8217;d like to share with whoever reads this. I could just post some links, but that wouldn&#8217;t be fun and some of the links might be taken down leaving me without any source of information in case I want to repeat the process.</p>
+
+<p>On with the interesting part, setting up Ubuntu 10.04 as a Time Machine network drive.</p>
+
+<!--more-->
+
+
+<p>Ubuntu is able to <em>speak</em> the Apple language when it comes to networking, all we have to do is install the netatalk package and in case we want to be able to dinamically find the server in our finder window for example, the avahi-daemon package.</p>
+
+<blockquote><p>$ sudo apt-get install netatalk avahi-daemon</p></blockquote>
+
+<p>Everything pretty much works right out of the box, we just have to edit a text file describing what directory to use for Time Machine and restart the services.</p>
+
+<p>For this, we will edit <strong>/etc/netatak/AppleVolumes.default</strong> and add the following:</p>
+
+<blockquote><p># By default all users have access to their home directories.<br/>
+# ~/ &#8220;Home Directory&#8221;<br/>
+/TimeMachine &#8220;TimeMachine&#8221; options:tm</p></blockquote>
+
+<p>This will point netatalk to a directory called TimeMachine in our root filesystem and share it. It <em>can</em> be a directory inside your home dir. Now we have to actually create the directory and give it the correct permissions.</p>
+
+<blockquote><p>$ sudo mkdir /TimeMachine</p>
+
+<p>$ sudo chmod a+rw /TimeMachine</p></blockquote>
+
+<p>Next up, in case we want it showing up on our finder instead of having to connect to it through the &#8220;Connect to Server&#8221; dialog (afp://192.168.ip.ip), we&#8217;ll create a file named <strong>/etc/avahi/services/afpd.service </strong>and add the following content into it:</p>
+
+<blockquote><p><div>
+  <div></p>
+
+<pre><code>&lt;div&gt;
+  &lt;service-group&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;name replace-wildcards=&amp;#8221;yes&amp;#8221;&gt;%h&lt;/name&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;type&gt;_afpovertcp._tcp&lt;/type&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;port&gt;548&lt;/port&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;type&gt;_device-info._tcp&lt;/type&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;port&gt;0&lt;/port&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;txt-record&gt;model=Xserve&lt;/txt-record&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;/service-group&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>  </div>
+</div></p></blockquote>
+
+<div>
+  Next, we&#8217;ll restart the services. I&#8217;m not sure you actually have to restart the avahi-daemon but we&#8217;ll do it anyway.
+</div>
+
+
+<blockquote><p><div>
+  $ sudo service avahi-daemon restart
+</div></p>
+
+<p><div>
+  $ sudo service netatalk restart
+</div></p></blockquote>
+
+<div>
+  Alternatively, you can:
+</div>
+
+
+<blockquote><p><div>
+  $ sudo /etc/init.d/avahi-daemon restart
+</div></p>
+
+<p><div>
+  $ sudo /etc/init.d/netatalk restart
+</div></p></blockquote>
+
+<div>
+  Either way works fine.
+</div>
+
+
+
+
+<div>
+  And that&#8217;s it! That folder is ready to act as a Time Machine network drive for your macs :)
+</div>
+
+
+
+
+<div>
+  It is advisable to keep the folder with enough space  for your backups, usually something with twice the space of your used space in disk works but the bigger the better since it allows you to go further back in time. Folders used in these screenshots were made for example/test purposes and have nowhere near the required size to effectively act as a Time Machine server.
+</div>
+
+
+
+
+<div>
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/screen1.png"><img class="alignnone size-medium wp-image-593" title="Finder Window" src="http://ncatarino.net/wp-content/uploads/2010/09/screen1-300x181.png" alt="The server is visible in your finder window" width="300" height="181" /></a>
+</div>
+
+
+
+
+<div>
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/screen2.png"><img class="alignnone size-medium wp-image-594" title="Time Machine Window" src="http://ncatarino.net/wp-content/uploads/2010/09/screen2-300x174.png" alt="The folder is visible in your Time Machine window." width="300" height="174" /></a>
+</div>
+
+
+
+
+<div>
+  Full credit for this info goes to:
+</div>
+
+
+
+
+<div>
+  <ul>
+    <li>
+      <a href="http://sidikahawa.blogspot.com/2010/03/setting-up-time-machine-server-on-my.html" target="_blank">Sidi Kawaha</a>
+    </li>
+    <li>
+      <a href="http://www.kremalicious.com/2008/06/ubuntu-as-mac-file-server-and-time-machine-volume/" target="_blank">kremalicious</a>
+    </li>
+    <li>
+      <a href="http://ubuntuforums.org/" target="_blank">The Ubuntu Forums</a> (too many posts to list here)
+    </li>
+    <li>
+      If you feel your name should be here please press Contact on the top of this page and use it to email me
+    </li>
+  </ul>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Changing Nvidia Fan Speed on Ubuntu]]></title>
+    <link href="http://ncatarino.github.io/archives/573"/>
+    <updated>2010-09-05T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/changing-nvidia-fan-speed-on-ubuntu</id>
+    <content type="html"><![CDATA[<p style="text-align: justify;">
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/Screenshot-NVIDIA-X-Server-Settings.png"><img class="alignright size-thumbnail wp-image-585" title="Screenshot-NVIDIA X Server Settings" src="http://ncatarino.net/wp-content/uploads/2010/09/Screenshot-NVIDIA-X-Server-Settings-150x106.png" alt="" width="150" height="106" /></a>I recently mentioned the only thing bugging me about my recent Ubuntu incursion was that my gfx card (<a href="http://www.pureoverclock.com/images/review/video_cards/asus_gts250dk/asus_gts250dk_forums.jpg" target="_blank">Geforce GTS 250</a>) wasn&#8217;t supported by <a href="http://www.linuxhardware.org/nvclock/" target="_blank">nvclock</a> so I couldn&#8217;t set it&#8217;s fan speed to whatever I want it to ending up with a serious decibel issue right next to me.
+</p>
+
+
+
+
+<p style="text-align: justify;">
+  Turns out nvidia&#8217;s driver itself is able to do so, though it&#8217;s an unsupported feature and thus it&#8217;s not as easy as 1 2 3 to activate it. The Coolbits option in our xorg.conf comes into place, allowing us to overclock and/or change several features directly in the driver&#8217;s settings panel. Now, I never did overclock anything and I seriously doubt I ever will since I really don&#8217;t like to reduce the life expectancy of any given piece of hardware, but being able to reduce that <em>HORRIBLE NOISE</em> when I&#8217;m idling in my desktop surfing the web or chatting with friends is a blessing. I always keep an eye on temperatures and obviously I won&#8217;t lock the fan speed when playing games and such so I think it should be just fine.
+</p>
+
+
+<p>On to the goods, nvidia&#8217;s config options available <a href="http://us.download.nvidia.com/XFree86/Linux-x86/195.36.24/README/xconfigoptions.html" target="_blank">here</a> state the following:</p>
+
+<!--more-->
+
+
+<blockquote><p>Option &#8220;Coolbits&#8221; &#8220;integer&#8221;</p>
+
+<p>Enables various unsupported features, such as support for GPU clock manipulation in the NV-CONTROL X extension. This option accepts a bit mask of features to enable.</p>
+
+<p>WARNING: this may cause system damage and void warranties. This utility can run your computer system out of the manufacturer&#8217;s design specifications, including, but not limited to: higher system voltages, above normal temperatures, excessive frequencies, and changes to BIOS that may corrupt the BIOS. Your computer&#8217;s operating system may hang and result in data loss or corrupted images. Depending on the manufacturer of your computer system, the computer system, hardware and software warranties may be voided, and you may not receive any further manufacturer support. NVIDIA does not provide customer service support for the Coolbits option. It is for these reasons that absolutely no warranty or guarantee is either express or implied. Before enabling and using, you should determine the suitability of the utility for your intended use, and you shall assume all responsibility in connection therewith.</p>
+
+<p>When &#8220;1&#8243; (Bit 0) is set in the &#8220;Coolbits&#8221; option value, the nvidia-settings utility will contain a page labeled &#8220;Clock Frequencies&#8221; through which clock settings can be manipulated. &#8220;Coolbits&#8221; is only available on GeForce FX, Quadro FX and newer desktop GPUs. On GeForce FX and newer mobile GPUs, limited clock manipulation support is available when &#8220;1&#8243; is set in the &#8220;Coolbits&#8221; option value: clocks can be lowered relative to the default settings; overclocking is not supported due to the thermal constraints of notebook designs.</p>
+
+<p>When &#8220;2&#8243; (Bit 1) is set in the &#8220;Coolbits&#8221; option value, the NVIDIA driver will attempt to initialize SLI when using GPUs with different amounts of video memory.</p>
+
+<p>When &#8220;4&#8243; (Bit 2) is set in the &#8220;Coolbits&#8221; option value, the nvidia-settings Thermal Monitor page will allow configuration of GPU fan speed, on graphics boards with programmable fan capability.</p>
+
+<p>The default for this option is 0 (unsupported features are disabled).</p></blockquote>
+
+<p>The Coolbits option I care about is number 4, so all I had to do was open my favorite text editor and add the following to my xorg.conf:</p>
+
+<blockquote><p>Section &#8220;Device&#8221;<br/>
+&#8230;<br/>
+Option &#8220;Coolbits&#8221; &#8220;4&#8243;<br/>
+&#8230;<br/>
+EndSection</p></blockquote>
+
+<p>This way I ended up with a control within the driver&#8217;s settings panel to control the fan&#8217;s speed as seen on the screenshot attached to this post. It&#8217;s running smoothly (and silently) at 35% while keeping the GPU Temp at a stable 49ºC while doing stuff not GPU intensive.</p>
+
+<p>More useful info <a href="http://en.gentoo-wiki.com/wiki/Nvidia#Manual_Fan_Control_for_nVIDIA_Settings" target="_blank">here</a> and <a href="http://us.download.nvidia.com/XFree86/Linux-x86/195.36.24/README/xconfigoptions.html" target="_blank">here</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

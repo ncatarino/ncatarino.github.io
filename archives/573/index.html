@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Changing Nvidia Fan Speed on Ubuntu - ncatarino.github.io</title>
+  <meta name="author" content="Nuno Catarino">
+
+  
+  <meta name="description" content="I recently mentioned the only thing bugging me about my recent Ubuntu incursion was that my gfx card (Geforce GTS 250) wasn&#8217;t supported by &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ncatarino.github.io/archives/573">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="ncatarino.github.io" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ncatarino.github.io</a></h1>
+  
+    <h2>bla bla bla yada yada yada ad nauseam</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ncatarino.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Changing Nvidia Fan Speed on Ubuntu</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-05T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p style="text-align: justify;">
+  <a href="http://ncatarino.net/wp-content/uploads/2010/09/Screenshot-NVIDIA-X-Server-Settings.png"><img class="alignright size-thumbnail wp-image-585" title="Screenshot-NVIDIA X Server Settings" src="http://ncatarino.net/wp-content/uploads/2010/09/Screenshot-NVIDIA-X-Server-Settings-150x106.png" alt="" width="150" height="106" /></a>I recently mentioned the only thing bugging me about my recent Ubuntu incursion was that my gfx card (<a href="http://www.pureoverclock.com/images/review/video_cards/asus_gts250dk/asus_gts250dk_forums.jpg" target="_blank">Geforce GTS 250</a>) wasn&#8217;t supported by <a href="http://www.linuxhardware.org/nvclock/" target="_blank">nvclock</a> so I couldn&#8217;t set it&#8217;s fan speed to whatever I want it to ending up with a serious decibel issue right next to me.
+</p>
+
+
+
+
+<p style="text-align: justify;">
+  Turns out nvidia&#8217;s driver itself is able to do so, though it&#8217;s an unsupported feature and thus it&#8217;s not as easy as 1 2 3 to activate it. The Coolbits option in our xorg.conf comes into place, allowing us to overclock and/or change several features directly in the driver&#8217;s settings panel. Now, I never did overclock anything and I seriously doubt I ever will since I really don&#8217;t like to reduce the life expectancy of any given piece of hardware, but being able to reduce that <em>HORRIBLE NOISE</em> when I&#8217;m idling in my desktop surfing the web or chatting with friends is a blessing. I always keep an eye on temperatures and obviously I won&#8217;t lock the fan speed when playing games and such so I think it should be just fine.
+</p>
+
+
+<p>On to the goods, nvidia&#8217;s config options available <a href="http://us.download.nvidia.com/XFree86/Linux-x86/195.36.24/README/xconfigoptions.html" target="_blank">here</a> state the following:</p>
+
+<!--more-->
+
+
+<blockquote><p>Option &#8220;Coolbits&#8221; &#8220;integer&#8221;</p>
+
+<p>Enables various unsupported features, such as support for GPU clock manipulation in the NV-CONTROL X extension. This option accepts a bit mask of features to enable.</p>
+
+<p>WARNING: this may cause system damage and void warranties. This utility can run your computer system out of the manufacturer&#8217;s design specifications, including, but not limited to: higher system voltages, above normal temperatures, excessive frequencies, and changes to BIOS that may corrupt the BIOS. Your computer&#8217;s operating system may hang and result in data loss or corrupted images. Depending on the manufacturer of your computer system, the computer system, hardware and software warranties may be voided, and you may not receive any further manufacturer support. NVIDIA does not provide customer service support for the Coolbits option. It is for these reasons that absolutely no warranty or guarantee is either express or implied. Before enabling and using, you should determine the suitability of the utility for your intended use, and you shall assume all responsibility in connection therewith.</p>
+
+<p>When &#8220;1&#8243; (Bit 0) is set in the &#8220;Coolbits&#8221; option value, the nvidia-settings utility will contain a page labeled &#8220;Clock Frequencies&#8221; through which clock settings can be manipulated. &#8220;Coolbits&#8221; is only available on GeForce FX, Quadro FX and newer desktop GPUs. On GeForce FX and newer mobile GPUs, limited clock manipulation support is available when &#8220;1&#8243; is set in the &#8220;Coolbits&#8221; option value: clocks can be lowered relative to the default settings; overclocking is not supported due to the thermal constraints of notebook designs.</p>
+
+<p>When &#8220;2&#8243; (Bit 1) is set in the &#8220;Coolbits&#8221; option value, the NVIDIA driver will attempt to initialize SLI when using GPUs with different amounts of video memory.</p>
+
+<p>When &#8220;4&#8243; (Bit 2) is set in the &#8220;Coolbits&#8221; option value, the nvidia-settings Thermal Monitor page will allow configuration of GPU fan speed, on graphics boards with programmable fan capability.</p>
+
+<p>The default for this option is 0 (unsupported features are disabled).</p></blockquote>
+
+<p>The Coolbits option I care about is number 4, so all I had to do was open my favorite text editor and add the following to my xorg.conf:</p>
+
+<blockquote><p>Section &#8220;Device&#8221;<br/>
+&#8230;<br/>
+Option &#8220;Coolbits&#8221; &#8220;4&#8243;<br/>
+&#8230;<br/>
+EndSection</p></blockquote>
+
+<p>This way I ended up with a control within the driver&#8217;s settings panel to control the fan&#8217;s speed as seen on the screenshot attached to this post. It&#8217;s running smoothly (and silently) at 35% while keeping the GPU Temp at a stable 49ºC while doing stuff not GPU intensive.</p>
+
+<p>More useful info <a href="http://en.gentoo-wiki.com/wiki/Nvidia#Manual_Fan_Control_for_nVIDIA_Settings" target="_blank">here</a> and <a href="http://us.download.nvidia.com/XFree86/Linux-x86/195.36.24/README/xconfigoptions.html" target="_blank">here</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nuno</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-05T00:00:00+01:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ubuntu/'>Ubuntu</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://ncatarino.github.io/archives/573" data-via="nncatarino" data-counturl="http://ncatarino.github.io/archives/573" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archives/563" title="Previous Post: Stuff I added on top of my default Ubuntu install">&laquo; Stuff I added on top of my default Ubuntu install</a>
+      
+      
+        <a class="basic-alignment right" href="/archives/592" title="Next Post: Setting up Time Machine on Ubuntu 10.04">Setting up Time Machine on Ubuntu 10.04 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archives/1556">Using LaTeX in Portuguese</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1552">My .bashrc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1537">Changing Nvidia Fan Speed on Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1515">Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Nuno Catarino -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A Few Tweaks for Your Samsung Spica - ncatarino.github.io</title>
+  <meta name="author" content="Nuno Catarino">
+
+  
+  <meta name="description" content="Here&#8217;s a couple of tweaks for your Samsung Spica, I&#8217;m posting them here mostly so I&#8217;ll have an easy place to search if I ever need &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ncatarino.github.io/archives/709">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="ncatarino.github.io" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ncatarino.github.io</a></h1>
+  
+    <h2>bla bla bla yada yada yada ad nauseam</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ncatarino.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">A Few Tweaks for Your Samsung Spica</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-16T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Here&#8217;s a couple of tweaks for your Samsung Spica, I&#8217;m posting them here mostly so I&#8217;ll have an easy place to search if I ever need them again. You <em>will</em> need root for them and the Android SDK installed with proper drivers for your phone.</p>
+
+<p>Also, please don&#8217;t try this if you don&#8217;t feel comfortable doing it and <strong>PAY ATTENTION</strong> to the commands you enter while root. Typos may end up in disaster. I am not responsible if you brick your phone.</p>
+
+<!--more-->
+
+
+<p><strong>Faster GPS lock time.</strong></p>
+
+<p>Create a gps.conf file containing:</p>
+
+<blockquote><p>NTP_SERVER=pt.pool.ntp.org<br/>
+XTRA_SERVER_1=<a href="http://xtra1.gpsonextra.net/xtra.bin  ">http://xtra1.gpsonextra.net/xtra.bin  </a>
+XTRA_SERVER_2=<a href="http://xtra2.gpsonextra.net/xtra.bin  ">http://xtra2.gpsonextra.net/xtra.bin  </a>
+XTRA_SERVER_3=<a href="http://xtra3.gpsonextra.net/xtra.bin  ">http://xtra3.gpsonextra.net/xtra.bin  </a>
+SUPL_HOST=supl.google.com<br/>
+SUPL_PORT=7276</p></blockquote>
+
+<p>I use <em>pt.pool.ntp.org</em> because I&#8217;m in Portugal, you may want to use something else.</p>
+
+<p>Copy gps.conf to your SD card and run:</p>
+
+<blockquote><p>adb shell</p></blockquote>
+
+<p>and then type:</p>
+
+<blockquote><p>su<br/>
+remount rw<br/>
+cat /sdcard/gps.conf > /system/etc/gps.conf<br/>
+reboot</p></blockquote>
+
+<p>I have experienced seriously faster gps lock times by doing this. It might have been a fluke or something already cached but the first couple of times I tried it took around 15 secs to find a lock both in Google Maps and NDrive.</p>
+
+<p><strong>Disabling the HORRIBLY LOUD sound played while the phone boots.</strong></p>
+
+<p>This sound is located at <em>/system/etc/poweron.snd. </em>All you have to do is delete it or rename it and you won&#8217;t wake up your neighborhood ever again when you turn on your phone.</p>
+
+<p>Again, you&#8217;ll need both root and the Android SDK installed with proper drivers for your phone.</p>
+
+<blockquote><p>adb shell<br/>
+su<br/>
+remount rw<br/>
+mv /system/etc/poweron.snd /system/etc/poweron.snd.bak</p></blockquote>
+
+<p>Also, if you&#8217;re running this on any form of Unix you might have to run adb daemon and shell with root permitions. If you ran it first without root issue the following:</p>
+
+<blockquote><p>sudo ./adb kill-server<br/>
+sudo ./adb shell</p></blockquote>
+
+<p>This example uses sudo to run as root, if you&#8217;re using <em>su</em> or already logged in as root you obviously exclude the sudo part from every command.</p>
+
+<p>Via <a href="http://forum.samdroid.net/f38/gps-speedup-1262/" target="_blank">this</a> and <a href="http://forum.samdroid.net/f28/disabling-boot-up-sound-352/" target="_blank">this</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nuno</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-16T00:00:00+01:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>Android</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://ncatarino.github.io/archives/709" data-via="nncatarino" data-counturl="http://ncatarino.github.io/archives/709" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archives/704" title="Previous Post: VMware failing to build kernel modules on Ubuntu 10.10">&laquo; VMware failing to build kernel modules on Ubuntu 10.10</a>
+      
+      
+        <a class="basic-alignment right" href="/archives/727" title="Next Post: Android software I couldn&#8217;t live without">Android software I couldn&#8217;t live without &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archives/1556">Using LaTeX in Portuguese</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1552">My .bashrc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1537">Changing Nvidia Fan Speed on Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1515">Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Nuno Catarino -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

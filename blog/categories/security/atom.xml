@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Security | ncatarino.github.io]]></title>
+  <link href="http://ncatarino.github.io/blog/categories/security/atom.xml" rel="self"/>
+  <link href="http://ncatarino.github.io/"/>
+  <updated>2013-11-22T02:19:30+00:00</updated>
+  <id>http://ncatarino.github.io/</id>
+  <author>
+    <name><![CDATA[Nuno Catarino]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Do You Trust Your Wifi Connection?]]></title>
+    <link href="http://ncatarino.github.io/archives/749"/>
+    <updated>2010-10-25T00:00:00+01:00</updated>
+    <id>http://ncatarino.github.io/archives/how-much-do-you-trust-your-wifi-connection</id>
+    <content type="html"><![CDATA[<p>We&#8217;ve all been known to sometimes use public wifi networks to quickly check on something online or kill some time and we all know they&#8217;re not exactly secure. But just how insecure are they? Here&#8217;s a perfect example simple enough for anyone able to use a Firefox extension to use it. Since it is, in fact, a Firefox extension.</p>
+
+<p>Meet <a href="http://codebutler.com/firesheep" target="_blank">Firesheep</a>. Rather than trying to explain it myself, I&#8217;ll use the author&#8217;s words..</p>
+
+<!--more-->
+
+
+<blockquote><p>When logging into a website you usually start by submitting your username and password. The server then checks to see if an account matching this information exists and if so, replies back to you with a &#8220;cookie&#8221; which is used by your browser for all subsequent requests.It&#8217;s extremely common for websites to protect your password by encrypting the initial login, but surprisingly uncommon for websites to encrypt everything else. This leaves the cookie (and the user) vulnerable. HTTP session hijacking (sometimes called &#8220;sidejacking&#8221;) is when an attacker gets a hold of a user&#8217;s cookie, allowing them to do anything the user can do on a particular website. On an open wireless network, cookies are basically shouted through the air, making these attacks extremely easy.</p>
+
+<p>This is a widely known problem that has been talked about to death, yet very popular websites continue to fail at protecting their users. The only effective fix for this problem is full end-to-end encryption, known on the web as HTTPS or SSL. Facebook is constantly rolling out new &#8220;privacy&#8221; features in an endless attempt to quell the screams of unhappy users, but what&#8217;s the point when someone can just take over an account entirely? Twitter forced all third party developers to use OAuth then immediately released (and promoted) a new version of their insecure website. When it comes to user privacy, SSL is the elephant in the room.</p></blockquote>
+
+<p>What exactly does this mean? It means that if you use a public or not trustworthy wifi network, anyone using this or similar tools can hijack your authentication method and impersonate you on the website you just logged in to. How&#8217;s that for borking things up?</p>
+
+<p>If you&#8217;re willing to avoid this kind of methods from harming you I highly recommend you simply don&#8217;t use public or otherwise not trusted wifi internet links. If you absolutely have to use them, take some time preparing to use them beforehand. Other than using <a href="http://en.wikipedia.org/wiki/Secure_Sockets_Layer" target="_blank">SSL</a> whenever possible (i.e. for example use <a href="https://gmail.com">https://gmail.com</a> instead of <a href="http://gmail.com">http://gmail.com</a>) I suggest you get a hold of some other also free tools such as <a href="http://www.torproject.org/" target="_blank">TOR</a> or <a href="http://hotspotshield.com/" target="_blank">Hotspot Shield</a> or any other tool that creates a <a href="http://en.wikipedia.org/wiki/Vpn" target="_blank">VPN</a> or encrypts the data between you and the rest of the internet. An option for the most paranoid of you might even be having your home computer running some sort of <a href="http://en.wikipedia.org/wiki/Secure_Shell" target="_blank">SSH</a> and tunnel your public wifi http session through it. Sure it may be slower than not using anything at all, but are you willing to risk it?</p>
+
+<p>What knocked off my feet when I read this is imagining what kind of chaos this tool coupled with others such as <a href="http://underdev.org/penetrate/" target="_blank">Penetrate</a> could potentially generate. It&#8217;s sort of a security time bomb waiting to happen.</p>
+]]></content>
+  </entry>
+  
+</feed>
