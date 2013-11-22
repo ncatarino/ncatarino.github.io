@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | ncatarino.github.io]]></title>
   <link href="http://ncatarino.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://ncatarino.github.io/"/>
-  <updated>2013-11-22T15:33:10+00:00</updated>
+  <updated>2013-11-22T18:35:46+00:00</updated>
   <id>http://ncatarino.github.io/</id>
   <author>
     <name><![CDATA[Nuno Catarino]]></name>
@@ -64,7 +64,7 @@
     <id>http://ncatarino.github.io/archives/nexus-7-bootloader-unlock-root</id>
     <content type="html"><![CDATA[<p>Quick update here, the Nexus 7 is rooted. I found that I miss little things <a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup" target="_blank">Titanium Backup</a> and <a href="https://play.google.com/store/apps/details?id=org.adaway" target="_blank">AdAway</a> a bit too much.</p>
 
-<p>The whole process is pretty straight forward, quite possibly the easiest rooting I had to do. Push 2 buttons and that&#8217;s it. I used <a href="http://www.wugfresh.com/nrt/" target="_blank">this</a> tool. There&#8217;s <a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank">another way</a> of doing it that incidentally also has a few more tools and options that can make your life easier but the graphical interface and literally &#8220;push 2 buttons and we&#8217;re done&#8221; thing makes the first one a fair bit more attractive if all you want is unlocking the bootloader and rooting.<a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank"><br /> </a></p>
+<p>The whole process is pretty straight forward, quite possibly the easiest rooting I had to do. Push 2 buttons and that&#8217;s it. I used <a href="http://www.wugfresh.com/nrt/" target="_blank">this</a> tool. There&#8217;s <a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank">another way</a> of doing it that incidentally also has a few more tools and options that can make your life easier but the graphical interface and literally &#8220;push 2 buttons and we&#8217;re done&#8221; thing makes the first one a fair bit more attractive if all you want is unlocking the bootloader and rooting.</p>
 
 <p>I won&#8217;t make a guide on how to do it since, like I said, the whole process is as easy as it can be. Really. Pushing 2 buttons is all you have to do. And if you find that pushing 2 buttons is too hard for you, the guide/tutorial that comes with the app makes it literally idiot proof.</p>
 ]]></content>

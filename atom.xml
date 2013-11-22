@@ -4,7 +4,7 @@
   <title><![CDATA[ncatarino.github.io]]></title>
   <link href="http://ncatarino.github.io/atom.xml" rel="self"/>
   <link href="http://ncatarino.github.io/"/>
-  <updated>2013-11-22T15:33:10+00:00</updated>
+  <updated>2013-11-22T18:35:46+00:00</updated>
   <id>http://ncatarino.github.io/</id>
   <author>
     <name><![CDATA[Nuno Catarino]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Continuando Com as Experiências]]></title>
+    <link href="http://ncatarino.github.io/blog/2013/11/22/continuando-com-as-experiencias/"/>
+    <updated>2013-11-22T18:06:47+00:00</updated>
+    <id>http://ncatarino.github.io/blog/2013/11/22/continuando-com-as-experiencias</id>
+    <content type="html"><![CDATA[<p>Ora bem, desta vez vamos exprimentar como fica isto em Português. Não sei até que ponto isto lidará convenientemente com acentos mas logo se vê.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using LaTeX in Portuguese]]></title>
@@ -465,18 +474,18 @@
     <link href="http://ncatarino.github.io/archives/1515"/>
     <updated>2013-10-26T00:00:00+01:00</updated>
     <id>http://ncatarino.github.io/archives/arch-linux</id>
-    <content type="html"><![CDATA[<p>Since I&#8217;m not really enjoying the path <a href="http://www.canonical.com/" target="_blank">Canonical </a>is headed with <a href="http://www.ubuntu.com/" target="_blank">Ubuntu </a>I was somewhat forced to consider moving to another distribution. I considered <a href="http://www.opensuse.org/" target="_blank">OpenSUSE</a> since I had it installed inside a VM and I had really enjoyed it and <a href="http://en.opensuse.org/Portal:Tumbleweed" target="_blank">Tumbleweed </a>would probably give me all I need in terms of package freshness. I also considered going back to <a href="http://www.gentoo.org/" target="_blank">Gentoo</a> but I don&#8217;t think I&#8217;d have it in me to sit and wait for the compile times every single time I wanted to install or update something. In the end my curiosity got the best of me and I decided see to what all the fuss about <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> is about.</p>
+    <content type="html"><![CDATA[<p>Since I&#8217;m not really enjoying the path <a href="http://www.canonical.com/" target="_blank">Canonical</a>is headed with <a href="http://www.ubuntu.com/" target="_blank">Ubuntu </a>I was somewhat forced to consider moving to another distribution. I considered <a href="http://www.opensuse.org/" target="_blank">OpenSUSE</a> since I had it installed inside a VM and I had really enjoyed it and <a href="http://en.opensuse.org/Portal:Tumbleweed" target="_blank">Tumbleweed</a>would probably give me all I need in terms of package freshness. I also considered going back to <a href="http://www.gentoo.org/" target="_blank">Gentoo</a> but I don&#8217;t think I&#8217;d have it in me to sit and wait for the compile times every single time I wanted to install or update something. In the end my curiosity got the best of me and I decided see to what all the fuss about <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> is about.</p>
 
 <p>I&#8217;ve been using it for roughly little more than a month now and I couldn&#8217;t be happier. It took some time to get used to it, there&#8217;s always a learning curve when changing from distribution to distribution but in this case the curve was gentle enough. It&#8217;s publicized as being a somewhat non user friendly distribution but in the end all you have to learn will help you later on. You&#8217;ll find yourself being able to fix problems instead of just reinstalling everything just because you don&#8217;t even know where to begin with a fix.</p>
 
-<p>Pacman is quite probably the best package manager I&#8217;ve used and I&#8217;m throwing <a href="http://dev.gentoo.org/~zmedico/portage/doc/man/emerge.1.html" target="_blank">emerge</a> into the equation. I&#8217;m yet to need any sort of software installed that I haven&#8217;t found on the <a href="https://aur.archlinux.org/" target="_blank">Arch User Repository</a> (AUR) and though you should really learn to install AUR packages by hand first, tools like <a href="https://aur.archlinux.org/packages/pacaur/" target="_blank">Pacaur </a>and <a href="https://aur.archlinux.org/packages/yaourt/" target="_blank">Yaourt </a>turn it into an automated process.</p>
+<p>Pacman is quite probably the best package manager I&#8217;ve used and I&#8217;m throwing <a href="http://dev.gentoo.org/~zmedico/portage/doc/man/emerge.1.html" target="_blank">emerge</a> into the equation. I&#8217;m yet to need any sort of software installed that I haven&#8217;t found on the <a href="https://aur.archlinux.org/" target="_blank">Arch User Repository</a> (AUR) and though you should really learn to install AUR packages by hand first, tools like <a href="https://aur.archlinux.org/packages/pacaur/" target="_blank">Pacaur</a>and <a href="https://aur.archlinux.org/packages/yaourt/" target="_blank">Yaourt</a>turn it into an automated process.</p>
 
 <!--more-->
 
 
 <p>That said, the two biggest reasons I&#8217;m enjoying Arch so much is the fact it&#8217;s a rolling distribution and how close to upstream I am. I don&#8217;t have to &#8220;upgrade&#8221; it every X months. In fact, I could have it installed for <em>years</em> before I start considering a reinstall. It&#8217;s not based on a snapshot frozen in time who eventually (quite soon on the Linux world) gets outdated with backport support only. Software comes out upstream and it&#8217;s available as a package usually within a couple of days. Larger projects such as <a href="http://www.gnome.org/" target="_blank">Gnome</a> can take the larger part of a week to be available, but as an example once <a href="http://cinnamon.linuxmint.com/" target="_blank">Cinnamon 2.0</a> was out it was within Arch&#8217;s repositories in a couple of days. I would probably <em>not</em> use it in a production server, where Debian stable would be my first choice but for a workstation it&#8217;s really <em>really</em> good.</p>
 
-<p>The <a href="https://wiki.archlinux.org/" target="_blank">Wiki </a>~ though most expert users say the Wiki is always wrong as a joke ~ is a great source of information, there&#8217;s apparently no aspect of an Arch instalation and maintenance that isn&#8217;t covered. Some articles have even helped me loads before I even used Arch. It sometimes makes me think Arch is what Linux is supposed to be.</p>
+<p>The <a href="https://wiki.archlinux.org/" target="_blank">Wiki</a>~ though most expert users say the Wiki is always wrong as a joke ~ is a great source of information, there&#8217;s apparently no aspect of an Arch instalation and maintenance that isn&#8217;t covered. Some articles have even helped me loads before I even used Arch. It sometimes makes me think Arch is what Linux is supposed to be.</p>
 
 <p>The Community, famed to be a bunch of elitist jerks, are actually quite friendly &#8211; provided you a) know how to get help in the first place and not just &#8220;how do I computer???&#8221;. Logs are actually useful for a reason. b) at least read the manual (<a href="http://en.wikipedia.org/wiki/RTFM" target="_blank">RTFM</a>) of the stuff you&#8217;re trying to use or do.</p>
 
@@ -591,7 +600,7 @@
 
 <p>For now there&#8217;s still a way to revert to the &#8220;old&#8221; Gnome. You&#8217;ll have to open up a console window and type the following in it.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Gnome Classic on Ubuntu 12.10</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install gnome-session-fallback
 </span></code></pre></td></tr></table></div></figure>
 
@@ -609,23 +618,9 @@
     <id>http://ncatarino.github.io/archives/nexus-7-bootloader-unlock-root</id>
     <content type="html"><![CDATA[<p>Quick update here, the Nexus 7 is rooted. I found that I miss little things <a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup" target="_blank">Titanium Backup</a> and <a href="https://play.google.com/store/apps/details?id=org.adaway" target="_blank">AdAway</a> a bit too much.</p>
 
-<p>The whole process is pretty straight forward, quite possibly the easiest rooting I had to do. Push 2 buttons and that&#8217;s it. I used <a href="http://www.wugfresh.com/nrt/" target="_blank">this</a> tool. There&#8217;s <a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank">another way</a> of doing it that incidentally also has a few more tools and options that can make your life easier but the graphical interface and literally &#8220;push 2 buttons and we&#8217;re done&#8221; thing makes the first one a fair bit more attractive if all you want is unlocking the bootloader and rooting.<a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank"><br /> </a></p>
+<p>The whole process is pretty straight forward, quite possibly the easiest rooting I had to do. Push 2 buttons and that&#8217;s it. I used <a href="http://www.wugfresh.com/nrt/" target="_blank">this</a> tool. There&#8217;s <a href="http://forum.xda-developers.com/showthread.php?t=1809195" target="_blank">another way</a> of doing it that incidentally also has a few more tools and options that can make your life easier but the graphical interface and literally &#8220;push 2 buttons and we&#8217;re done&#8221; thing makes the first one a fair bit more attractive if all you want is unlocking the bootloader and rooting.</p>
 
 <p>I won&#8217;t make a guide on how to do it since, like I said, the whole process is as easy as it can be. Really. Pushing 2 buttons is all you have to do. And if you find that pushing 2 buttons is too hard for you, the guide/tutorial that comes with the app makes it literally idiot proof.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Modern Computers]]></title>
-    <link href="http://ncatarino.github.io/archives/1328"/>
-    <updated>2013-01-01T00:00:00+00:00</updated>
-    <id>http://ncatarino.github.io/archives/modern-computers</id>
-    <content type="html"><![CDATA[<p>Multiple processors, gigabytes of ram, videocards with 400 times more memory than my first computer ever had and he had no videocard worth mentioning at all..and what do I find myself playing? Also, happy new year :)</p>
-
-<p style="text-align: center">
-  <a href="http://ncatarino.net/wp-content/uploads/2013/01/angband.png"><img class="aligncenter  wp-image-1329" alt="angband" src="http://ncatarino.net/wp-content/uploads/2013/01/angband-1024x560.png" width="496" height="271" /></a>
-</p>
-
 ]]></content>
   </entry>
   
@@ -647,15 +642,6 @@
 <p>I&#8217;m glad the Nexus 7 was my first tablet, it&#8217;s a pretty good one as far as I can tell. I&#8217;m yet to find something to whine and moan about, and coming from me that&#8217;s a good thing. All in all, it&#8217;s the perfect price range with the perfect size in a little piece of really fast hardware with support directly from Google. If you&#8217;re considering getting one go for it.</p>
 
 <p>I guess that a while not too long from now I&#8217;ll root and customize it to my liking as usual, but for now I&#8217;m enjoying the vanilla experience. Once a month has gone since when I got it is quite probably the ideal time to get into that sort of stuff. Until then, stay tuned for possible rooting guides as I&#8217;ll more than likely make a list of all the steps and procedures I take with the help of the fine folks at XDA and post it here.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hur Hur. Oh So True&#8230;]]></title>
-    <link href="http://ncatarino.github.io/archives/1295"/>
-    <updated>2012-08-13T00:00:00+01:00</updated>
-    <id>http://ncatarino.github.io/archives/hur-hur-oh-so-true</id>
-    <content type="html"><![CDATA[<p><a href="http://ncatarino.net/wp-content/uploads/2012/08/4964114.jpg"><img class="size-full wp-image-1296 aligncenter" title="4964114" src="http://ncatarino.net/wp-content/uploads/2012/08/4964114.jpg" alt="" width="405" height="644" /></a></p>
 ]]></content>
   </entry>
   
@@ -881,6 +867,25 @@ ICS should be made available through PC Companion later this month, tough it&#82
 <p>Turns out the made his user.css publicly available and I decided to give it a shot. I <em>love </em>it! Had to make a new banner and I will probably have to make yet another one since I made that one in under a minute and it sort of needs some polishing but whatever, I like how uncluttered everything looks like.</p>
 
 <p>Still have to work on the label position on the comment forms. The labels are showing up on the left of the forms and thus messing up their alignment. I have no idea where to change that, probably on the comments.php file but as soon as I *try* to start reading it and figure out what needs to be changed I&#8217;m reminded I&#8217;m a total naab when it comes to php. Oh well.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sweet Home Alabama Performed With Tesla Coils]]></title>
+    <link href="http://ncatarino.github.io/archives/1156"/>
+    <updated>2012-03-21T00:00:00+00:00</updated>
+    <id>http://ncatarino.github.io/archives/sweet-home-alabama-performed-with-tesla-coils</id>
+    <content type="html"><![CDATA[<p style="text-align: center;">
+  <span class='embed-youtube' style='text-align:center; display: block;'></span>
+</p>
+
+
+
+
+<p style="text-align: center;">
+  Holy crap!
+</p>
+
 ]]></content>
   </entry>
   
