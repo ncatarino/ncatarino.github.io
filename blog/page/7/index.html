@@ -9,8 +9,7 @@
   <meta name="author" content="Nuno Catarino">
 
   
-  <meta name="description" content="[][1] Click for larger image [1]: http://ncatarino.net/wp-content/uploads/2010/06/leiriaflyer.jpg
-">
+  <meta name="description" content="[][1] Was it just me that hated the ending they gave to Lost? via &lt;a href="http://www.geeksaresexy.net/2010/05/26/how-lost-should-have-ended- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,51 +65,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/archives/498">I&#8217;m SO There. Perfect for My Birthday :)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-05T00:00:00+01:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>[<img class="aligncenter size-medium wp-image-501" title="leiriaflyer" src="http://ncatarino.net/wp-content/uploads/2010/06/leiriaflyer-300x272.jpg" alt="" width="300" height="272" />][1]</p>
-
-<pre style="text-align: center;">Click for larger image</pre>
-
-
-
-
-<p><p style="text-align: center;"></p>
-
-<p> [1]: <a href="http://ncatarino.net/wp-content/uploads/2010/06/leiriaflyer.jpg">http://ncatarino.net/wp-content/uploads/2010/06/leiriaflyer.jpg</a></p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -545,6 +499,110 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/392">Macports</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-31T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://ncatarino.net/wp-content/uploads/2010/03/macports.png"><img class="alignright size-medium wp-image-405" title="macports" src="http://ncatarino.net/wp-content/uploads/2010/03/macports-300x225.png" alt="" width="300" height="225" /></a>One of the reasons I really like Mac OS X is it&#8217;s native Unix origin. In fact, Mac OS X <em>is </em>Unix. This translates into having easy access to common Unix tools and applications. I won&#8217;t say many users take advantage of this, I&#8217;m even willing to bet most don&#8217;t, but those who do feel life is a lot easier I&#8217;m sure. Tools as simple as <a href="http://www.gnu.org/software/wget/" target="_blank">wget</a> or <a href="http://lftp.yar.ru/" target="_blank">lftp</a> make mine a lot easier.</p>
+
+<p>Most of these tools can be installed in any regular Unix/Linux flavor but they have to be ported into the flavor before they can be used. This means some lines of code have to be changed in order for our Unix flavor to understand it.</p>
+
+<p>Meet Macports.</p>
+
+<p><strong>Installing Macports</strong></p>
+
+<p>Macports makes it easy to download and install Unix applications, be it simple command line tools or full fledged graphical applications. The easiest way to get it is download the .dmg for your version of Mac OS <a href="http://www.macports.org/install.php" target="_blank">here</a> and install it on your applications folder. You will also need XCode installed in your Mac. XCode is a set of developer tools for Mac allowing you to compile and install applications from source. You can find it in your Mac OS X install CD under the &#8220;Optional Installs&#8221; folder. From this moment on you will have access to the &#8216;port&#8217; command on your Terminal app.</p>
+
+<p><strong>Installing Applications</strong></p>
+
+<p>Installing ported applications is very easy. All you have to do is issue the following command inside a Terminal app.</p>
+
+<blockquote><p>sudo port -v install wget</p></blockquote>
+
+<p>What this will do is download the ported version of wget and all it&#8217;s necessary dependencies, compile them and install them on your system. The -v switch tells it to run on verbose mode, displaying all he&#8217;s doing at the moment. You can turn it off if you don&#8217;t need or like it. A list of all the software you can install this way can be found <a href="http://www.macports.org/ports.php" target="_blank">here</a>. Since it needs superuser access it will ask for your password.</p>
+
+<p>Uninstalling applications is also simple.</p>
+
+<blockquote><p>sudo port -v uninstall wget</p></blockquote>
+
+<p>One of the options I found really useful is the ability to create a .dmg that installs everything you need to install the chosen package in any given system. Running the following command for example will create a .dmg file with wget and all it&#8217;s dependencies ready to install in any mac even without Macports installed.</p>
+
+<blockquote><p>sudo port -v dmg wget</p></blockquote>
+
+<p><strong>Keeping up to date</strong></p>
+
+<p>It is also very easy to keep all your installed applications up to date with the latest software&#8217;s version. Issue the following commands on your Terminal app.</p>
+
+<blockquote><p>sudo port -v sync</p>
+
+<p>sudo port -v selfupdate</p>
+
+<p>sudo port -v upgrade outdated</p></blockquote>
+
+<p>What the first command will do is syncronize with the Macport&#8217;s server and figure out what&#8217;s the newest version number for all available software. The second command will update Macports itself it need be. The third and final command will upgrade all your outdated software to it&#8217;s current versions.</p>
+
+<p><strong>Keeping it clean</strong></p>
+
+<p>I&#8217;m one of those guys that likes to keep it&#8217;s system clean of near useless stuff, disc space is something I&#8217;ll never have enough of. This said, Macports likes to keep old versions of software installed after you update them to the newest version as well as intermediate files that are needed to compile and install software. This adds up bit by bit till it takes up large chunks of precious disc space. Running the following commands will get rid of all that for you.</p>
+
+<blockquote><p>sudo port clean &#8211;all installed</p>
+
+<p>sudo port uninstall inactive</p></blockquote>
+
+<p>The first command will clean all intermediate files needed to compile and install a port and the second will uninstall inactive ports such as old versions.</p>
+
+<p><strong>Uninstalling Macports altogether</strong></p>
+
+<p>If for some reason you don&#8217;t want Macports or any of it&#8217;s applications on your system, issuing the following commands on your Terminall app will do so for you.</p>
+
+<blockquote><p>sudo port -f uninstall installed</p></blockquote>
+
+<p>This will uninstall all your Macports installed software, but you will still be left with files such as configuration files and databases it uses. To get rid of them issue this command.</p>
+
+<blockquote><p>sudo rm -rf \<br/>
+/opt/local \<br/>
+/Applications/DarwinPorts \<br/>
+/Applications/MacPorts \<br/>
+/Library/LaunchDaemons/org.macports.<em> \<br/>
+/Library/Receipts/DarwinPorts</em>.pkg \<br/>
+/Library/Receipts/MacPorts*.pkg \<br/>
+/Library/StartupItems/DarwinPortsStartup \<br/>
+/Library/Tcl/darwinports1.0 \<br/>
+/Library/Tcl/macports1.0 \<br/>
+~/.macports</p></blockquote>
+
+<p>More useful info can be found at <a href="http://guide.macports.org" target="_blank"><a href="http://guide.macports.org">http://guide.macports.org</a></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -558,12 +616,16 @@
 <aside class="sidebar">
   
     <section>
+<br><br><br>
+<h1>Shameless plug</h1>  
+<p><div style="text-align: center;"><img src="https://www.dropbox.com/static/images/logo210.png"></div><br>
+Dropbox is a great way to have cloud backups of your vital data. If you don&#8217;t have an account and found useful info on this website please consider opening an account with them and helping me get more storage space using the following referral link <a href="http://db.tt/e1Pg2iet" target=blank>http://db.tt/e1Pg2iet</a><br><br>
+Thanks!</p>
+</section>
+
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/11/22/continuando-com-as-experiencias/">Continuando Com as Experiências</a>
-      </li>
     
       <li class="post">
         <a href="/archives/1556">Using LaTeX in Portuguese</a>
@@ -581,9 +643,12 @@
         <a href="/archives/1515">Arch Linux</a>
       </li>
     
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
+    
   </ul>
 </section>
-
 
 
 

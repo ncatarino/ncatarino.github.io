@@ -9,7 +9,7 @@
   <meta name="author" content="Nuno Catarino">
 
   
-  <meta name="description" content="I&#8217;ve always been a fan of verbose booting screens letting me know what&#8217;s going on while the OS is booting and recently this came to my &hellip;">
+  <meta name="description" content=" ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,71 +65,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/archives/678">Boot Snow Leopard in Verbose Mode And/or 64 Bits</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-14T00:00:00+01:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p style="text-align: justify;">
-  <a href="http://ncatarino.net/wp-content/uploads/2010/09/64bit.png"><img class="alignright size-medium wp-image-682" title="64bit" src="http://ncatarino.net/wp-content/uploads/2010/09/64bit-300x162.png" alt="" width="210" height="113" /></a>I&#8217;ve always been a fan of verbose booting screens letting me know what&#8217;s going on while the OS is booting and recently this came to my attention, we can do it on OS X. Booting it once in verbose mode is as simple as holding Command+V when we power it up but if we want it to act like that by default we&#8217;ll have to open a Terminal window and type the following:
-</p>
-
-
-<blockquote><p>sudo nvram boot-args=&#8221;-v&#8221;</p></blockquote>
-
-<p>To disable verbose mode type the following:</p>
-
-<blockquote><p>sudo nvram boot-args=</p></blockquote>
-
-<p>Another option we have on Snow Leopard is booting into 64 bits mode on supported machines, we can hold the 6 and the 4 keys on boot if we want to do it once but if we want it booting into 64 bits by default we&#8217;ll have to follow a few necessary steps.</p>
-
-<p>First of all we&#8217;ll need to know if we have a 64 bit EFI. Issue the following command on a Terminal window:</p>
-
-<blockquote><p>ioreg -l -p IODeviceTree | grep firmware-abi</p></blockquote>
-
-<p>We&#8217;ll either get a &#8220;EFI32&#8243; or a &#8220;EFI64&#8243; result. If we have a 64 bit EFI we&#8217;re good to go.</p>
-
-<p>Find and edit <strong>/Library/Preferences/SystemConfiguration/com.apple.Boot.plist </strong>replacing:</p>
-
-<blockquote><p><key>Kernel Flags</key><br/>
-<string></string></p></blockquote>
-
-<p>With</p>
-
-<blockquote><p><key>Kernel Flags</key><br/>
-<string>arch=x86_64</string></p></blockquote>
-
-<p>Reboot :)</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -647,6 +582,51 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archives/498">I&#8217;m SO There. Perfect for My Birthday :)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-05T00:00:00+01:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>[<img class="aligncenter size-medium wp-image-501" title="leiriaflyer" src="http://ncatarino.net/wp-content/uploads/2010/06/leiriaflyer-300x272.jpg" alt="" width="300" height="272" />][1]</p>
+
+<pre style="text-align: center;">Click for larger image</pre>
+
+
+
+
+<p><p style="text-align: center;"></p>
+
+<p> [1]: <a href="http://ncatarino.net/wp-content/uploads/2010/06/leiriaflyer.jpg">http://ncatarino.net/wp-content/uploads/2010/06/leiriaflyer.jpg</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -660,12 +640,16 @@
 <aside class="sidebar">
   
     <section>
+<br><br><br>
+<h1>Shameless plug</h1>  
+<p><div style="text-align: center;"><img src="https://www.dropbox.com/static/images/logo210.png"></div><br>
+Dropbox is a great way to have cloud backups of your vital data. If you don&#8217;t have an account and found useful info on this website please consider opening an account with them and helping me get more storage space using the following referral link <a href="http://db.tt/e1Pg2iet" target=blank>http://db.tt/e1Pg2iet</a><br><br>
+Thanks!</p>
+</section>
+
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/11/22/continuando-com-as-experiencias/">Continuando Com as Experiências</a>
-      </li>
     
       <li class="post">
         <a href="/archives/1556">Using LaTeX in Portuguese</a>
@@ -683,9 +667,12 @@
         <a href="/archives/1515">Arch Linux</a>
       </li>
     
+      <li class="post">
+        <a href="/archives/1488">Making a OS X 10.9 Mavericks Install USB Drive</a>
+      </li>
+    
   </ul>
 </section>
-
 
 
 
